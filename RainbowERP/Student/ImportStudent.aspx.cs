@@ -192,7 +192,7 @@ namespace RAINBOW_ERP.Student
                                 }
                                 if (count == 6)
                                 {
-                                    studentCL.dob = Convert.ToDateTime(FileRec);
+                                    studentCL.dob = Convert.ToDateTime(FileRec+" 00:00");
                                 }
                                 if (count == 7)
                                 {

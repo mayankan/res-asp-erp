@@ -618,6 +618,7 @@
     <Content Include="sass\libs\_vars.scss" />
     <Content Include="sass\main.scss" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Student\test_data.csv" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

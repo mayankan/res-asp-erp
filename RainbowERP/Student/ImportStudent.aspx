@@ -24,7 +24,8 @@
     </header>
     <!-- Section -->
     <section>
-        FORMAT - Admission Number, Student's Name, Father's Name, Mother's Name, Mobile Number, Gender(0-Female/1-Male), Date Of Birth, Address 
+        FORMAT - Admission Number, Student's Name, Father's Name, Mother's Name, Mobile Number, Gender(0-Female/1-Male), Date Of Birth, Address <br />
+        <a href="test_data.csv">Sample Data</a>
         </br></br>
         <asp:dropdownlist ID="ddlClass" runat="server" width="149px"></asp:dropdownlist>
         <asp:dropdownlist ID="ddlStudentcategory" runat="server" width="149px"></asp:dropdownlist>

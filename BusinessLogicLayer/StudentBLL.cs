@@ -139,7 +139,7 @@ namespace BusinessLogicLayer
         }
         public StudentCL viewStudentByAdmissionNo(int admissionNo, int sessionId)
         {
-            Student item = (from x in dbcontext.Students where x.AdmissionNo == admissionNo && x.Class.SessionId == sessionId && x.IsDeleted==false select x).FirstOrDefault();
+            Student item = (from x in dbcontext.Students where x.AdmissionNo == admissionNo && x.Class.SessionId == sessionId && x.IsDeleted == false select x).FirstOrDefault();
             StudentCL studentCL = new StudentCL()
             {
                 aadharCardNo = item.AadharCard,
@@ -217,7 +217,7 @@ namespace BusinessLogicLayer
             int count = 0;
             foreach (StudentCL item in studentCL)
             {
-                Student query = (from x in dbcontext.Students where x.AdmissionNo == item.admissionNo && x.IsDeleted == false select x).FirstOrDefault();
+                Student query = (from x in dbcontext.Students where x.AdmissionNo == item.admissionNo && x.ClassId == item.classId && x.IsDeleted == false select x).FirstOrDefault();
                 if (query == null)
                 {
                     Student student = dbcontext.Students.Add(new Student
