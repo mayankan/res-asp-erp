@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="rainbowjanakpuriModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Attendance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentLeaveTypeId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="StudentId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateModified" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Class" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Section" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SessionId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateModified" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClassSubjectMap">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassId" Type="int" Nullable="false" />
+    <Property Name="SubjectId" Type="int" Nullable="false" />
+    <Property Name="SessionId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateModified" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Examination">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" Nullable="false" />
+    <Property Name="ClassId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateModified" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GradeEntry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExaminationId" Type="int" Nullable="false" />
+    <Property Name="ClassSubjectId" Type="int" Nullable="false" />
+    <Property Name="Grade" Type="varchar(max)" Nullable="false" />
+    <Property Name="SessionId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateModified" Type="date" Nullable="false" />
+    <Property Name="StudentId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogAction" Type="varchar(max)" Nullable="false" />
+    <Property Name="DateOfAction" Type="datetime" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Module" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MarksEntry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExaminationId" Type="int" Nullable="false" />
+    <Property Name="Marks" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SessionId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateModified" Type="date" Nullable="false" />
+    <Property Name="ClassSubjectId" Type="int" Nullable="false" />
+    <Property Name="StudentId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MiscEntry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExaminationId" Type="int" Nullable="false" />
+    <Property Name="ClassSubjectId" Type="int" Nullable="false" />
+    <Property Name="Remarks" Type="varchar(max)" Nullable="false" />
+    <Property Name="Attendance" Type="varchar(max)" Nullable="false" />
+    <Property Name="SessionId" Type="int" Nullable="false" />
+    <Property Name="StudentId" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateModified" Type="date" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="DateModifed" Type="datetime" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StartingYear" Type="int" Nullable="false" />
+    <Property Name="EndingYear" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SMS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentLeaveTypeId" Type="int" Nullable="false" />
+    <Property Name="Template" Type="varchar(max)" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateModified" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SMSEntry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AttendanceId" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="SMSTemplateId" Type="int" Nullable="false" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentCategoryId" Type="int" Nullable="false" />
+    <Property Name="ClassId" Type="int" Nullable="false" />
+    <Property Name="AdmissionNo" Type="int" Nullable="false" />
+    <Property Name="StudentName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FatherName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FatherMobileNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MotherName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Gender" Type="bit" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EmailAddress" Type="nvarchar(max)" />
+    <Property Name="DOB" Type="date" Nullable="false" />
+    <Property Name="SiblingAdmissionNo" Type="int" />
+    <Property Name="AadharCard" Type="nvarchar(max)" />
+    <Property Name="BirthCertificate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TransferCertificate" Type="nvarchar(max)" />
+    <Property Name="Miscellaneous1Name" Type="nvarchar(max)" />
+    <Property Name="Miscellaneous1Link" Type="nvarchar(max)" />
+    <Property Name="Miscellaneous2Name" Type="nvarchar(max)" />
+    <Property Name="Miscellaneous2Link" Type="nvarchar(max)" />
+    <Property Name="Miscellaneous3Name" Type="nvarchar(max)" />
+    <Property Name="Miscellaneous3Link" Type="nvarchar(max)" />
+    <Property Name="DeletedTransferCertificate" Type="nvarchar(max)" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateModified" Type="date" Nullable="false" />
+    <Property Name="DateDeleted" Type="date" />
+  </EntityType>
+  <EntityType Name="StudentCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateModified" Type="date" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StudentLeaveType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateModified" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DateCreated" Type="date" Nullable="false" />
+    <Property Name="DateModified" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar(max)" Nullable="false" />
+    <Property Name="Password" Type="varchar(max)" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="DateModified" Type="datetime" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Attendance_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Attendance_StudentLeaveType">
+    <End Role="StudentLeaveType" Type="Self.StudentLeaveType" Multiplicity="1" />
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentLeaveType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Attendance">
+        <PropertyRef Name="StudentLeaveTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Class_Session">
+    <End Role="Session" Type="Self.Session" Multiplicity="1" />
+    <End Role="Class" Type="Self.Class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Class">
+        <PropertyRef Name="SessionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClassSubjectMap_Class">
+    <End Role="Class" Type="Self.Class" Multiplicity="1" />
+    <End Role="ClassSubjectMap" Type="Self.ClassSubjectMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClassSubjectMap">
+        <PropertyRef Name="ClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClassSubjectMap_Subject">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
+    <End Role="ClassSubjectMap" Type="Self.ClassSubjectMap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClassSubjectMap">
+        <PropertyRef Name="SubjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Examination_Class">
+    <End Role="Class" Type="Self.Class" Multiplicity="1" />
+    <End Role="Examination" Type="Self.Examination" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Examination">
+        <PropertyRef Name="ClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GradeEntry_ClassSubjectMap">
+    <End Role="ClassSubjectMap" Type="Self.ClassSubjectMap" Multiplicity="1" />
+    <End Role="GradeEntry" Type="Self.GradeEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClassSubjectMap">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GradeEntry">
+        <PropertyRef Name="ClassSubjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GradeEntry_Examination">
+    <End Role="Examination" Type="Self.Examination" Multiplicity="1" />
+    <End Role="GradeEntry" Type="Self.GradeEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Examination">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GradeEntry">
+        <PropertyRef Name="ExaminationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GradeEntry_Session">
+    <End Role="Session" Type="Self.Session" Multiplicity="1" />
+    <End Role="GradeEntry" Type="Self.GradeEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GradeEntry">
+        <PropertyRef Name="SessionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GradeEntry_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="GradeEntry" Type="Self.GradeEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GradeEntry">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Logs_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Logs" Type="Self.Logs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Logs">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MarksEntry_ClassSubjectMap">
+    <End Role="ClassSubjectMap" Type="Self.ClassSubjectMap" Multiplicity="1" />
+    <End Role="MarksEntry" Type="Self.MarksEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClassSubjectMap">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MarksEntry">
+        <PropertyRef Name="ClassSubjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MarksEntry_Examination">
+    <End Role="Examination" Type="Self.Examination" Multiplicity="1" />
+    <End Role="MarksEntry" Type="Self.MarksEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Examination">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MarksEntry">
+        <PropertyRef Name="ExaminationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MarksEntry_Session">
+    <End Role="Session" Type="Self.Session" Multiplicity="1" />
+    <End Role="MarksEntry" Type="Self.MarksEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MarksEntry">
+        <PropertyRef Name="SessionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MarksEntry_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="MarksEntry" Type="Self.MarksEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MarksEntry">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MiscEntry_ClassSubjectMap">
+    <End Role="ClassSubjectMap" Type="Self.ClassSubjectMap" Multiplicity="1" />
+    <End Role="MiscEntry" Type="Self.MiscEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClassSubjectMap">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MiscEntry">
+        <PropertyRef Name="ClassSubjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MiscEntry_Examination">
+    <End Role="Examination" Type="Self.Examination" Multiplicity="1" />
+    <End Role="MiscEntry" Type="Self.MiscEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Examination">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MiscEntry">
+        <PropertyRef Name="ExaminationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MiscEntry_Session">
+    <End Role="Session" Type="Self.Session" Multiplicity="1" />
+    <End Role="MiscEntry" Type="Self.MiscEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MiscEntry">
+        <PropertyRef Name="SessionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MiscEntry_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="MiscEntry" Type="Self.MiscEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MiscEntry">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMS_StudentLeaveType">
+    <End Role="StudentLeaveType" Type="Self.StudentLeaveType" Multiplicity="1" />
+    <End Role="SMS" Type="Self.SMS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentLeaveType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SMS">
+        <PropertyRef Name="StudentLeaveTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSEntry_Attendance">
+    <End Role="Attendance" Type="Self.Attendance" Multiplicity="1" />
+    <End Role="SMSEntry" Type="Self.SMSEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Attendance">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SMSEntry">
+        <PropertyRef Name="AttendanceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSEntry_SMS">
+    <End Role="SMS" Type="Self.SMS" Multiplicity="1" />
+    <End Role="SMSEntry" Type="Self.SMSEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SMS">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SMSEntry">
+        <PropertyRef Name="SMSTemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Class">
+    <End Role="Class" Type="Self.Class" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="ClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Student Category">
+    <End Role="StudentCategory" Type="Self.StudentCategory" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="StudentCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="rainbowjanakpuriModelStoreContainer">
+    <EntitySet Name="Attendance" EntityType="Self.Attendance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Class" EntityType="Self.Class" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClassSubjectMap" EntityType="Self.ClassSubjectMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Examination" EntityType="Self.Examination" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GradeEntry" EntityType="Self.GradeEntry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MarksEntry" EntityType="Self.MarksEntry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MiscEntry" EntityType="Self.MiscEntry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Session" EntityType="Self.Session" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMS" EntityType="Self.SMS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMSEntry" EntityType="Self.SMSEntry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentCategory" EntityType="Self.StudentCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentLeaveType" EntityType="Self.StudentLeaveType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Attendance_Student" Association="Self.FK_Attendance_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Attendance" EntitySet="Attendance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Attendance_StudentLeaveType" Association="Self.FK_Attendance_StudentLeaveType">
+      <End Role="StudentLeaveType" EntitySet="StudentLeaveType" />
+      <End Role="Attendance" EntitySet="Attendance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Class_Session" Association="Self.FK_Class_Session">
+      <End Role="Session" EntitySet="Session" />
+      <End Role="Class" EntitySet="Class" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClassSubjectMap_Class" Association="Self.FK_ClassSubjectMap_Class">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="ClassSubjectMap" EntitySet="ClassSubjectMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClassSubjectMap_Subject" Association="Self.FK_ClassSubjectMap_Subject">
+      <End Role="Subject" EntitySet="Subject" />
+      <End Role="ClassSubjectMap" EntitySet="ClassSubjectMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Examination_Class" Association="Self.FK_Examination_Class">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Examination" EntitySet="Examination" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GradeEntry_ClassSubjectMap" Association="Self.FK_GradeEntry_ClassSubjectMap">
+      <End Role="ClassSubjectMap" EntitySet="ClassSubjectMap" />
+      <End Role="GradeEntry" EntitySet="GradeEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GradeEntry_Examination" Association="Self.FK_GradeEntry_Examination">
+      <End Role="Examination" EntitySet="Examination" />
+      <End Role="GradeEntry" EntitySet="GradeEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GradeEntry_Session" Association="Self.FK_GradeEntry_Session">
+      <End Role="Session" EntitySet="Session" />
+      <End Role="GradeEntry" EntitySet="GradeEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GradeEntry_Student" Association="Self.FK_GradeEntry_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="GradeEntry" EntitySet="GradeEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Logs_Users" Association="Self.FK_Logs_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Logs" EntitySet="Logs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MarksEntry_ClassSubjectMap" Association="Self.FK_MarksEntry_ClassSubjectMap">
+      <End Role="ClassSubjectMap" EntitySet="ClassSubjectMap" />
+      <End Role="MarksEntry" EntitySet="MarksEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MarksEntry_Examination" Association="Self.FK_MarksEntry_Examination">
+      <End Role="Examination" EntitySet="Examination" />
+      <End Role="MarksEntry" EntitySet="MarksEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MarksEntry_Session" Association="Self.FK_MarksEntry_Session">
+      <End Role="Session" EntitySet="Session" />
+      <End Role="MarksEntry" EntitySet="MarksEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MarksEntry_Student" Association="Self.FK_MarksEntry_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="MarksEntry" EntitySet="MarksEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MiscEntry_ClassSubjectMap" Association="Self.FK_MiscEntry_ClassSubjectMap">
+      <End Role="ClassSubjectMap" EntitySet="ClassSubjectMap" />
+      <End Role="MiscEntry" EntitySet="MiscEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MiscEntry_Examination" Association="Self.FK_MiscEntry_Examination">
+      <End Role="Examination" EntitySet="Examination" />
+      <End Role="MiscEntry" EntitySet="MiscEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MiscEntry_Session" Association="Self.FK_MiscEntry_Session">
+      <End Role="Session" EntitySet="Session" />
+      <End Role="MiscEntry" EntitySet="MiscEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MiscEntry_Student" Association="Self.FK_MiscEntry_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="MiscEntry" EntitySet="MiscEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMS_StudentLeaveType" Association="Self.FK_SMS_StudentLeaveType">
+      <End Role="StudentLeaveType" EntitySet="StudentLeaveType" />
+      <End Role="SMS" EntitySet="SMS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSEntry_Attendance" Association="Self.FK_SMSEntry_Attendance">
+      <End Role="Attendance" EntitySet="Attendance" />
+      <End Role="SMSEntry" EntitySet="SMSEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSEntry_SMS" Association="Self.FK_SMSEntry_SMS">
+      <End Role="SMS" EntitySet="SMS" />
+      <End Role="SMSEntry" EntitySet="SMSEntry" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Class" Association="Self.FK_Student_Class">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Student Category" Association="Self.FK_Student_Student Category">
+      <End Role="StudentCategory" EntitySet="StudentCategory" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

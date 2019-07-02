@@ -1,0 +1,12 @@
+C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\bin\Release\DataAccessLayer.dll.config
+C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\bin\Release\EntityFramework.dll
+C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\bin\Release\EntityFramework.xml
+C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Release\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Release\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Release\DataAccessLayer.csproj.CopyComplete
+C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Release\DataAccessLayer.pdb
