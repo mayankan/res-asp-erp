@@ -31,7 +31,7 @@
         <asp:dropdownlist ID="ddlStudentcategory" runat="server" width="149px"></asp:dropdownlist>
         <asp:fileupload ID="flExcelUpload" runat="server"></asp:fileupload>
         <asp:Button ID="btnUpload" runat="server" Text="Upload" OnClick="btnUpload_Click" />
-        <asp:GridView ID="grdStudent" PageSize="20" AllowPaging="true" runat="server" CellPadding="0" GridLines="None" EmptyDataText="No data available." Width="100%">
+        <asp:GridView ID="grdStudent" PageSize="20" AllowPaging="true" runat="server" CellPadding="0" GridLines="None" EmptyDataText="No data available." Width="100%" OnPageIndexChanging="grdStudent_PageIndexChanging">
             <EditRowStyle BackColor="#7C6F57" />
             <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="#ffffff" />
             <HeaderStyle BorderColor="Black" BorderStyle="Solid" BorderWidth="1" BackColor="#3AB4E8" Font-Bold="True" ForeColor="#000000" />
@@ -39,7 +39,7 @@
             <RowStyle BorderColor="Black" BorderStyle="Solid" BorderWidth="1" BackColor="White" HorizontalAlign="Center" />
             <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
         </asp:GridView>
-        <asp:Label ID="lblConfirm" runat="server" ForeColor="Green"></asp:Label></br></br>
+        <asp:Label ID="lblConfirm" runat="server" ForeColor="Green"></asp:Label><asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label></br></br>
         <asp:button ID="btnImport" runat="server" text="Import" OnClick="btnImport_Click" /> </br></br></br></br>
 
     </section>

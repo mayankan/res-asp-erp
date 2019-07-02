@@ -38,12 +38,12 @@ namespace RAINBOW_ERP.Student
                         SessionCL sessionCL = sessionBLL.addorCheckSession();
                         Session["sessionId"] = sessionCL.id;
                     }
-                    else if (role.ToLower() == "teacher" || role.ToLower() == "attendanceo")
-                    {
-                        Response.Redirect("../UnAuthorized.aspx");
-                    }
                     else
                     {
+                        if (role.ToLower() == "teacher" || role.ToLower() == "attendanceo")
+                        {
+                            Response.Redirect("../UnAuthorized.aspx");
+                        }
                         sessionId = Convert.ToInt32(Session["sessionId"]);
                         ddlClass.DataSource = classBLL.viewClasses(sessionId);
                         ddlClass.DataValueField = "id";
@@ -136,11 +136,13 @@ namespace RAINBOW_ERP.Student
             }
             //Calling Bind Grid Functions
             grdStudent.DataSource = tblcsv;
+            ViewState["students"] = tblcsv;
             grdStudent.DataBind();
         }
 
         protected void btnImport_Click(object sender, EventArgs e)
         {
+            int admissionNoError = 0;
             try
             {
                 //Creating Collection of FeeExcelCL for storing multiple data entries provided by excel file.
@@ -163,6 +165,8 @@ namespace RAINBOW_ERP.Student
                             int feeCount = 0;
                             //Creating count variable for splitting data in columns.
                             int count = 0;
+                            //Storing Admission No for handling Exception and returning AdmissionNo.
+                            admissionNoError = Convert.ToInt32(csvRow.Split(',')[0]);
                             //Loop for splitting the data and inputting the data in StudentCL intance.
                             foreach (string FileRec in csvRow.Split(','))
                             {
@@ -232,7 +236,7 @@ namespace RAINBOW_ERP.Student
             }
             catch (Exception ex)
             {
-                throw (new Exception(ex.Message));
+                lblError.Text = "Error in Line with Admission No. " + admissionNoError;
             }
         }
 
@@ -245,6 +249,20 @@ namespace RAINBOW_ERP.Student
                     BindDataGrid();
                     btnImport.Visible = true;
                 }
+            }
+            catch (Exception ex)
+            {
+                throw (new Exception(ex.Message));
+            }
+        }
+
+        protected void grdStudent_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            try
+            {
+                grdStudent.PageIndex = e.NewPageIndex;
+                grdStudent.DataSource = ViewState["students"];
+                grdStudent.DataBind();
             }
             catch (Exception ex)
             {
