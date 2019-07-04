@@ -607,9 +607,9 @@
     <Content Include="obj\Debug\RainbowERP.csproj.CopyComplete" />
     <Content Include="obj\Debug\RainbowERP.csproj.CoreCompileInputs.cache" />
     <Content Include="obj\Debug\RainbowERP.csprojAssemblyReference.cache" />
+    <Content Include="libman.json" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\AWS.pubxml" />
-    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <Content Include="sass\ie8.scss" />
     <Content Include="sass\ie9.scss" />
     <Content Include="sass\libs\_functions.scss" />
@@ -617,6 +617,7 @@
     <Content Include="sass\libs\_skel.scss" />
     <Content Include="sass\libs\_vars.scss" />
     <Content Include="sass\main.scss" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Student\test_data.csv" />
     <None Include="Web.Debug.config">

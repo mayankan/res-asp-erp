@@ -9,4 +9,3 @@ C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Debug\DataAcce
 C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
