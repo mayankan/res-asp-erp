@@ -162,6 +162,7 @@
     <Content Include="ReportCard\PrintStudentFromClass.aspx" />
     <Content Include="ReportCard\Subject.aspx" />
     <Content Include="Student\Class.aspx" />
+    <Content Include="Student\Data\nopage.html" />
     <Content Include="Student\ImportStudent.aspx" />
     <Content Include="Student\index.aspx" />
     <Content Include="Student\ManageClass.aspx" />
@@ -637,7 +638,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Student\Data\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
