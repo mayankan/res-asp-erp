@@ -233,7 +233,7 @@ namespace RAINBOW_ERP.Student
             {
                 studentCL.siblingAdmissionNo = null;
             }
-            studentCL.studentCategoryId = Convert.ToInt32(ddlStudentCategory.SelectedIndex);
+            studentCL.studentCategoryId = Convert.ToInt32(ddlStudentCategory.SelectedValue);
             studentCL.studentName = txtStudentName.Text;
             if (fuMisc1.HasFile)
             {

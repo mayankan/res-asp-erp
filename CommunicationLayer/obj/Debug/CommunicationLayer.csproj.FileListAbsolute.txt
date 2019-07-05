@@ -3,4 +3,3 @@ C:\Users\Mayank Anand\source\repos\RainbowERP\CommunicationLayer\bin\Debug\Commu
 C:\Users\Mayank Anand\source\repos\RainbowERP\CommunicationLayer\obj\Debug\CommunicationLayer.csproj.CoreCompileInputs.cache
 C:\Users\Mayank Anand\source\repos\RainbowERP\CommunicationLayer\obj\Debug\CommunicationLayer.dll
 C:\Users\Mayank Anand\source\repos\RainbowERP\CommunicationLayer\obj\Debug\CommunicationLayer.pdb
-C:\Users\Mayank Anand\source\repos\RainbowERP\CommunicationLayer\obj\Debug\CommunicationLayer.csprojAssemblyReference.cache

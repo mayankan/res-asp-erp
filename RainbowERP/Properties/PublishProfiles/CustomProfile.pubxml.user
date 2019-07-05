@@ -161,10 +161,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/05/2019 10:35:02</publishTime>
     </File>
     <File Include="bin/RainbowERP.dll">
-      <publishTime>07/05/2019 10:36:44</publishTime>
+      <publishTime>07/05/2019 11:47:06</publishTime>
     </File>
     <File Include="bin/RainbowERP.pdb">
-      <publishTime>07/05/2019 10:36:44</publishTime>
+      <publishTime>07/05/2019 11:47:06</publishTime>
     </File>
     <File Include="bin/System.ValueTuple.dll">
       <publishTime>07/19/2017 10:01:32</publishTime>
@@ -183,6 +183,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="ERP.Master">
       <publishTime>02/22/2019 08:40:22</publishTime>
+    </File>
+    <File Include="Error.aspx">
+      <publishTime>07/05/2019 11:46:15</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.eot">
       <publishTime>02/21/2019 02:23:24</publishTime>
@@ -414,6 +417,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Student/ManageStudent.aspx">
       <publishTime>06/16/2018 11:03:48</publishTime>
+    </File>
+    <File Include="Student/ManageStudent.aspx.cs">
+      <publishTime>07/05/2019 11:28:25</publishTime>
     </File>
     <File Include="Student/ManageTC.aspx">
       <publishTime>07/24/2018 13:58:54</publishTime>

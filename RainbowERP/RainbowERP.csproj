@@ -99,6 +99,7 @@
     <Content Include="css\ie8.css" />
     <Content Include="css\ie9.css" />
     <Content Include="css\main.css" />
+    <Content Include="Error.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="index.aspx" />
@@ -227,6 +228,13 @@
     </Compile>
     <Compile Include="ERP.Master.designer.cs">
       <DependentUpon>ERP.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
