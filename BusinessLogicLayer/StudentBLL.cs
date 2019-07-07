@@ -211,9 +211,8 @@ namespace BusinessLogicLayer
             int StudentId = studentQuery.Id;
             return StudentId;
         }
-        public int createStudentCollection(Collection<StudentCL> studentCL)
+        public int createupdateStudentCollection(Collection<StudentCL> studentCL)
         {
-            Collection<int> admissionNoAlready = new Collection<int>();
             int count = 0;
             foreach (StudentCL item in studentCL)
             {
@@ -243,7 +242,26 @@ namespace BusinessLogicLayer
                 }
                 else
                 {
-                    return item.admissionNo;
+                    query.AadharCard = item.aadharCardNo;
+                    query.Address = item.address;
+                    query.BirthCertificate = item.birthCertificate;
+                    query.ClassId = item.classId;
+                    query.DateCreated = item.dateCreated;
+                    query.DateDeleted = item.dateDeleted;
+                    query.DateModified = item.dateModified;
+                    query.DeletedTransferCertificate = item.deletedTransferCertificate;
+                    query.DOB = item.dob;
+                    query.EmailAddress = item.emailAddress;
+                    query.FatherMobileNumber = item.fatherMobileNumber;
+                    query.FatherName = item.fatherName;
+                    query.Gender = item.gender;
+                    query.IsDeleted = item.isDeleted;
+                    query.Miscellaneous1Link = item.miscellaneous1Link;
+                    query.MotherName = item.motherName;
+                    query.SiblingAdmissionNo = item.siblingAdmissionNo;
+                    query.StudentCategoryId = item.studentCategoryId;
+                    query.StudentName = item.studentName;
+                    count++;
                 }
             }
             dbcontext.SaveChanges();

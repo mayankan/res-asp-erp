@@ -196,7 +196,7 @@ namespace RAINBOW_ERP.Student
                                 }
                                 if (count == 6)
                                 {
-                                    studentCL.dob = Convert.ToDateTime(FileRec+" 00:00");
+                                    studentCL.dob = Convert.ToDateTime(FileRec + " 00:00");
                                 }
                                 if (count == 7)
                                 {
@@ -223,16 +223,9 @@ namespace RAINBOW_ERP.Student
                         }
                     }
                 }
-                int returnStudents = studentBLL.createStudentCollection(studentCol);
-                if (returnStudents > 999)
-                {
-                    lblConfirm.Text = "Admission Number " + returnStudents + " has been already added in the Application. Please remove it and Import Again.";
-                }
-                else
-                {
-                    lblConfirm.Text = "Student Data imported successfully. The page will refresh in 10 seconds";
-                    Response.AppendHeader("Refresh", "10;url=ImportStudent.aspx");
-                }
+                int studentsCount = studentBLL.createupdateStudentCollection(studentCol);
+                lblConfirm.Text = studentsCount+" Students Imported or Updated successfully. The page will refresh in 10 seconds";
+                Response.AppendHeader("Refresh", "10;url=ImportStudent.aspx");
             }
             catch (Exception ex)
             {
