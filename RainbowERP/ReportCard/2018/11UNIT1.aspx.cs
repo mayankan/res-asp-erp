@@ -71,7 +71,7 @@ namespace RAINBOW_ERP.ReportCard._2018
                                 marksSubjectDict.Add(item.subjectId, item.marks);
                             }
                             double grandTotal = 0;
-                            for (int i = 55; i <= 71; i++)
+                            for (int i = 54; i <= 71; i++)
                             {
                                 DeletePractical(subjectCol, i);
                             }
