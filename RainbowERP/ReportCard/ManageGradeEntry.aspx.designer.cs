@@ -40,6 +40,15 @@ namespace RAINBOW_ERP.ReportCard {
         protected global::System.Web.UI.WebControls.DropDownList ddlClass;
         
         /// <summary>
+        /// valClass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator valClass;
+        
+        /// <summary>
         /// ddlSubjectName control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace RAINBOW_ERP.ReportCard {
         protected global::System.Web.UI.WebControls.DropDownList ddlSubjectName;
         
         /// <summary>
+        /// valSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator valSubject;
+        
+        /// <summary>
         /// ddlExamination control.
         /// </summary>
         /// <remarks>
@@ -56,6 +74,15 @@ namespace RAINBOW_ERP.ReportCard {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlExamination;
+        
+        /// <summary>
+        /// valExamination control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator valExamination;
         
         /// <summary>
         /// lblUpdate1 control.

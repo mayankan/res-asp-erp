@@ -27,9 +27,11 @@
             <span style="float: left;">&nbsp;&nbsp;&nbsp; Student Class</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="ddlClass" runat="server" Width="149px" AutoPostBack="true" OnSelectedIndexChanged="ddlClass_SelectedIndexChanged">
             </asp:DropDownList>
+            <asp:RequiredFieldValidator InitialValue="-1" ID="valClass" Display="Dynamic" ValidationGroup="Required" runat="server" ForeColor="Red" ControlToValidate="ddlClass" ErrorMessage="Enter Class"></asp:RequiredFieldValidator>
             <br />
             <span style="float: left;">&nbsp;&nbsp;&nbsp; Subject Name</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="ddlSubjectName" runat="server" Width="149px">
+            <asp:RequiredFieldValidator InitialValue="-1" ID="valSubject" Display="Dynamic" ValidationGroup="Required" runat="server" ForeColor="Red" ControlToValidate="ddlSubject" ErrorMessage="Enter Subject"></asp:RequiredFieldValidator>
             </asp:DropDownList>
             <br />
         </p>
@@ -37,7 +39,9 @@
     <section style="float: right; width: 50%">
         <span>Examination Name&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
             <asp:DropDownList ID="ddlExamination" runat="server" Width="149px">
-            </asp:DropDownList>&nbsp;&nbsp;&nbsp; 
+            <asp:RequiredFieldValidator InitialValue="-1" ID="valExamination" Display="Dynamic" ValidationGroup="Required" runat="server" ForeColor="Red" ControlToValidate="ddlExamination" ErrorMessage="Enter Examination"></asp:RequiredFieldValidator>
+            </asp:DropDownList>
+        &nbsp;&nbsp;&nbsp; 
             <br />
         <asp:Label ID="lblUpdate1" runat="server" ForeColor="Red"></asp:Label>
     </section>

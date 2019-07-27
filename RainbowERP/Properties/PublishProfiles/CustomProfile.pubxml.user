@@ -161,10 +161,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/05/2019 10:35:02</publishTime>
     </File>
     <File Include="bin/RainbowERP.dll">
-      <publishTime>07/25/2019 11:55:18</publishTime>
+      <publishTime>07/25/2019 12:26:33</publishTime>
     </File>
     <File Include="bin/RainbowERP.pdb">
-      <publishTime>07/25/2019 11:55:18</publishTime>
+      <publishTime>07/25/2019 12:26:33</publishTime>
     </File>
     <File Include="bin/System.ValueTuple.dll">
       <publishTime>07/19/2017 10:01:32</publishTime>
@@ -348,6 +348,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="ReportCard/2019/logo.jpg">
       <publishTime>07/08/2019 14:51:21</publishTime>
+    </File>
+    <File Include="ReportCard/BackupFiles/ManageGClassSubjectMap.aspx">
+      <publishTime>07/08/2019 14:51:33</publishTime>
+    </File>
+    <File Include="ReportCard/BackupFiles/ManageGradeEntryPrimary.aspx">
+      <publishTime>07/08/2019 14:51:34</publishTime>
+    </File>
+    <File Include="ReportCard/BackupFiles/ReportCard.aspx">
+      <publishTime>07/08/2019 14:51:23</publishTime>
     </File>
     <File Include="ReportCard/ClassSubjectMap.aspx">
       <publishTime>07/08/2019 14:51:31</publishTime>

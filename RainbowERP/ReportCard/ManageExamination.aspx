@@ -32,6 +32,7 @@
             <br />
             Student Class&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="ddlClass" runat="server" Width="149px"></asp:DropDownList>
+            <asp:RequiredFieldValidator InitialValue="-1" ID="valClass" Display="Dynamic" ValidationGroup="Required" runat="server" ForeColor="Red" ControlToValidate="ddlClass" ErrorMessage="Enter Class"></asp:RequiredFieldValidator>
             <br />
             <br />
             Date Created&nbsp;&nbsp;&nbsp;&nbsp;
