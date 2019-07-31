@@ -113,6 +113,7 @@
     <Content Include="obj\Debug\RainbowERP.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\RainbowERP.dll" />
     <Content Include="obj\Debug\RainbowERP.pdb" />
+    <Content Include="ReportCard\2017\logo.jpg" />
     <Content Include="ReportCard\2018\11TERM1.aspx" />
     <Content Include="ReportCard\2018\11TERM2.aspx" />
     <Content Include="ReportCard\2018\11UNIT1.aspx" />
@@ -159,7 +160,6 @@
     <Content Include="ReportCard\2017\6TERM2.aspx" />
     <Content Include="ReportCard\2017\9TERM1.aspx" />
     <Content Include="ReportCard\2017\9TERM2.aspx" />
-    <Content Include="ReportCard\2017\logo.jpg" />
     <Content Include="ReportCard\PrintStudentFromClass.aspx" />
     <Content Include="ReportCard\Subject.aspx" />
     <Content Include="Student\Class.aspx" />
