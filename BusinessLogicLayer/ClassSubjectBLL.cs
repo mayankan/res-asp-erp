@@ -27,7 +27,7 @@ namespace BusinessLogicLayer
                     sessionId = item.SessionId,
                     subjectId = item.SubjectId,
                     classSection = item.Class.Class1 + "-" + item.Class.Section,
-                    noOfSubjects = item.Class.ClassSubjectMaps.Count(),
+                    noOfSubjects = item.Class.ClassSubjectMaps.Where(x=>x.IsDeleted==false).Count(),
                     subject = item.Subject.Name,
                     dateCreated = item.DateCreated,
                     dateModified = item.DateModified,
@@ -63,7 +63,7 @@ namespace BusinessLogicLayer
             bool flag = false;
             foreach (ClassSubjectMapGridCL item in subjectData)
             {
-                int count =(from x in dbcontext.ClassSubjectMaps where x.ClassId == item.classId && x.SubjectId == item.subjectId select x).Count();
+                int count =(from x in dbcontext.ClassSubjectMaps where x.ClassId == item.classId && x.SubjectId == item.subjectId && x.IsDeleted==false select x).Count();
                 if (count>0)
                 {
                     flag = true;

@@ -21,6 +21,7 @@ namespace BusinessLogicLayer
         {
             Collection<ClassCL> queryClass = new Collection<ClassCL>();
             IQueryable<Class> queryClassDB = (from x in dbcontext.Classes where x.SessionId == sessionId && x.IsDeleted == false select x).OrderBy(x => x.Class1 + x.Section);
+            int totalStrength = queryClassDB.Count();
             foreach (Class item in queryClassDB)
             {
                 queryClass.Add(
