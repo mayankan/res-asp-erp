@@ -23,7 +23,7 @@ namespace BusinessLogicLayer
                     {
                         name = item.Name,
                         id = item.Id,
-                        totalClasses = item.ClassSubjectMaps.Count(),
+                        totalClasses = item.ClassSubjectMaps.Where(x=>x.IsDeleted==false).Count(),
                         dateCreated = item.DateCreated,
                         dateModified = item.DateModified,
                         isDeleted = item.IsDeleted,
@@ -38,7 +38,7 @@ namespace BusinessLogicLayer
             {
                 name = querySubjectDB.Name,
                 id = querySubjectDB.Id,
-                totalClasses = querySubjectDB.ClassSubjectMaps.Count(),
+                totalClasses = querySubjectDB.ClassSubjectMaps.Where(x => x.IsDeleted == false).Count(),
                 dateCreated = querySubjectDB.DateCreated,
                 dateModified = querySubjectDB.DateModified,
                 isDeleted = querySubjectDB.IsDeleted,
@@ -55,7 +55,7 @@ namespace BusinessLogicLayer
                 {
                     name = item.Name,
                     id = item.Id,
-                    totalClasses = item.ClassSubjectMaps.Count(),
+                    totalClasses = item.ClassSubjectMaps.Where(x => x.IsDeleted == false).Count(),
                     dateCreated = item.DateCreated,
                     dateModified = item.DateModified,
                     isDeleted = item.IsDeleted,
@@ -73,7 +73,7 @@ namespace BusinessLogicLayer
                 {
                     name = item.Name,
                     id = item.Id,
-                    totalClasses = item.ClassSubjectMaps.Count(),
+                    totalClasses = item.ClassSubjectMaps.Where(x => x.IsDeleted == false).Count(),
                     dateCreated = item.DateCreated,
                     dateModified = item.DateModified,
                     isDeleted = item.IsDeleted,
@@ -91,7 +91,7 @@ namespace BusinessLogicLayer
                 {
                     name = item.Name,
                     id = item.Id,
-                    totalClasses = item.ClassSubjectMaps.Count(),
+                    totalClasses = item.ClassSubjectMaps.Where(x => x.IsDeleted == false).Count(),
                     dateCreated = item.DateCreated,
                     dateModified = item.DateModified,
                     isDeleted = item.IsDeleted,
@@ -127,7 +127,7 @@ namespace BusinessLogicLayer
             subjectReturn.isDeleted = subjectQuery.IsDeleted;
             subjectReturn.id = subjectQuery.Id;
             subjectReturn.name = subjectQuery.Name;
-            subjectReturn.totalClasses = subjectQuery.ClassSubjectMaps.Count();
+            subjectReturn.totalClasses = subjectQuery.ClassSubjectMaps.Where(x => x.IsDeleted == false).Count();
             return subjectReturn;
         }
         public void deleteSubject(int subjectId)
