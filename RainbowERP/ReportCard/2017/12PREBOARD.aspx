@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="12PREBOARD1.aspx.cs" Inherits="RAINBOW_ERP.ReportCard.Out._12PREBOARD1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="12PREBOARD.aspx.cs" Inherits="RAINBOW_ERP.ReportCard.Out._12PREBOARD1" %>
 
 <!DOCTYPE html>
 

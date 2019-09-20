@@ -17,6 +17,7 @@ namespace RAINBOW_ERP.ReportCard
         SubjectBLL subjectBLL = new SubjectBLL();
         ReportCardEntryBLL reportBLL = new ReportCardEntryBLL();
         StudentBLL studentBLL = new StudentBLL();
+        SessionBLL sessionBLL = new SessionBLL();
         public int sessionId;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,54 +35,73 @@ namespace RAINBOW_ERP.ReportCard
                     }
                     else
                     {
-                        sessionId = Convert.ToInt32(Session["sessionId"]);
-                        int studentId = Convert.ToInt32(Request.QueryString["studentId"]);
-                        imgLogo.ImageUrl = "logo.jpg";
-                        StudentCL studentCL = new StudentCL();
-                        //StudentCL studentCL = studentBLL.viewStudentById(studentId);
-                        lblStudentName.Text = studentCL.studentName;
-                        lblFatherName.Text = studentCL.fatherName;
-                        lblMotherName.Text = studentCL.motherName;
-                        lblAdmissionNo.Text = studentCL.admissionNo.ToString();
-                        lblClassSec.Text = studentCL.classSection;
-                        lblExamination.Text = "Unit 1";
-                        int examinationId = Convert.ToInt32(Request.QueryString["examId"]);
-                        Collection<SubjectCL> subjectCol = subjectBLL.viewSubjectByClassId(studentCL.classId);
-                        Collection<MarksEntryCL> marksCol = reportBLL.viewMarksByStudentId(studentId, examinationId);
-                        var subjectColl = subjectCol.OrderBy(x => x.name);
-                        DataTable dt = new DataTable();
-                        DataRow dr = null;
-                        dt.Columns.Add(new DataColumn("Subjects", typeof(string)));
-                        dt.Columns.Add(new DataColumn("Max. Marks", typeof(int)));
-                        dt.Columns.Add(new DataColumn("Min. Marks", typeof(int)));
-                        dt.Columns.Add(new DataColumn("Obtained Marks", typeof(string)));
-                        IDictionary<int, string> marksSubjectDict = new Dictionary<int, string>();
-                        foreach (MarksEntryCL item in marksCol)
+                        if (Session["sessionId"] == null)
                         {
-                            marksSubjectDict.Add(item.subjectId, item.marks);
+                            SessionCL sessionCL = sessionBLL.addorCheckSession();
+                            Session["sessionId"] = sessionCL.id;
                         }
-                        double grandTotal = 0;
-                        foreach (SubjectCL item in subjectCol)
+                        else
                         {
-                            dr = dt.NewRow();
-                            dr["Subjects"] = item.name;
-                            dr["Max. Marks"] = 20;
-                            dr["Min. Marks"] = 8;
-                            if (marksSubjectDict.ContainsKey(item.id))
+                            sessionId = Convert.ToInt32(Session["sessionId"]);
+                            int studentId = 0;
+                            StudentCL studentCL = new StudentCL();
+                            studentId = Convert.ToInt32(Request.QueryString["studentId"]);
+                            if (studentId != 0)
                             {
-                                dr["Obtained Marks"] = marksSubjectDict[item.id];
-                                grandTotal = grandTotal + Convert.ToDouble(marksSubjectDict[item.id]);
+                                studentId = Convert.ToInt32(Request.QueryString["studentId"]);
+                                studentCL = studentBLL.viewStudentById(studentId, sessionId);
                             }
                             else
                             {
-                                dr["Obtained Marks"] = string.Empty;
+                                studentId = Convert.ToInt32(Request.QueryString["admNo"]);
+                                studentCL = studentBLL.viewStudentByAdmissionNo(studentId, sessionId);
+                                studentId = studentCL.id;
                             }
-                            dt.Rows.Add(dr);
+                            imgLogo.ImageUrl = "logo.jpg";
+                            lblStudentName.Text = studentCL.studentName;
+                            lblFatherName.Text = studentCL.fatherName;
+                            lblMotherName.Text = studentCL.motherName;
+                            lblAdmissionNo.Text = studentCL.admissionNo.ToString();
+                            lblClassSec.Text = studentCL.classSection;
+                            lblExamination.Text = "Unit 1";
+                            int examinationId = Convert.ToInt32(Request.QueryString["examId"]);
+                            Collection<SubjectCL> subjectCol = subjectBLL.viewSubjectByClassId(studentCL.classId);
+                            Collection<MarksEntryCL> marksCol = reportBLL.viewMarksByStudentId(studentId, examinationId);
+                            var subjectColl = subjectCol.OrderBy(x => x.name);
+                            DataTable dt = new DataTable();
+                            DataRow dr = null;
+                            dt.Columns.Add(new DataColumn("Subjects", typeof(string)));
+                            dt.Columns.Add(new DataColumn("Max. Marks", typeof(int)));
+                            dt.Columns.Add(new DataColumn("Min. Marks", typeof(int)));
+                            dt.Columns.Add(new DataColumn("Obtained Marks", typeof(string)));
+                            IDictionary<int, string> marksSubjectDict = new Dictionary<int, string>();
+                            foreach (MarksEntryCL item in marksCol)
+                            {
+                                marksSubjectDict.Add(item.subjectId, item.marks);
+                            }
+                            double grandTotal = 0;
+                            foreach (SubjectCL item in subjectCol)
+                            {
+                                dr = dt.NewRow();
+                                dr["Subjects"] = item.name;
+                                dr["Max. Marks"] = 20;
+                                dr["Min. Marks"] = 8;
+                                if (marksSubjectDict.ContainsKey(item.id))
+                                {
+                                    dr["Obtained Marks"] = marksSubjectDict[item.id];
+                                    grandTotal = grandTotal + Convert.ToDouble(marksSubjectDict[item.id]);
+                                }
+                                else
+                                {
+                                    dr["Obtained Marks"] = string.Empty;
+                                }
+                                dt.Rows.Add(dr);
+                            }
+                            grdMarksReport.DataSource = dt;
+                            grdMarksReport.DataBind();
+                            lblGrandTotal.Text = grandTotal.ToString();
+                            lblPercentage.Text = grandTotal + "%"; 
                         }
-                        grdMarksReport.DataSource = dt;
-                        grdMarksReport.DataBind();
-                        lblGrandTotal.Text = grandTotal.ToString();
-                        lblPercentage.Text = grandTotal + "%";
                     }
                 }
             }

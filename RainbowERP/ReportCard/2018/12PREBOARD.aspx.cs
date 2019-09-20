@@ -37,7 +37,8 @@ namespace RAINBOW_ERP.ReportCard._2019
                         sessionId = Convert.ToInt32(Session["sessionId"]);
                         int studentId = 0;
                         StudentCL studentCL = new StudentCL();
-                        if (Request.QueryString["studentId"] != string.Empty)
+                        studentId = Convert.ToInt32(Request.QueryString["studentId"]);
+                        if (studentId != 0)
                         {
                             studentId = Convert.ToInt32(Request.QueryString["studentId"]);
                             studentCL = studentBLL.viewStudentById(studentId, sessionId);
@@ -46,6 +47,7 @@ namespace RAINBOW_ERP.ReportCard._2019
                         {
                             studentId = Convert.ToInt32(Request.QueryString["admNo"]);
                             studentCL = studentBLL.viewStudentByAdmissionNo(studentId, sessionId);
+                            studentId = studentCL.id;
                         }
                         imgLogo.ImageUrl = "logo.jpg";
                         lblStudentName.Text = studentCL.studentName;

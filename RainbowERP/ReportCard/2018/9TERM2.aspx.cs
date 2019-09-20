@@ -49,8 +49,6 @@ namespace RAINBOW_ERP.ReportCard._2019
                             studentId = studentCL.id;
                         }
                         imgLogo.ImageUrl = "logo.jpg";
-                        //StudentCL studentCL = new StudentCL();
-                        //StudentCL studentCL = studentBLL.viewStudentById(studentId, sessionId);
                         lblStudentName.Text = studentCL.studentName;
                         lblFatherName.Text = studentCL.fatherName;
                         lblMotherName.Text = studentCL.motherName;

@@ -34,10 +34,21 @@ namespace RAINBOW_ERP.ReportCard.Out
                     else
                     {
                         sessionId = Convert.ToInt32(Session["sessionId"]);
-                        int studentId = Convert.ToInt32(Request.QueryString["studentId"]);
+                        int studentId = 0;
+                        StudentCL studentCL = new StudentCL();
+                        studentId = Convert.ToInt32(Request.QueryString["studentId"]);
+                        if (studentId != 0)
+                        {
+                            studentId = Convert.ToInt32(Request.QueryString["studentId"]);
+                            studentCL = studentBLL.viewStudentById(studentId, sessionId);
+                        }
+                        else
+                        {
+                            studentId = Convert.ToInt32(Request.QueryString["admNo"]);
+                            studentCL = studentBLL.viewStudentByAdmissionNo(studentId, sessionId);
+                            studentId = studentCL.id;
+                        }
                         imgLogo.ImageUrl = "logo.jpg";
-                        //StudentCL studentCL = new StudentCL();
-                        StudentCL studentCL = studentBLL.viewStudentById(studentId,sessionId);
                         lblStudentName.Text = studentCL.studentName;
                         lblFatherName.Text = studentCL.fatherName;
                         lblMotherName.Text = studentCL.motherName;
