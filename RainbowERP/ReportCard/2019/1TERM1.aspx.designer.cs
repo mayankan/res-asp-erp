@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RAINBOW_ERP.ReportCard._2018 {
+namespace RainbowERP.ReportCard._2019 {
     
     
     public partial class _1TERM1 {
@@ -65,15 +65,6 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAdmissionNo;
-        
-        /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// lblFatherName control.

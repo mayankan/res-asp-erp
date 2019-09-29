@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="1TERM1.aspx.cs" Inherits="RAINBOW_ERP.ReportCard._2018._1TERM1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="6TERM1.aspx.cs" Inherits="RainbowERP.ReportCard._2019._6TERM1" %>
 
 <!DOCTYPE html>
 
@@ -8,11 +8,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="border: 1px solid black;">
+       <div style="border: 1px solid black;">
             <br />
             <asp:Image ID="imgLogo" runat="server" Width="100%" ImageUrl="logo.jpg" Style="padding-left: 50px;" />
             <p style="text-align: center"><b>ACHIEVEMENT RECORD (FIRST TERMINAL EXAMINATION)</b></p>
-            <p style="text-align: center">SESSION 2019-20</p>
+            <p style="text-align: center">SESSION 2018-19</p>
             <br />
             <table style="width: 100%; height: 150px;">
                 <tr>
@@ -21,9 +21,6 @@
                         <br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<asp:Label ID="Label4" runat="server" Text="Admission No. :"></asp:Label>
                         <asp:Label ID="lblAdmissionNo" runat="server"></asp:Label><br />
-                        <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<asp:Label ID="Label2" runat="server" Text="Father's Name : "></asp:Label>
-                        <asp:Label ID="lblFatherName" runat="server"></asp:Label><br />
                         <br />
                     </td>
                     <td>&nbsp;</td>
@@ -40,9 +37,6 @@
                         Attendance :
                         <asp:Label ID="lblAttendance" runat="server"></asp:Label><br />
                         <br />
-                        Mother's Name : 
-                        <asp:Label ID="lblMotherName" runat="server"></asp:Label>
-                        <br />
                     </td>
                 </tr>
             </table>
@@ -54,18 +48,14 @@
                     </tr>
                     <tr style="border: 1px solid black;">
                         <td><strong>Subject Name</strong></td>
-                        <td><strong>PT </strong>
-
-                            <strong>(30)</strong></td>
+                        <td><strong>PT (10)</strong></td>
                         <td><strong>NS </strong>
 
                             <strong>(5)</strong></td>
                         <td><strong>SEA </strong>
 
                             <strong>(5)</strong></td>
-                        <td><strong>Term-1 </strong>
-
-                            <strong>(60)</strong></td>
+                        <td><strong>Term-1 (80)</strong></td>
                         <td><strong>Marks Obtained (100)</strong></td>
                         <td><strong>Grade</strong></td>
                     </tr>
@@ -100,6 +90,15 @@
                             <asp:Label ID="lblHindiGrade" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
+                        <td><strong>SANSKRIT</strong></td>
+                        <td width="86" style="text-align: center"><asp:Label ID="lblSanskritPT" runat="server"></asp:Label></td>
+                        <td width="102" style="text-align: center"><asp:Label ID="lblSanskritNS" runat="server"></asp:Label></td>
+                        <td width="114" style="text-align: center"><asp:Label ID="lblSanskritSEA" runat="server"></asp:Label></td>
+                        <td width="108" style="text-align: center"><asp:Label ID="lblSanskritTerm1" runat="server"></asp:Label></td>
+                        <td width="132" style="text-align: center"><asp:Label ID="lblSanskritTotal" runat="server"></asp:Label></td>
+                        <td width="103" style="text-align: center"><asp:Label ID="lblSanskritGrade" runat="server"></asp:Label></td>
+                    </tr>
+                    <tr>
                         <td><strong>MATHEMATICS</strong></td>
                         <td width="86" style="text-align: center">
                             <asp:Label ID="lblMathematicsPT" runat="server"></asp:Label></td>
@@ -115,34 +114,37 @@
                             <asp:Label ID="lblMathematicsGrade" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
-                        <td><strong>EVS</strong></td>
-                        <td width="86" style="text-align: center">
-                            <asp:Label ID="lblEVSPT" runat="server"></asp:Label></td>
-                        <td width="102" style="text-align: center">
-                            <asp:Label ID="lblEVSNS" runat="server"></asp:Label></td>
-                        <td width="114" style="text-align: center">
-                            <asp:Label ID="lblEVSSEA" runat="server"></asp:Label></td>
-                        <td width="108" style="text-align: center">
-                            <asp:Label ID="lblEVSTerm1" runat="server"></asp:Label></td>
-                        <td width="132" style="text-align: center">
-                            <asp:Label ID="lblEVSTotal" runat="server"></asp:Label></td>
-                        <td width="103" style="text-align: center">
-                            <asp:Label ID="lblEVSGrade" runat="server"></asp:Label></td>
+                        <td><strong>SCIENCE</strong></td>
+                        <td width="86" style="text-align: center"><asp:Label ID="lblSciencePT" runat="server"></asp:Label></td>
+                        <td width="102" style="text-align: center"><asp:Label ID="lblScienceNS" runat="server"></asp:Label></td>
+                        <td width="114" style="text-align: center"><asp:Label ID="lblScienceSEA" runat="server"></asp:Label></td>
+                        <td width="108" style="text-align: center"><asp:Label ID="lblScienceTerm1" runat="server"></asp:Label></td>
+                        <td width="132" style="text-align: center"><asp:Label ID="lblScienceTotal" runat="server"></asp:Label></td>
+                        <td width="103" style="text-align: center"><asp:Label ID="lblScienceGrade" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
-                        <td><strong>G.K./MSC</strong></td>
+                        <td><strong>SOCIAL SCIENCE</strong></td>
+                        <td width="86" style="text-align: center"><asp:Label ID="lblSocialSciencePT" runat="server"></asp:Label></td>
+                        <td width="102" style="text-align: center"><asp:Label ID="lblSocialScienceNS" runat="server"></asp:Label></td>
+                        <td width="114" style="text-align: center"><asp:Label ID="lblSocialScienceSEA" runat="server"></asp:Label></td>
+                        <td width="108" style="text-align: center"><asp:Label ID="lblSocialScienceTerm1" runat="server"></asp:Label></td>
+                        <td width="132" style="text-align: center"><asp:Label ID="lblSocialScienceTotal" runat="server"></asp:Label></td>
+                        <td width="103" style="text-align: center"><asp:Label ID="lblSocialScienceGrade" runat="server"></asp:Label></td>
+                    </tr>
+                    <tr>
+                        <td><strong>COMPUTER SCIENCE</strong></td>
                         <td width="86" style="text-align: center">
-                            <asp:Label ID="lblGKPT" runat="server"></asp:Label></td>
+                            <asp:Label ID="lblCSPT" runat="server"></asp:Label></td>
                         <td width="102" style="text-align: center">
-                            <asp:Label ID="lblGKNS" runat="server"></asp:Label></td>
+                            <asp:Label ID="lblCSNS" runat="server"></asp:Label></td>
                         <td width="114" style="text-align: center">
-                            <asp:Label ID="lblGKSEA" runat="server"></asp:Label></td>
+                            <asp:Label ID="lblCSSEA" runat="server"></asp:Label></td>
                         <td width="108" style="text-align: center">
-                            <asp:Label ID="lblGKTerm1" runat="server"></asp:Label></td>
+                            <asp:Label ID="lblCSTerm1" runat="server"></asp:Label></td>
                         <td width="132" style="text-align: center">
-                            <asp:Label ID="lblGKTotal" runat="server"></asp:Label></td>
+                            <asp:Label ID="lblCSTotal" runat="server"></asp:Label></td>
                         <td width="103" style="text-align: center">
-                            <asp:Label ID="lblGKGrade" runat="server"></asp:Label></td>
+                            <asp:Label ID="lblCSGrade" runat="server"></asp:Label></td>
                     </tr>
                 </tbody>
             </table>

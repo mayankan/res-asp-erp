@@ -12,7 +12,7 @@
             <br />
             <asp:Image ID="imgLogo" runat="server" Width="100%" ImageUrl="logo.jpg" Style="padding-left: 50px;" />
             <p style="text-align: center"><b>ACHIEVEMENT RECORD (FIRST TERMINAL EXAMINATION)</b></p>
-            <p style="text-align: center">SESSION 2018-19</p>
+            <p style="text-align: center">SESSION 2019-20</p>
             <br />
             <table style="width: 100%; height: 150px;">
                 <tr>
@@ -22,7 +22,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<asp:Label ID="Label4" runat="server" Text="Admission No. :"></asp:Label>
                         <asp:Label ID="lblAdmissionNo" runat="server"></asp:Label><br />
                         <br />
-                        Father's Name : 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<asp:Label ID="Label2" runat="server" Text="Father's Name : "></asp:Label>
                         <asp:Label ID="lblFatherName" runat="server"></asp:Label><br />
                         <br />
                     </td>

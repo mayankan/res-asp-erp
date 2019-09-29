@@ -130,6 +130,9 @@
     <Content Include="ReportCard\2018\6TERM2.aspx" />
     <Content Include="ReportCard\2018\9TERM2.aspx" />
     <Content Include="ReportCard\2019\11UNIT1.aspx" />
+    <Content Include="ReportCard\2019\1TERM1.aspx" />
+    <Content Include="ReportCard\2019\3TERM1.aspx" />
+    <Content Include="ReportCard\2019\6TERM1.aspx" />
     <Content Include="ReportCard\2019\logo.jpg" />
     <Content Include="ReportCard\BackupFiles\ManageGClassSubjectMap.aspx" />
     <Content Include="ReportCard\BackupFiles\ManageGradeEntryPrimary.aspx" />
@@ -177,54 +180,63 @@
   <ItemGroup>
     <Compile Include="Attendance\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Attendance\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Attendance\ManageAttendance.aspx.cs">
       <DependentUpon>ManageAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Attendance\ManageAttendance.aspx.designer.cs">
       <DependentUpon>ManageAttendance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Attendance\ManageSLT.aspx.cs">
       <DependentUpon>ManageSLT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Attendance\ManageSLT.aspx.designer.cs">
       <DependentUpon>ManageSLT.aspx</DependentUpon>
     </Compile>
     <Compile Include="Attendance\ManageSMSTemplate.aspx.cs">
       <DependentUpon>ManageSMSTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Attendance\ManageSMSTemplate.aspx.designer.cs">
       <DependentUpon>ManageSMSTemplate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Attendance\SMSEntry.aspx.cs">
       <DependentUpon>SMSEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Attendance\SMSEntry.aspx.designer.cs">
       <DependentUpon>SMSEntry.aspx</DependentUpon>
     </Compile>
     <Compile Include="Attendance\SMSReport.aspx.cs">
       <DependentUpon>SMSReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Attendance\SMSReport.aspx.designer.cs">
       <DependentUpon>SMSReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Attendance\SMSTemplate.aspx.cs">
       <DependentUpon>SMSTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Attendance\SMSTemplate.aspx.designer.cs">
       <DependentUpon>SMSTemplate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Attendance\StudentLeaveType.aspx.cs">
       <DependentUpon>StudentLeaveType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Attendance\StudentLeaveType.aspx.designer.cs">
       <DependentUpon>StudentLeaveType.aspx</DependentUpon>
     </Compile>
     <Compile Include="ERP.Master.cs">
       <DependentUpon>ERP.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ERP.Master.designer.cs">
       <DependentUpon>ERP.Master</DependentUpon>
@@ -241,12 +253,14 @@
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\UserLogin.aspx.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login\UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
@@ -257,48 +271,56 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportCard\2018\11TERM1.aspx.cs">
       <DependentUpon>11TERM1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\2018\11TERM1.aspx.designer.cs">
       <DependentUpon>11TERM1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\2018\11TERM2.aspx.cs">
       <DependentUpon>11TERM2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\2018\11TERM2.aspx.designer.cs">
       <DependentUpon>11TERM2.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\2018\11UNIT1.aspx.cs">
       <DependentUpon>11UNIT1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\2018\11UNIT1.aspx.designer.cs">
       <DependentUpon>11UNIT1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\2018\11UNIT2.aspx.cs">
       <DependentUpon>11UNIT2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\2018\11UNIT2.aspx.designer.cs">
       <DependentUpon>11UNIT2.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\2018\1TERM1.aspx.cs">
       <DependentUpon>1TERM1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\2018\1TERM1.aspx.designer.cs">
       <DependentUpon>1TERM1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\2018\3TERM1.aspx.cs">
       <DependentUpon>3TERM1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\2018\3TERM1.aspx.designer.cs">
       <DependentUpon>3TERM1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\2018\6TERM1.aspx.cs">
       <DependentUpon>6TERM1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\2018\6TERM1.aspx.designer.cs">
       <DependentUpon>6TERM1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\2018\9TERM1.aspx.cs">
       <DependentUpon>9TERM1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\2018\9TERM1.aspx.designer.cs">
       <DependentUpon>9TERM1.aspx</DependentUpon>
@@ -352,6 +374,27 @@
     <Compile Include="ReportCard\2019\11UNIT1.aspx.designer.cs">
       <DependentUpon>11UNIT1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReportCard\2019\1TERM1.aspx.cs">
+      <DependentUpon>1TERM1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCard\2019\1TERM1.aspx.designer.cs">
+      <DependentUpon>1TERM1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCard\2019\3TERM1.aspx.cs">
+      <DependentUpon>3TERM1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCard\2019\3TERM1.aspx.designer.cs">
+      <DependentUpon>3TERM1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCard\2019\6TERM1.aspx.cs">
+      <DependentUpon>6TERM1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCard\2019\6TERM1.aspx.designer.cs">
+      <DependentUpon>6TERM1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReportCard\BackupFiles\ManageGClassSubjectMap.aspx.cs">
       <DependentUpon>ManageGClassSubjectMap.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -375,78 +418,91 @@
     </Compile>
     <Compile Include="ReportCard\ClassSubjectMap.aspx.cs">
       <DependentUpon>ClassSubjectMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\ClassSubjectMap.aspx.designer.cs">
       <DependentUpon>ClassSubjectMap.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\Examination.aspx.cs">
       <DependentUpon>Examination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\Examination.aspx.designer.cs">
       <DependentUpon>Examination.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\GradeEntry.aspx.cs">
       <DependentUpon>GradeEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\GradeEntry.aspx.designer.cs">
       <DependentUpon>GradeEntry.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\GradeEntryPrimary.aspx.cs">
       <DependentUpon>GradeEntryPrimary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\GradeEntryPrimary.aspx.designer.cs">
       <DependentUpon>GradeEntryPrimary.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\ManageClassSubjectMap.aspx.cs">
       <DependentUpon>ManageClassSubjectMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\ManageClassSubjectMap.aspx.designer.cs">
       <DependentUpon>ManageClassSubjectMap.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\ManageExamination.aspx.cs">
       <DependentUpon>ManageExamination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\ManageExamination.aspx.designer.cs">
       <DependentUpon>ManageExamination.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\ManageGradeEntry.aspx.cs">
       <DependentUpon>ManageGradeEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\ManageGradeEntry.aspx.designer.cs">
       <DependentUpon>ManageGradeEntry.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\ManageMiscellaneousEntry.aspx.cs">
       <DependentUpon>ManageMiscellaneousEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\ManageMiscellaneousEntry.aspx.designer.cs">
       <DependentUpon>ManageMiscellaneousEntry.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\ManageReportCard.aspx.cs">
       <DependentUpon>ManageReportCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\ManageReportCard.aspx.designer.cs">
       <DependentUpon>ManageReportCard.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\ManageSubject.aspx.cs">
       <DependentUpon>ManageSubject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\ManageSubject.aspx.designer.cs">
       <DependentUpon>ManageSubject.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\MarksEntry.aspx.cs">
       <DependentUpon>MarksEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\MarksEntry.aspx.designer.cs">
       <DependentUpon>MarksEntry.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\MiscellaneousEntry.aspx.cs">
       <DependentUpon>MiscellaneousEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\MiscellaneousEntry.aspx.designer.cs">
       <DependentUpon>MiscellaneousEntry.aspx</DependentUpon>
@@ -530,78 +586,91 @@
     </Compile>
     <Compile Include="ReportCard\PrintStudentFromClass.aspx.cs">
       <DependentUpon>PrintStudentFromClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\PrintStudentFromClass.aspx.designer.cs">
       <DependentUpon>PrintStudentFromClass.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\Subject.aspx.cs">
       <DependentUpon>Subject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\Subject.aspx.designer.cs">
       <DependentUpon>Subject.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\Class.aspx.cs">
       <DependentUpon>Class.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\Class.aspx.designer.cs">
       <DependentUpon>Class.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\ImportStudent.aspx.cs">
       <DependentUpon>ImportStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\ImportStudent.aspx.designer.cs">
       <DependentUpon>ImportStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\ManageClass.aspx.cs">
       <DependentUpon>ManageClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\ManageClass.aspx.designer.cs">
       <DependentUpon>ManageClass.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\ManageSC.aspx.cs">
       <DependentUpon>ManageSC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\ManageSC.aspx.designer.cs">
       <DependentUpon>ManageSC.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\ManageStudent.aspx.cs">
       <DependentUpon>ManageStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\ManageStudent.aspx.designer.cs">
       <DependentUpon>ManageStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\ManageTC.aspx.cs">
       <DependentUpon>ManageTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\ManageTC.aspx.designer.cs">
       <DependentUpon>ManageTC.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\Session.aspx.cs">
       <DependentUpon>Session.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\Session.aspx.designer.cs">
       <DependentUpon>Session.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\StudentCategory.aspx.cs">
       <DependentUpon>StudentCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\StudentCategory.aspx.designer.cs">
       <DependentUpon>StudentCategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\TC.aspx.cs">
       <DependentUpon>TC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\TC.aspx.designer.cs">
       <DependentUpon>TC.aspx</DependentUpon>
     </Compile>
     <Compile Include="UnAuthorized.aspx.cs">
       <DependentUpon>UnAuthorized.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UnAuthorized.aspx.designer.cs">
       <DependentUpon>UnAuthorized.aspx</DependentUpon>

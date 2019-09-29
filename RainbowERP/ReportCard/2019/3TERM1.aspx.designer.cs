@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RAINBOW_ERP.ReportCard._2018 {
+namespace RainbowERP.ReportCard._2019 {
     
     
-    public partial class _1TERM1 {
+    public partial class _3TERM1 {
         
         /// <summary>
         /// form1 control.
@@ -65,15 +65,6 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAdmissionNo;
-        
-        /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// lblFatherName control.
@@ -283,58 +274,112 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         protected global::System.Web.UI.WebControls.Label lblMathematicsGrade;
         
         /// <summary>
-        /// lblEVSPT control.
+        /// lblSciencePT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEVSPT;
+        protected global::System.Web.UI.WebControls.Label lblSciencePT;
         
         /// <summary>
-        /// lblEVSNS control.
+        /// lblScienceNS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEVSNS;
+        protected global::System.Web.UI.WebControls.Label lblScienceNS;
         
         /// <summary>
-        /// lblEVSSEA control.
+        /// lblScienceSEA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEVSSEA;
+        protected global::System.Web.UI.WebControls.Label lblScienceSEA;
         
         /// <summary>
-        /// lblEVSTerm1 control.
+        /// lblScienceTerm1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEVSTerm1;
+        protected global::System.Web.UI.WebControls.Label lblScienceTerm1;
         
         /// <summary>
-        /// lblEVSTotal control.
+        /// lblScienceTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEVSTotal;
+        protected global::System.Web.UI.WebControls.Label lblScienceTotal;
         
         /// <summary>
-        /// lblEVSGrade control.
+        /// lblScienceGrade control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEVSGrade;
+        protected global::System.Web.UI.WebControls.Label lblScienceGrade;
+        
+        /// <summary>
+        /// lblSocialSciencePT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSocialSciencePT;
+        
+        /// <summary>
+        /// lblSocialScienceNS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSocialScienceNS;
+        
+        /// <summary>
+        /// lblSocialScienceSEA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSocialScienceSEA;
+        
+        /// <summary>
+        /// lblSocialScienceTerm1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSocialScienceTerm1;
+        
+        /// <summary>
+        /// lblSocialScienceTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSocialScienceTotal;
+        
+        /// <summary>
+        /// lblSocialScienceGrade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSocialScienceGrade;
         
         /// <summary>
         /// lblGKPT control.
