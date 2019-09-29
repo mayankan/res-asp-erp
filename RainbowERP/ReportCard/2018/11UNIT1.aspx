@@ -16,7 +16,7 @@
     <form id="form1" runat="server">
     <div>
             <br />
-            <asp:Image ID="imgLogo" runat="server" Width="100%" />
+            <asp:Image ID="imgLogo" runat="server" Width="100%" ImageUrl="logo.jpg" />
             <p style="text-align: center">SESSION 2018-19</p>
             <br />
             <table style="width: 100%; height: 200px; border: 1px solid black;">

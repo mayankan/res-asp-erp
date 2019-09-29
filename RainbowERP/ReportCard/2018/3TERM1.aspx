@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
         <div style="border: 1px solid black;">
             <br />
-            <asp:Image ID="imgLogo" runat="server" Width="90%" Style="padding-left: 50px;" />
+            <asp:Image ID="imgLogo" runat="server" ImageUrl="logo.jpg" Width="90%" Style="padding-left: 50px;" />
             <p style="text-align: center"><b>ACHIEVEMENT RECORD (FIRST TERMINAL EXAMINATION)</b></p>
             <p style="text-align: center">SESSION 2018-19</p>
             <br />

@@ -15,7 +15,7 @@
     <form id="form1" runat="server">
         <div>
             <br />
-            <asp:Image ID="imgLogo" runat="server" Width="100%" />
+            <asp:Image ID="imgLogo" runat="server" Width="100%" ImageUrl="logo.jpg" />
             <p style="text-align: center"><b>REPORT CARD</b></p>
             <p style="text-align: center">SESSION 2017-18</p>
             <br />
