@@ -88,9 +88,6 @@ namespace RAINBOW_ERP.ReportCard
                         id = item.id,
                         examinationId = item.examinationId,
                         examinationName = item.examinationName,
-                        subjectId = item.subjectId,
-                        subjectName = item.subjectName,
-                        classSubjectId = item.classSubjectId,
                         attendance = item.attendance,
                         remarks = item.remarks,
 
@@ -134,9 +131,6 @@ namespace RAINBOW_ERP.ReportCard
                             id = item.id,
                             examinationId = item.examinationId,
                             examinationName = item.examinationName,
-                            subjectId = item.subjectId,
-                            subjectName = item.subjectName,
-                            classSubjectId = item.classSubjectId,
                             attendance = item.attendance,
                             remarks = item.remarks,
 
@@ -180,7 +174,6 @@ namespace RAINBOW_ERP.ReportCard
             try
             {
                 grdMisc.PageIndex = e.NewPageIndex;
-
                 grdMisc.DataSource = (Collection<MiscEntryGridCL>)ViewState["misc"];
                 grdMisc.DataBind();
             }

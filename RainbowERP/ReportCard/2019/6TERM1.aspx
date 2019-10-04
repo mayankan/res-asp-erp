@@ -12,7 +12,7 @@
             <br />
             <asp:Image ID="imgLogo" runat="server" Width="100%" ImageUrl="logo.jpg" Style="padding-left: 50px;" />
             <p style="text-align: center"><b>ACHIEVEMENT RECORD (FIRST TERMINAL EXAMINATION)</b></p>
-            <p style="text-align: center">SESSION 2018-19</p>
+            <p style="text-align: center">SESSION 2019-20</p>
             <br />
             <table style="width: 100%; height: 150px;">
                 <tr>

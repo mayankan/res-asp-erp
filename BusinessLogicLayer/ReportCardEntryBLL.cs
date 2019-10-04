@@ -362,21 +362,18 @@ namespace BusinessLogicLayer
             Collection<MiscEntryGridCL> returnMisc = new Collection<MiscEntryGridCL>();
             IEnumerable<MiscEntry> queryMiscDB = from x in dbcontext.MiscEntries where x.IsDeleted == false && x.SessionId == sessionId select x;
             //queryMarksDB = queryMarksDB.GroupBy(x => x.ClassSubjectMap.ClassId).Select(y => y.FirstOrDefault());
-            queryMiscDB = queryMiscDB.DistinctBy(x => new { x.ExaminationId, x.ClassSubjectId });
+            queryMiscDB = queryMiscDB.DistinctBy(x => new { x.ExaminationId, x.Student.ClassId });
             foreach (MiscEntry item in queryMiscDB)
             {
                 returnMisc.Add(new MiscEntryGridCL()
                 {
-                    classId = item.ClassSubjectMap.ClassId,
+                    classId = item.Student.ClassId,
                     attendance = item.Attendance,
                     remarks = item.Remarks,
-                    classSection = item.ClassSubjectMap.Class.Class1 + "-" + item.ClassSubjectMap.Class.Section,
+                    classSection = item.Student.Class.Class1 + "-" + item.Student.Class.Section,
                     examinationId = item.ExaminationId,
                     examinationName = item.Examination.Name,
                     id = item.Id,
-                    subjectId = item.ClassSubjectMap.SubjectId,
-                    subjectName = item.ClassSubjectMap.Subject.Name,
-                    classSubjectId = item.ClassSubjectId,
                 });
             }
             return returnMisc;

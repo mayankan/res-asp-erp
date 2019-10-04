@@ -14,9 +14,6 @@ namespace CommunicationLayer
         public string classSection { get; set; }
         public int examinationId { get; set; }
         public string examinationName { get; set; }
-        public int subjectId { get; set; }
-        public string subjectName { get; set; }
-        public int classSubjectId { get; set; }
         public string remarks { get; set; }
         public string attendance { get; set; }
     }

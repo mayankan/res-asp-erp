@@ -50,7 +50,7 @@ namespace RAINBOW_ERP.ReportCard
             if (Request.QueryString["classId"] != null)
             {
                 classId = Convert.ToInt32(Request.QueryString["classId"]);
-                Collection<ClassCL> classCol = classBLL.viewClasses(classBLL.getSessionIdByClassId(classId));
+                Collection<ClassCL> classCol = classBLL.viewClasses(Convert.ToInt32(Session["sessionId"]));
                 examId = Convert.ToInt32(Request.QueryString["examId"]);
                 Collection<StudentCL> studentCol = studentBLL.viewStudentsByClassId(classId);
                 Collection<ExaminationCL> examCL = examBLL.viewExaminationsByClassId(classId);

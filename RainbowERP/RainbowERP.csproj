@@ -129,10 +129,12 @@
     <Content Include="ReportCard\2018\3TERM2.aspx" />
     <Content Include="ReportCard\2018\6TERM2.aspx" />
     <Content Include="ReportCard\2018\9TERM2.aspx" />
+    <Content Include="ReportCard\2019\11TERM1.aspx" />
     <Content Include="ReportCard\2019\11UNIT1.aspx" />
     <Content Include="ReportCard\2019\1TERM1.aspx" />
     <Content Include="ReportCard\2019\3TERM1.aspx" />
     <Content Include="ReportCard\2019\6TERM1.aspx" />
+    <Content Include="ReportCard\2019\9TERM1.aspx" />
     <Content Include="ReportCard\2019\logo.jpg" />
     <Content Include="ReportCard\BackupFiles\ManageGClassSubjectMap.aspx" />
     <Content Include="ReportCard\BackupFiles\ManageGradeEntryPrimary.aspx" />
@@ -367,6 +369,13 @@
     <Compile Include="ReportCard\2018\9TERM2.aspx.designer.cs">
       <DependentUpon>9TERM2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReportCard\2019\11TERM1.aspx.cs">
+      <DependentUpon>11TERM1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCard\2019\11TERM1.aspx.designer.cs">
+      <DependentUpon>11TERM1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReportCard\2019\11UNIT1.aspx.cs">
       <DependentUpon>11UNIT1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -394,6 +403,13 @@
     </Compile>
     <Compile Include="ReportCard\2019\6TERM1.aspx.designer.cs">
       <DependentUpon>6TERM1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCard\2019\9TERM1.aspx.cs">
+      <DependentUpon>9TERM1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCard\2019\9TERM1.aspx.designer.cs">
+      <DependentUpon>9TERM1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\BackupFiles\ManageGClassSubjectMap.aspx.cs">
       <DependentUpon>ManageGClassSubjectMap.aspx</DependentUpon>
