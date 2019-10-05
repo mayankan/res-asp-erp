@@ -418,10 +418,28 @@ namespace BusinessLogicLayer
         {
             foreach (MiscEntryCL item in miscCol)
             {
-                MiscEntry queryMiscDB = (from x in dbcontext.MiscEntries where x.ExaminationId == examId && x.StudentId ==item.studentId && x.IsDeleted == false select x).FirstOrDefault();
-                queryMiscDB.DateModified = DateTime.Now;
-                queryMiscDB.Attendance = item.attendance;
-                queryMiscDB.Remarks = item.remarks;
+                MiscEntry queryMiscDB = (from x in dbcontext.MiscEntries where x.ExaminationId == examId && x.StudentId == item.studentId && x.IsDeleted == false select x).FirstOrDefault();
+                if(queryMiscDB==null)
+                {
+                    dbcontext.MiscEntries.Add(new MiscEntry()
+                    {
+                        DateCreated = DateTime.Now,
+                        DateModified = DateTime.Now,
+                        ExaminationId = examId,
+                        IsDeleted = false,
+                        Attendance = item.attendance,
+                        Remarks = item.remarks,
+                        SessionId = item.sessionId,
+                        StudentId = item.studentId,
+                        ClassSubjectId = 0,
+                    });
+                }
+                else
+                {
+                    queryMiscDB.DateModified = DateTime.Now;
+                    queryMiscDB.Attendance = item.attendance;
+                    queryMiscDB.Remarks = item.remarks; 
+                }
                 dbcontext.SaveChanges();
             }
         }
