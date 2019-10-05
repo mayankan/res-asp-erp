@@ -416,37 +416,21 @@ namespace BusinessLogicLayer
         }
         public void updateMiscFromClassExam(int classId, int examId, Collection<MiscEntryCL> miscCol)
         {
-            IQueryable<MiscEntry> queryMiscDB = from x in dbcontext.MiscEntries where x.ClassSubjectMap.ClassId == classId && x.ExaminationId == examId && x.IsDeleted == false select x;
-            int classSubjectId = (from x in dbcontext.MiscEntries where x.ClassSubjectMap.ClassId == classId && x.ExaminationId == examId && x.IsDeleted == false select x.ClassSubjectId).FirstOrDefault();
-            foreach (MiscEntry item in queryMiscDB)
-            {
-                dbcontext.MiscEntries.Remove(item);
-            }
-            dbcontext.SaveChanges();
             foreach (MiscEntryCL item in miscCol)
             {
-                dbcontext.MiscEntries.Add(new MiscEntry()
-                {
-                    DateCreated = DateTime.Now,
-                    DateModified = DateTime.Now,
-                    ExaminationId = examId,
-                    IsDeleted = false,
-                    Attendance = item.attendance,
-                    Remarks = item.remarks,
-                    SessionId = item.sessionId,
-                    StudentId = item.studentId,
-                    ClassSubjectId = classSubjectId,
-                });
+                MiscEntry queryMiscDB = (from x in dbcontext.MiscEntries where x.ExaminationId == examId && x.StudentId ==item.studentId && x.IsDeleted == false select x).FirstOrDefault();
+                queryMiscDB.DateModified = DateTime.Now;
+                queryMiscDB.Attendance = item.attendance;
+                queryMiscDB.Remarks = item.remarks;
+                dbcontext.SaveChanges();
             }
-            dbcontext.SaveChanges();
         }
         public void deleteMiscFromClassExam(int classId, int examId)
         {
-            IQueryable<MiscEntry> queryMiscDB = from x in dbcontext.MiscEntries where x.ClassSubjectMap.ClassId == classId && x.ExaminationId == examId && x.IsDeleted == false select x;
-            int classSubjectId = (from x in dbcontext.MiscEntries where x.ClassSubjectMap.ClassId == classId && x.ExaminationId == examId && x.IsDeleted == false select x.ClassSubjectId).FirstOrDefault();
+            var queryMiscDB = from x in dbcontext.MiscEntries where x.Student.ClassId == classId && x.ExaminationId == examId && x.IsDeleted == false select x;
             foreach (MiscEntry item in queryMiscDB)
             {
-                dbcontext.MiscEntries.Remove(item);
+                item.IsDeleted = true;
             }
             dbcontext.SaveChanges();
         }
@@ -578,7 +562,7 @@ namespace BusinessLogicLayer
         public bool CheckMiscEntry(int classId, int examId)
         {
             bool returnType;
-            var query = from x in dbcontext.MiscEntries where x.ExaminationId == examId && x.Student.ClassId == classId select x;
+            var query = from x in dbcontext.MiscEntries where x.ExaminationId == examId && x.Student.ClassId == classId && x.IsDeleted==false select x;
             if (query.Count() == 0)
                 returnType = true;
             else
