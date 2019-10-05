@@ -26,7 +26,8 @@
 
         <br />
         &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnAddGrades" runat="server" Text="Enter Grades" OnClick="btnAddGrades_Click" />
+        <asp:Button ID="btnAddGrades" runat="server" Text="Enter Grades" OnClick="btnAddGrades_Click" />&nbsp;&nbsp;
+        <asp:Button ID="btnAddGradesB" runat="server" Text="Enter Grades For 9th/10th" OnClick="btnAddGradesB_Click" />
         <br />
         <br />
  <span style="float:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EXAMINATION NAME&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<asp:TextBox ID="ftExaminationName" runat="server" Width="149px" style="float:left;"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -142,11 +142,12 @@
     <Content Include="ReportCard\ClassSubjectMap.aspx" />
     <Content Include="ReportCard\Examination.aspx" />
     <Content Include="ReportCard\GradeEntry.aspx" />
-    <Content Include="ReportCard\GradeEntryPrimary.aspx" />
+    <Content Include="ReportCard\BackupFiles\GradeEntryPrimary.aspx" />
     <Content Include="ReportCard\index.aspx" />
     <Content Include="ReportCard\ManageClassSubjectMap.aspx" />
     <Content Include="ReportCard\ManageExamination.aspx" />
     <Content Include="ReportCard\ManageGradeEntry.aspx" />
+    <Content Include="ReportCard\ManageGradeEntryB.aspx" />
     <Content Include="ReportCard\ManageMiscellaneousEntry.aspx" />
     <Content Include="ReportCard\ManageReportCard.aspx" />
     <Content Include="ReportCard\ManageSubject.aspx" />
@@ -453,11 +454,11 @@
     <Compile Include="ReportCard\GradeEntry.aspx.designer.cs">
       <DependentUpon>GradeEntry.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ReportCard\GradeEntryPrimary.aspx.cs">
+    <Compile Include="ReportCard\BackupFiles\GradeEntryPrimary.aspx.cs">
       <DependentUpon>GradeEntryPrimary.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ReportCard\GradeEntryPrimary.aspx.designer.cs">
+    <Compile Include="ReportCard\BackupFiles\GradeEntryPrimary.aspx.designer.cs">
       <DependentUpon>GradeEntryPrimary.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\index.aspx.cs">
@@ -487,6 +488,13 @@
     </Compile>
     <Compile Include="ReportCard\ManageGradeEntry.aspx.designer.cs">
       <DependentUpon>ManageGradeEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCard\ManageGradeEntryB.aspx.cs">
+      <DependentUpon>ManageGradeEntryB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCard\ManageGradeEntryB.aspx.designer.cs">
+      <DependentUpon>ManageGradeEntryB.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\ManageMiscellaneousEntry.aspx.cs">
       <DependentUpon>ManageMiscellaneousEntry.aspx</DependentUpon>

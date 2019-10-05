@@ -40,7 +40,9 @@
 	.button {
 		position: relative;
 		-ms-behavior: url("assets/js/ie/PIE.htc");
-	}
+    top: 0px;
+    left: -1px;
+}
 
 /* Box */
 

@@ -31,6 +31,15 @@ namespace RAINBOW_ERP.ReportCard {
         protected global::System.Web.UI.WebControls.Button btnAddGrades;
         
         /// <summary>
+        /// btnAddGradesB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddGradesB;
+        
+        /// <summary>
         /// ftExaminationName control.
         /// </summary>
         /// <remarks>

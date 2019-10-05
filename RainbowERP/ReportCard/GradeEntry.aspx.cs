@@ -75,7 +75,14 @@ namespace RAINBOW_ERP.ReportCard
                 int classId = Convert.ToInt32(combinedId.Split('-').FirstOrDefault());
                 int examId = Convert.ToInt32(combinedId.Split('-')[1]);
                 int subjectId = Convert.ToInt32(combinedId.Split('-')[2]);
-                Response.Redirect("ManageGradeEntry.aspx?classId=" + classId + "&examId=" + examId + "&subjectId=" + subjectId);
+                if((classId>=150 && classId<=154)||(classId>=156 && classId<=160))
+                {
+                    Response.Redirect("ManageGradeEntryB.aspx?classId=" + classId + "&examId=" + examId + "&subjectId=" + subjectId);
+                }
+                else
+                {
+                    Response.Redirect("ManageGradeEntry.aspx?classId=" + classId + "&examId=" + examId + "&subjectId=" + subjectId);
+                }
             }
         }
 
@@ -182,6 +189,11 @@ namespace RAINBOW_ERP.ReportCard
                 ViewState["grades"] = grdGrades.DataSource = newGrades;
                 grdGrades.DataBind();
             }
+        }
+
+        protected void btnAddGradesB_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ManageGradeEntryB.aspx");
         }
     }
 }
