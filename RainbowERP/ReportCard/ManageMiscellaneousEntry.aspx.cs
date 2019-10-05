@@ -132,8 +132,22 @@ namespace RAINBOW_ERP.ReportCard
                     TextBox txtAttendanceUpdate = e.Row.FindControl("txtAttendance") as TextBox;
                     int studentId = ((StudentCL)e.Row.DataItem).id;
                     MiscEntryCL miscUpdate = reportBLL.viewMiscByStudentId(studentId, examId);
-                    txtRemarksUpdate.Text = miscUpdate.remarks;
-                    txtAttendanceUpdate.Text = miscUpdate.attendance;
+                    if (miscUpdate.remarks == "NULL")
+                    {
+                        txtRemarksUpdate.Text = string.Empty;
+                    }
+                    else
+                    {
+                        txtRemarksUpdate.Text = miscUpdate.remarks;
+                    }
+                    if (miscUpdate.attendance == "NULL")
+                    {
+                        txtAttendanceUpdate.Text = string.Empty;
+                    }
+                    else
+                    {
+                        txtAttendanceUpdate.Text = miscUpdate.attendance;
+                    }
                 }
             }
         }
@@ -168,8 +182,8 @@ namespace RAINBOW_ERP.ReportCard
                         miscCol.Add(new MiscEntryCL()
                         {
                             studentId = studentId,
+                            remarks = "NULL",
                             attendance = txtAttendanceUpdate,
-                            remarks = string.Empty,
                             sessionId = sessionId,
                         });
                     }
@@ -180,7 +194,7 @@ namespace RAINBOW_ERP.ReportCard
                         {
                             studentId = studentId,
                             remarks = txtRemarksUpdate,
-                            attendance = string.Empty,
+                            attendance = "NULL",
                             sessionId = sessionId,
                         });
                     }
@@ -219,8 +233,8 @@ namespace RAINBOW_ERP.ReportCard
                             miscCol.Add(new MiscEntryCL()
                             {
                                 studentId = studentId,
+                                remarks = "NULL",
                                 attendance = txtAttendanceUpdate,
-                                remarks = string.Empty,
                                 sessionId = sessionId,
                             });
                         }
@@ -231,7 +245,7 @@ namespace RAINBOW_ERP.ReportCard
                             {
                                 studentId = studentId,
                                 remarks = txtRemarksUpdate,
-                                attendance = string.Empty,
+                                attendance = "NULL",
                                 sessionId = sessionId,
                             });
                         }
@@ -244,7 +258,7 @@ namespace RAINBOW_ERP.ReportCard
                                 remarks = txtRemarksUpdate,
                                 attendance = txtAttendanceUpdate,
                                 sessionId = sessionId,
-
+                                classId = classId,
                             });
                         }
                     }
