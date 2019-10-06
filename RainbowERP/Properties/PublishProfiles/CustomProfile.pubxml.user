@@ -407,7 +407,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/30/2019 19:13:00</publishTime>
     </File>
     <File Include="ReportCard/ManageGradeEntryB.aspx">
-      <publishTime>10/05/2019 18:29:33</publishTime>
+      <publishTime>10/06/2019 10:30:10</publishTime>
     </File>
     <File Include="ReportCard/ManageGradeEntryPrimary.aspx">
       <publishTime>07/08/2019 14:51:34</publishTime>

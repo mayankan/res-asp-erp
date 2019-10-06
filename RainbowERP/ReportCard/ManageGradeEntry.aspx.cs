@@ -26,7 +26,6 @@ namespace RAINBOW_ERP.ReportCard
         public int subjectId = 0;
         public int count = 4;
         public int subjectCount = 0;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
