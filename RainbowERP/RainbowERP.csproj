@@ -110,9 +110,6 @@
     <Content Include="js\skel.min.js" />
     <Content Include="js\util.js" />
     <Content Include="Login\UserLogin.aspx" />
-    <Content Include="obj\Debug\RainbowERP.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\RainbowERP.dll" />
-    <Content Include="obj\Debug\RainbowERP.pdb" />
     <Content Include="ReportCard\2017\logo.jpg" />
     <Content Include="ReportCard\2018\11TERM1.aspx" />
     <Content Include="ReportCard\2018\11TERM2.aspx" />
@@ -268,9 +265,6 @@
     <Compile Include="Login\UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportCard\2018\11TERM1.aspx.cs">
       <DependentUpon>11TERM1.aspx</DependentUpon>
@@ -719,10 +713,6 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\RainbowERP.csproj.CopyComplete" />
-    <Content Include="obj\Debug\RainbowERP.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\RainbowERP.csprojAssemblyReference.cache" />
     <Content Include="libman.json" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\AWS.pubxml" />
@@ -743,9 +733,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
       <Project>{252da330-7192-4c58-ab7e-af81fb2c2f02}</Project>

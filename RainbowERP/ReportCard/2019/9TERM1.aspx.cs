@@ -53,7 +53,7 @@ namespace RainbowERP.ReportCard._2019
                         lblAdmissionNo.Text = studentCL.admissionNo.ToString();
                         lblClassSec.Text = studentCL.classSection;
                         int term1ExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 1");
-                        int ptId = reportBLL.viewExamIdByClass(studentCL.classId, "PT(10)");
+                        int ptId = reportBLL.viewExamIdByClass(studentCL.classId, "PT(5)");
                         int maId = reportBLL.viewExamIdByClass(studentCL.classId, "MA(5)");
                         int seaId = reportBLL.viewExamIdByClass(studentCL.classId, "SEA(5)");
                         int portId = reportBLL.viewExamIdByClass(studentCL.classId, "Portfolio(5)");

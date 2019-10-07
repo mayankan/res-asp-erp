@@ -190,7 +190,7 @@ namespace RainbowERP.ReportCard
                         }
                     }
                     reportBLL.addGradesFromSubjectExam(classId, subjectId, examId, gradesCol);
-                    Response.Redirect("ManageGradeEntry.aspx?classId=" + classId + "&examId=" + examId + "&subjectId=" + subjectId);
+                    Response.Redirect("ManageGradeEntryB.aspx?classId=" + classId + "&examId=" + examId + "&subjectId=" + subjectId);
                 }
                 else
                 {

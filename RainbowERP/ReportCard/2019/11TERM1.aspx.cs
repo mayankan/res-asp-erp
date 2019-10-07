@@ -72,6 +72,11 @@ namespace RainbowERP.ReportCard._2019
                         {
                             DeletePractical(subjectCol, i);
                         }
+                        DeletePractical(subjectCol, 122);
+                        for (int i = 67; i <= 71; i++)
+                        {
+                            DeletePractical(subjectCol, i);
+                        }
                         var subjectColl = subjectCol.OrderBy(x => x.name);
                         DataTable dt = new DataTable();
                         DataRow dr = null;
