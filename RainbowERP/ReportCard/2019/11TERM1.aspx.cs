@@ -217,11 +217,18 @@ namespace RainbowERP.ReportCard._2019
                         grdMarksReport.DataBind();
                         lblGrandTotal.Text = grandTotal.ToString();
                         lblPercentage.Text = Math.Round(grandTotal / 5, 2) + "%";
-                        lblDiscipline.Text = gradesColTERM1.Where(x => x.subjectId == 71).FirstOrDefault().grade;
-                        lblPunctuality.Text = gradesColTERM1.Where(x => x.subjectId == 67).FirstOrDefault().grade;
-                        lblRespectToGender.Text = gradesColTERM1.Where(x => x.subjectId == 68).FirstOrDefault().grade;
-                        lblAttitudeClassmates.Text = gradesColTERM1.Where(x => x.subjectId == 69).FirstOrDefault().grade;
-                        lblAttitudeTeachers.Text = gradesColTERM1.Where(x => x.subjectId == 70).FirstOrDefault().grade;
+                        try
+                        {
+                            lblDiscipline.Text = gradesColTERM1.Where(x => x.subjectId == 71).FirstOrDefault().grade;
+                            lblPunctuality.Text = gradesColTERM1.Where(x => x.subjectId == 67).FirstOrDefault().grade;
+                            lblRespectToGender.Text = gradesColTERM1.Where(x => x.subjectId == 68).FirstOrDefault().grade;
+                            lblAttitudeClassmates.Text = gradesColTERM1.Where(x => x.subjectId == 69).FirstOrDefault().grade;
+                            lblAttitudeTeachers.Text = gradesColTERM1.Where(x => x.subjectId == 70).FirstOrDefault().grade;
+                        }
+                        catch (Exception)
+                        {
+                            throw;
+                        }
                         lblAttendance.Text = remarksAttendance.attendance;
                         lblRemarks.Text = remarksAttendance.remarks;
                     }
