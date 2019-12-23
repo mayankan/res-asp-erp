@@ -49,7 +49,6 @@ namespace RainbowERP.ReportCard._2019
                             studentCL = studentBLL.viewStudentByAdmissionNo(studentId, sessionId);
                             studentId = studentCL.id;
                         }
-                        imgLogo.ImageUrl = "logo.jpg";
                         lblStudentName.Text = studentCL.studentName;
                         lblFatherName.Text = studentCL.fatherName;
                         lblMotherName.Text = studentCL.motherName;
@@ -139,17 +138,17 @@ namespace RainbowERP.ReportCard._2019
                             else if (item.subjectName == "Accountancy(055)")
                             {
                                 marksSubjectDict.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 63));
+                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 64));
                             }
                             else if (item.subjectName == "Economics(030)")
                             {
                                 marksSubjectDict.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 64));
+                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 65));
                             }
                             else if (item.subjectName == "History(027)")
                             {
                                 marksSubjectDict.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 65));
+                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 66));
                             }
                             else if (item.subjectName == "Hindi(302)")
                             {

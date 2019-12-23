@@ -90,5 +90,15 @@ namespace RAINBOW_ERP.Attendance
             FormsAuthentication.SignOut();
             FormsAuthentication.RedirectToLoginPage();
         }
+
+        protected void grdStudent_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+
+        }
+
+        protected void grdStudent_Sorting(object sender, GridViewSortEventArgs e)
+        {
+
+        }
     }
 }

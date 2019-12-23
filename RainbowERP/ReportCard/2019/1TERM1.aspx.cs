@@ -48,7 +48,6 @@ namespace RainbowERP.ReportCard._2019
                             studentCL = studentBLL.viewStudentByAdmissionNo(studentId, sessionId);
                             studentId = studentCL.id;
                         }
-                        imgLogo.ImageUrl = "logo.jpg";
                         lblStudentName.Text = studentCL.studentName;
                         lblAdmissionNo.Text = studentCL.admissionNo.ToString();
                         lblClassSec.Text = studentCL.classSection;
