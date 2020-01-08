@@ -128,6 +128,8 @@
     <Content Include="ReportCard\2018\9TERM2.aspx" />
     <Content Include="ReportCard\2019\11TERM1.aspx" />
     <Content Include="ReportCard\2019\11UNIT1.aspx" />
+    <Content Include="ReportCard\2019\11UNIT2.aspx" />
+    <Content Include="ReportCard\2019\12PREBOARD.aspx" />
     <Content Include="ReportCard\2019\1TERM1.aspx" />
     <Content Include="ReportCard\2019\3TERM1.aspx" />
     <Content Include="ReportCard\2019\6TERM1.aspx" />
@@ -377,6 +379,20 @@
     </Compile>
     <Compile Include="ReportCard\2019\11UNIT1.aspx.designer.cs">
       <DependentUpon>11UNIT1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCard\2019\11UNIT2.aspx.cs">
+      <DependentUpon>11UNIT2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCard\2019\11UNIT2.aspx.designer.cs">
+      <DependentUpon>11UNIT2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCard\2019\12PREBOARD.aspx.cs">
+      <DependentUpon>12PREBOARD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCard\2019\12PREBOARD.aspx.designer.cs">
+      <DependentUpon>12PREBOARD.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\2019\1TERM1.aspx.cs">
       <DependentUpon>1TERM1.aspx</DependentUpon>
