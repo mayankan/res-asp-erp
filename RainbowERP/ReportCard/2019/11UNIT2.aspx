@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="11UNIT2.aspx.cs" Inherits="RAINBOW_ERP.ReportCard._2018._11UNIT2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="11UNIT2.aspx.cs" Inherits="RainbowERP.ReportCard._2019._11UNIT2" %>
 
 <!DOCTYPE html>
 
@@ -8,9 +8,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    <br />
-            <asp:Image ID="imgLogo" runat="server" Width="100%" />
+        <div>
+            <br />
             <asp:Image ID="Image1" runat="server" Width="100%" ImageUrl="logo.jpg" />
             <p style="text-align: center">SESSION 2018-19</p>
             <br />
@@ -42,7 +41,7 @@
                         <asp:Label ID="lblClassSec" runat="server"></asp:Label><br />
                         <br />
                         <asp:Label ID="Label6" runat="server" Text="Attendance :"></asp:Label>
-                        <asp:Label ID="lblAttendance" runat="server"></asp:Label><br />
+                        <asp:Label ID="lblAttendance" runat="server">UNIT 2</asp:Label><br />
                         &nbsp;<br />
                     </td>
                 </tr>
@@ -90,8 +89,9 @@
             <br />
             <br />
             <br />
-            Class Teacher Signature</span><span style="text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parent's Signature</span><span style="float:right">HOS Signature</span>
-    </div>
+            Class Teacher Signature</span><span style="text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parent's Signature</span>
+        <span style="float:right">HOS Signature</span>
+        </div>
     </form>
 </body>
 </html>

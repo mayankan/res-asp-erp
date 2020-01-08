@@ -4,3 +4,8 @@ C:\Users\Mayank Anand\source\repos\RainbowERP\CommunicationLayer\obj\Debug\Commu
 C:\Users\Mayank Anand\source\repos\RainbowERP\CommunicationLayer\obj\Debug\CommunicationLayer.dll
 C:\Users\Mayank Anand\source\repos\RainbowERP\CommunicationLayer\obj\Debug\CommunicationLayer.pdb
 C:\Users\Mayank Anand\source\repos\RainbowERP\CommunicationLayer\obj\Debug\CommunicationLayer.csprojAssemblyReference.cache
+C:\Users\Mayank\Desktop\res-asp-erp\CommunicationLayer\bin\Debug\CommunicationLayer.dll
+C:\Users\Mayank\Desktop\res-asp-erp\CommunicationLayer\bin\Debug\CommunicationLayer.pdb
+C:\Users\Mayank\Desktop\res-asp-erp\CommunicationLayer\obj\Debug\CommunicationLayer.csprojAssemblyReference.cache
+C:\Users\Mayank\Desktop\res-asp-erp\CommunicationLayer\obj\Debug\CommunicationLayer.dll
+C:\Users\Mayank\Desktop\res-asp-erp\CommunicationLayer\obj\Debug\CommunicationLayer.pdb

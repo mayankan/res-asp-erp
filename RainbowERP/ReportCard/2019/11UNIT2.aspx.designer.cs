@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RAINBOW_ERP.ReportCard._2018 {
-    
-    
-    public partial class _11UNIT2 {
-        
+namespace RainbowERP.ReportCard._2019
+{
+
+
+    public partial class _11UNIT2
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,16 +22,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// imgLogo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgLogo;
-        
+
         /// <summary>
         /// Image1 control.
         /// </summary>
@@ -38,7 +31,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
-        
+
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -47,7 +40,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// lblStudentName control.
         /// </summary>
@@ -56,7 +49,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblStudentName;
-        
+
         /// <summary>
         /// Label2 control.
         /// </summary>
@@ -65,7 +58,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-        
+
         /// <summary>
         /// lblFatherName control.
         /// </summary>
@@ -74,7 +67,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFatherName;
-        
+
         /// <summary>
         /// Label10 control.
         /// </summary>
@@ -83,7 +76,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label10;
-        
+
         /// <summary>
         /// lblMotherName control.
         /// </summary>
@@ -92,7 +85,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMotherName;
-        
+
         /// <summary>
         /// Label3 control.
         /// </summary>
@@ -101,7 +94,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
-        
+
         /// <summary>
         /// lblExamination control.
         /// </summary>
@@ -110,7 +103,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblExamination;
-        
+
         /// <summary>
         /// Label4 control.
         /// </summary>
@@ -119,7 +112,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
-        
+
         /// <summary>
         /// lblAdmissionNo control.
         /// </summary>
@@ -128,7 +121,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAdmissionNo;
-        
+
         /// <summary>
         /// Label5 control.
         /// </summary>
@@ -137,7 +130,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label5;
-        
+
         /// <summary>
         /// lblClassSec control.
         /// </summary>
@@ -146,7 +139,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblClassSec;
-        
+
         /// <summary>
         /// Label6 control.
         /// </summary>
@@ -155,7 +148,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label6;
-        
+
         /// <summary>
         /// lblAttendance control.
         /// </summary>
@@ -164,7 +157,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAttendance;
-        
+
         /// <summary>
         /// grdMarksReport control.
         /// </summary>
@@ -173,7 +166,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdMarksReport;
-        
+
         /// <summary>
         /// lblGrandTotal control.
         /// </summary>
@@ -182,7 +175,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblGrandTotal;
-        
+
         /// <summary>
         /// lblPercentage control.
         /// </summary>
@@ -191,7 +184,7 @@ namespace RAINBOW_ERP.ReportCard._2018 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPercentage;
-        
+
         /// <summary>
         /// lblRemarks control.
         /// </summary>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="12PREBOARD.aspx.cs" Inherits="RAINBOW_ERP.ReportCard._2019._12PREBOARD" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="12PREBOARD.aspx.cs" Inherits="RainbowERP.ReportCard._2019._12PREBOARD" %>
 
 <!DOCTYPE html>
 
@@ -16,7 +16,7 @@
         <div>
             <br />
             <asp:Image ID="imgLogo" runat="server" Width="100%" ImageUrl="logo.jpg" />
-            <p style="text-align: center">SESSION 2018-19</p>
+            <p style="text-align: center">SESSION 2019-20</p>
             <br />
             <table style="width: 100%; height: 200px; border: 1px solid black;">
                 <tr>
