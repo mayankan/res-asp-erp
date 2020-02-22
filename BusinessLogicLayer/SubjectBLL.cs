@@ -48,7 +48,7 @@ namespace BusinessLogicLayer
         public Collection<SubjectCL> viewSubjectByClassId(int classId)
         {
             Collection<SubjectCL> returnSubjectData = new Collection<SubjectCL>();
-            IQueryable<Subject> querySubjectDB = from x in dbcontext.ClassSubjectMaps where x.ClassId == classId && x.IsDeleted == false select x.Subject;
+            IQueryable<Subject> querySubjectDB = from x in dbcontext.ClassSubjectMaps where x.ClassId == classId && x.Subject.IsDeleted == false && x.IsDeleted==false select x.Subject;
             foreach (Subject item in querySubjectDB)
             {
                 returnSubjectData.Add(new SubjectCL()

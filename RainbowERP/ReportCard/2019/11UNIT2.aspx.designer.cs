@@ -96,15 +96,6 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// lblExamination control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblExamination;
-
-        /// <summary>
         /// Label4 control.
         /// </summary>
         /// <remarks>

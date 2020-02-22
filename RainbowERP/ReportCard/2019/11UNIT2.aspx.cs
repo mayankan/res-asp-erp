@@ -87,6 +87,12 @@ namespace RainbowERP.ReportCard._2019
                                 DeletePractical(subjectCol, i);
                             }
                             DeletePractical(subjectCol, 116);
+                            DeletePractical(subjectCol, 121);
+                            DeletePractical(subjectCol, 122);
+                            for (int i = 143; i <= 150; i++)
+                            {
+                                DeletePractical(subjectCol, i);
+                            }
                             foreach (SubjectCL item in subjectCol)
                             {
                                 dr = dt.NewRow();

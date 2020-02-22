@@ -134,6 +134,7 @@
     <Content Include="ReportCard\2019\3TERM1.aspx" />
     <Content Include="ReportCard\2019\6TERM1.aspx" />
     <Content Include="ReportCard\2019\9TERM1.aspx" />
+    <Content Include="ReportCard\2019\9TERM2.aspx" />
     <Content Include="ReportCard\2019\logo.jpg" />
     <Content Include="ReportCard\BackupFiles\ManageGClassSubjectMap.aspx" />
     <Content Include="ReportCard\BackupFiles\ManageGradeEntryPrimary.aspx" />
@@ -421,6 +422,13 @@
     </Compile>
     <Compile Include="ReportCard\2019\9TERM1.aspx.designer.cs">
       <DependentUpon>9TERM1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCard\2019\9TERM2.aspx.cs">
+      <DependentUpon>9TERM2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCard\2019\9TERM2.aspx.designer.cs">
+      <DependentUpon>9TERM2.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\BackupFiles\ManageGClassSubjectMap.aspx.cs">
       <DependentUpon>ManageGClassSubjectMap.aspx</DependentUpon>

@@ -10,3 +10,14 @@ C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Release\DataAc
 C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Release\DataAccessLayer.csproj.CopyComplete
 C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Release\DataAccessLayer.dll
 C:\Users\Mayank Anand\source\repos\RainbowERP\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\bin\Release\DataAccessLayer.dll.config
+C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\bin\Release\EntityFramework.dll
+C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\bin\Release\EntityFramework.xml
+C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\obj\Release\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\obj\Release\DataAccessLayer.csproj.CopyComplete
+C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\obj\Release\DataAccessLayer.pdb

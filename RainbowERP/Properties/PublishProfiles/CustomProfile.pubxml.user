@@ -6,345 +6,357 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaaedCMesDk668lNkm/53qQAAAAACAAAAAAAQZgAAAAEAACAAAAAig5AIUfO/DR0e9h7M9MgjuFNl5cHt6OaJHdQmgrqe+AAAAAAOgAAAAAIAACAAAADUrD1Ix8zV7ShL09d66bM3xq1o7EmpKfxBscPyZJpUliAAAABz+/U58UDDW0OiH2TgclGSDXhvsUmMk9XFd/TxINNpxUAAAAB0z2UeNvpr3Py+QPr3xUvl7KCk16wNzoQhGfLZ1A55h/TfNdnw1qiZrun+En0VcSp/OjBSXI8/Po7phupUT5Vs</EncryptedPassword>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATf3Ckf8jEEincAIQM304rAAAAAACAAAAAAAQZgAAAAEAACAAAACT5Ck88/rVVulIL4pK9q1Po+WTi6VfWMBwGE7dI3yeLgAAAAAOgAAAAAIAACAAAAC1qwUP5ufHmwm9vlUjrpX3qD2JvP5MzdH8TscfCaN/MCAAAAAEVNpvjYS+VFSajn4dGSjQ10biABfZg9FxsdDTAmX+k0AAAAD5DaYOSgmJsFmpXuIJtIdO66IOd4WeDzMrBx2ws7axrV0g2KTDPTvioCY4fFXhHlVfFHMn618tMc7I7O9jrcBW</EncryptedPassword>
     <_PublishTargetUrl>ftp://182.50.132.57/rainbowjanakpuri.com</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="assets/css/font-awesome.min.css">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/css/ie8.css">
-      <publishTime>10/05/2019 19:53:55</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/css/ie9.css">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/css/images/bg01.png">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/css/images/bg02.png">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/css/images/bg03.png">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/css/main.css">
-      <publishTime>06/15/2018 20:57:56</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.eot">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.svg">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.ttf">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.woff">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont.woff2">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/fonts/FontAwesome.otf">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/js/ie/backgroundsize.min.htc">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/js/ie/html5shiv.js">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/js/ie/PIE.htc">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/js/ie/respond.min.js">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/js/jquery.dropotron.min.js">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/js/jquery.min.js">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/js/main.js">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/js/skel.min.js">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/js/util.js">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/sass/ie8.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/sass/ie9.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/sass/libs/_functions.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/sass/libs/_mixins.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/sass/libs/_skel.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/sass/libs/_vars.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="assets/sass/main.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Attendance/index.aspx">
-      <publishTime>06/18/2018 18:44:30</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="Attendance/ManageAttendance.aspx">
-      <publishTime>07/02/2018 21:14:14</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="Attendance/ManageSLT.aspx">
-      <publishTime>01/24/2018 03:39:28</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="Attendance/ManageSMSTemplate.aspx">
-      <publishTime>01/24/2018 03:39:28</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="Attendance/SMSEntry.aspx">
-      <publishTime>06/18/2018 18:45:28</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="Attendance/SMSReport.aspx">
-      <publishTime>11/15/2019 09:56:20</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="Attendance/SMSTemplate.aspx">
-      <publishTime>06/18/2018 18:43:46</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="Attendance/StudentLeaveType.aspx">
-      <publishTime>06/18/2018 18:42:46</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>01/14/2020 11:35:59</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>01/14/2020 11:35:59</publishTime>
     </File>
     <File Include="bin/BusinessLogicLayer.dll">
-      <publishTime>11/15/2019 09:57:59</publishTime>
+      <publishTime>01/10/2020 13:36:57</publishTime>
     </File>
     <File Include="bin/BusinessLogicLayer.dll.config">
-      <publishTime>07/02/2019 10:09:44</publishTime>
+      <publishTime>01/02/2020 21:34:20</publishTime>
     </File>
     <File Include="bin/BusinessLogicLayer.pdb">
-      <publishTime>11/15/2019 09:57:59</publishTime>
+      <publishTime>01/10/2020 13:36:57</publishTime>
     </File>
     <File Include="bin/CommunicationLayer.dll">
-      <publishTime>11/15/2019 09:57:58</publishTime>
+      <publishTime>01/08/2020 18:26:01</publishTime>
     </File>
     <File Include="bin/CommunicationLayer.pdb">
-      <publishTime>11/15/2019 09:57:58</publishTime>
+      <publishTime>01/08/2020 18:26:01</publishTime>
     </File>
     <File Include="bin/DataAccessLayer.dll">
-      <publishTime>11/15/2019 09:57:58</publishTime>
+      <publishTime>01/08/2020 18:26:01</publishTime>
     </File>
     <File Include="bin/DataAccessLayer.dll.config">
-      <publishTime>07/02/2019 10:07:20</publishTime>
+      <publishTime>01/02/2020 21:34:21</publishTime>
     </File>
     <File Include="bin/DataAccessLayer.pdb">
-      <publishTime>11/15/2019 09:57:58</publishTime>
+      <publishTime>01/08/2020 18:26:01</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>06/07/2018 11:03:48</publishTime>
+      <publishTime>01/02/2020 21:34:27</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>06/07/2018 11:03:48</publishTime>
+      <publishTime>01/02/2020 21:34:27</publishTime>
     </File>
     <File Include="bin/itextsharp.dll">
-      <publishTime>06/20/2019 17:39:40</publishTime>
+      <publishTime>01/02/2020 21:34:28</publishTime>
     </File>
     <File Include="bin/MoreLinq.dll">
-      <publishTime>04/05/2019 10:35:02</publishTime>
+      <publishTime>01/02/2020 21:34:28</publishTime>
     </File>
     <File Include="bin/MoreLinq.pdb">
-      <publishTime>04/05/2019 10:35:02</publishTime>
+      <publishTime>01/02/2020 21:34:28</publishTime>
     </File>
     <File Include="bin/RainbowERP.dll">
-      <publishTime>11/15/2019 09:58:00</publishTime>
+      <publishTime>01/14/2020 11:28:25</publishTime>
     </File>
     <File Include="bin/RainbowERP.pdb">
-      <publishTime>11/15/2019 09:58:00</publishTime>
+      <publishTime>01/14/2020 11:28:25</publishTime>
     </File>
     <File Include="bin/System.ValueTuple.dll">
-      <publishTime>07/19/2017 10:01:32</publishTime>
+      <publishTime>01/02/2020 21:34:28</publishTime>
     </File>
     <File Include="css/font-awesome.min.css">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="css/ie8.css">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="css/ie9.css">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="css/main.css">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="ERP.Master">
-      <publishTime>02/22/2019 08:40:22</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="Error.aspx">
-      <publishTime>07/05/2019 11:46:15</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.eot">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.svg">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.ttf">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.woff">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.woff2">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="fonts/FontAwesome.otf">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>06/18/2018 13:10:16</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="index.aspx">
-      <publishTime>02/22/2019 09:36:22</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="js/ie/html5shiv.js">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="js/ie/respond.min.js">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="js/jquery.min.js">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="js/main.js">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="js/skel.min.js">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="js/util.js">
-      <publishTime>02/21/2019 02:23:24</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="libman.json">
-      <publishTime>07/04/2019 19:31:13</publishTime>
+      <publishTime>01/02/2020 21:34:24</publishTime>
     </File>
     <File Include="Login/UserLogin.aspx">
-      <publishTime>02/22/2019 08:57:06</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>01/14/2020 11:35:50</publishTime>
     </File>
     <File Include="ReportCard/2017/11TERM1.aspx">
-      <publishTime>09/29/2019 14:28:13</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2017/11TERM2.aspx">
-      <publishTime>09/29/2019 14:28:18</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2017/11UNIT1.aspx">
-      <publishTime>09/29/2019 14:28:22</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2017/11UNIT2.aspx">
-      <publishTime>09/29/2019 14:28:28</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2017/12PREBOARD.aspx">
-      <publishTime>09/29/2019 14:28:34</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2017/12PREBOARD1.aspx">
       <publishTime>08/02/2019 15:33:14</publishTime>
     </File>
     <File Include="ReportCard/2017/1TERM2.aspx">
-      <publishTime>09/29/2019 14:28:47</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2017/3TERM2.aspx">
       <publishTime>08/02/2019 15:33:16</publishTime>
     </File>
     <File Include="ReportCard/2017/4TERM2.aspx">
-      <publishTime>09/29/2019 14:28:59</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2017/6TERM1.aspx">
-      <publishTime>09/29/2019 14:29:16</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2017/6TERM2.aspx">
-      <publishTime>09/29/2019 14:29:53</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2017/9TERM1.aspx">
-      <publishTime>09/29/2019 14:29:41</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2017/9TERM2.aspx">
-      <publishTime>09/29/2019 14:29:29</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2017/logo.jpg">
-      <publishTime>08/02/2019 15:33:22</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/11FINAL.aspx">
-      <publishTime>09/29/2019 14:24:41</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/11TERM1.aspx">
-      <publishTime>09/29/2019 14:24:51</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/11TERM2.aspx">
-      <publishTime>09/29/2019 14:24:57</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/11UNIT1.aspx">
-      <publishTime>09/29/2019 14:25:02</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/11UNIT2.aspx">
-      <publishTime>09/29/2019 14:25:11</publishTime>
+      <publishTime>01/08/2020 18:00:20</publishTime>
     </File>
     <File Include="ReportCard/2018/12PREBOARD.aspx">
-      <publishTime>09/29/2019 14:25:26</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/1TERM1.aspx">
-      <publishTime>09/29/2019 21:40:10</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/1TERM2.aspx">
-      <publishTime>09/29/2019 14:26:40</publishTime>
+      <publishTime>01/09/2020 15:43:32</publishTime>
     </File>
     <File Include="ReportCard/2018/3TERM1.aspx">
-      <publishTime>09/29/2019 14:27:31</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/3TERM2.aspx">
-      <publishTime>09/29/2019 14:27:18</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/4TERM2.aspx">
       <publishTime>07/08/2019 14:51:19</publishTime>
     </File>
     <File Include="ReportCard/2018/6TERM1.aspx">
-      <publishTime>09/29/2019 14:27:07</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/6TERM2.aspx">
-      <publishTime>09/29/2019 14:27:00</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/9TERM1.aspx">
-      <publishTime>09/29/2019 14:26:49</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/9TERM2.aspx">
-      <publishTime>09/29/2019 14:27:50</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2018/logo.jpg">
-      <publishTime>07/08/2019 14:51:29</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2019/11TERM1.aspx">
-      <publishTime>10/05/2019 17:34:29</publishTime>
+      <publishTime>01/08/2020 18:21:15</publishTime>
     </File>
     <File Include="ReportCard/2019/11TERM2.aspx">
       <publishTime>07/08/2019 14:51:18</publishTime>
     </File>
     <File Include="ReportCard/2019/11UNIT1.aspx">
-      <publishTime>09/29/2019 14:26:19</publishTime>
+      <publishTime>01/09/2020 14:45:36</publishTime>
+    </File>
+    <File Include="ReportCard/2019/11UNIT2.aspx">
+      <publishTime>01/10/2020 10:11:47</publishTime>
     </File>
     <File Include="ReportCard/2019/12PREBOARD.aspx">
-      <publishTime>07/08/2019 14:51:18</publishTime>
+      <publishTime>01/09/2020 14:52:49</publishTime>
     </File>
     <File Include="ReportCard/2019/1TERM1.aspx">
-      <publishTime>09/29/2019 23:10:55</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2019/1TERM2.aspx">
       <publishTime>07/08/2019 14:51:19</publishTime>
     </File>
     <File Include="ReportCard/2019/3TERM1.aspx">
-      <publishTime>09/29/2019 23:11:42</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2019/3TERM2.aspx">
       <publishTime>07/08/2019 14:51:19</publishTime>
@@ -353,79 +365,79 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/08/2019 14:51:19</publishTime>
     </File>
     <File Include="ReportCard/2019/6TERM1.aspx">
-      <publishTime>10/09/2019 20:15:52</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2019/6TERM2.aspx">
       <publishTime>07/08/2019 14:51:20</publishTime>
     </File>
     <File Include="ReportCard/2019/9TERM1.aspx">
-      <publishTime>10/05/2019 18:25:15</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/2019/9TERM2.aspx">
       <publishTime>07/08/2019 14:51:20</publishTime>
     </File>
     <File Include="ReportCard/2019/logo.jpg">
-      <publishTime>08/02/2019 15:31:21</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/BackupFiles/GradeEntryPrimary.aspx">
-      <publishTime>07/08/2019 14:51:32</publishTime>
+      <publishTime>01/02/2020 21:34:22</publishTime>
     </File>
     <File Include="ReportCard/BackupFiles/ManageGClassSubjectMap.aspx">
-      <publishTime>07/08/2019 14:51:33</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/BackupFiles/ManageGradeEntryPrimary.aspx">
-      <publishTime>07/08/2019 14:51:34</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/BackupFiles/ReportCard.aspx">
-      <publishTime>07/08/2019 14:51:23</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/ClassSubjectMap.aspx">
-      <publishTime>07/08/2019 14:51:31</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/Examination.aspx">
-      <publishTime>07/08/2019 14:51:31</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/GradeEntry.aspx">
-      <publishTime>10/05/2019 19:53:25</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/GradeEntryPrimary.aspx">
       <publishTime>07/08/2019 14:51:32</publishTime>
     </File>
     <File Include="ReportCard/index.aspx">
-      <publishTime>07/08/2019 14:51:32</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/ManageClassSubjectMap.aspx">
-      <publishTime>07/08/2019 14:51:33</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/ManageExamination.aspx">
-      <publishTime>07/30/2019 19:13:50</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/ManageGClassSubjectMap.aspx">
       <publishTime>07/08/2019 14:51:33</publishTime>
     </File>
     <File Include="ReportCard/ManageGradeEntry.aspx">
-      <publishTime>07/30/2019 19:13:00</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/ManageGradeEntryB.aspx">
-      <publishTime>10/06/2019 10:30:10</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/ManageGradeEntryPrimary.aspx">
       <publishTime>07/08/2019 14:51:34</publishTime>
     </File>
     <File Include="ReportCard/ManageMiscellaneousEntry.aspx">
-      <publishTime>07/30/2019 19:13:42</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/ManageReportCard.aspx">
-      <publishTime>07/08/2019 14:51:35</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/ManageSubject.aspx">
-      <publishTime>07/08/2019 14:51:35</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/MarksEntry.aspx">
-      <publishTime>07/30/2019 23:32:17</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/MiscellaneousEntry.aspx">
-      <publishTime>10/05/2019 10:00:35</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/Old/ManageGClassSubjectMap.aspx">
       <publishTime>07/08/2019 14:51:33</publishTime>
@@ -476,76 +488,76 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/08/2019 14:51:29</publishTime>
     </File>
     <File Include="ReportCard/PrintStudentFromClass.aspx">
-      <publishTime>07/08/2019 14:51:36</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="ReportCard/Subject.aspx">
-      <publishTime>07/08/2019 14:51:37</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="sass/ie8.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:26</publishTime>
     </File>
     <File Include="sass/ie9.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:26</publishTime>
     </File>
     <File Include="sass/libs/_functions.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:26</publishTime>
     </File>
     <File Include="sass/libs/_mixins.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:26</publishTime>
     </File>
     <File Include="sass/libs/_skel.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:26</publishTime>
     </File>
     <File Include="sass/libs/_vars.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:26</publishTime>
     </File>
     <File Include="sass/main.scss">
-      <publishTime>05/07/2017 05:31:20</publishTime>
+      <publishTime>01/02/2020 21:34:26</publishTime>
     </File>
     <File Include="Student/Class.aspx">
-      <publishTime>06/17/2018 16:14:42</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Student/Data/nopage.html">
-      <publishTime>07/05/2019 11:53:00</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Student/ImportStudent.aspx">
-      <publishTime>07/02/2019 19:14:44</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Student/index.aspx">
-      <publishTime>07/20/2018 23:17:04</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Student/ManageClass.aspx">
-      <publishTime>01/24/2018 03:39:50</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Student/ManageSC.aspx">
-      <publishTime>01/24/2018 03:39:50</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Student/ManageStudent.aspx">
-      <publishTime>06/16/2018 11:03:48</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Student/ManageStudent.aspx.cs">
       <publishTime>05/07/2019 11:28:25</publishTime>
     </File>
     <File Include="Student/ManageTC.aspx">
-      <publishTime>07/24/2018 13:58:54</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Student/Session.aspx">
-      <publishTime>06/14/2018 21:48:50</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Student/StudentCategory.aspx">
-      <publishTime>06/15/2018 08:17:08</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Student/TC.aspx">
-      <publishTime>06/15/2018 08:17:14</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Student/test_data.csv">
-      <publishTime>07/02/2019 15:32:58</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="UnAuthorized.aspx">
-      <publishTime>02/21/2019 23:05:16</publishTime>
+      <publishTime>01/02/2020 21:34:23</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/03/2019 19:14:24</publishTime>
+      <publishTime>01/14/2020 11:35:45</publishTime>
     </File>
   </ItemGroup>
 </Project>
