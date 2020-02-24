@@ -13,7 +13,7 @@
             <asp:Image ID="imgLogo" runat="server" ImageUrl="logo.jpg" Width="90%" Style="padding-left: 50px;" />
             <p style="text-align: center"><b>REPORT CARD</b></p>
             <p style="text-align: center">CLASS : IX</p>
-            <p style="text-align: center">SESSION 2018-19</p>
+            <p style="text-align: center">SESSION 2019-20</p>
             <br />
             <table style="width: 100%; height: 150px;">
                 <tr>
