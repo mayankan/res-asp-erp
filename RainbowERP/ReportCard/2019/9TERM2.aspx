@@ -5,6 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 171px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -56,7 +61,7 @@
                         <td colspan="16" style="text-align: center; border: 1px solid black; border-spacing: 0px;"><strong>SCHOLASTIC AREA</strong></td>
                     </tr>
                     <tr style="border: 1px solid black;">
-                        <td><strong>Subject Name</strong></td>
+                        <td class="auto-style1"><strong>Subject Name</strong></td>
                         <td><strong>Avg of </strong></br>
                             <strong>Best 2 PT<br />
                                 (5)</strong></td>
@@ -66,12 +71,13 @@
                             <strong>(5)</strong></td>
                         <td><strong>Portfolio </strong>
                             <strong>(5)</strong></td>
-                        <td><strong>Term-1 (80)</strong></td>
+                        <td><strong>Term-1 (20)</strong></td>
+                        <td><strong>Term-2 (80)</strong></td>
                         <td><strong>Marks Obtained (100)</strong></td>
                         <td><strong>Grade</strong></td>
                     </tr>
                     <tr>
-                        <td><strong>ENGLISH</strong></td>
+                        <td class="auto-style1"><strong>ENGLISH</strong></td>
                         <td width="86" style="text-align: center">
                             <asp:Label ID="lblEnglishPT" runat="server"></asp:Label></td>
                         <td width="102" style="text-align: center">
@@ -82,13 +88,15 @@
                             <asp:Label ID="lblEnglishPortfolio" runat="server"></asp:Label></td>
                         <td width="108" style="text-align: center">
                             <asp:Label ID="lblEnglishTerm1" runat="server"></asp:Label></td>
+                        <td width="102" style="text-align: center">
+                            <asp:Label ID="lblEnglishTerm2" runat="server"></asp:Label></td>
                         <td width="132" style="text-align: center">
                             <asp:Label ID="lblEnglishTotal" runat="server"></asp:Label></td>
                         <td width="103" style="text-align: center">
                             <asp:Label ID="lblEnglishGrade" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
-                        <td><strong>HINDI</strong></td>
+                        <td class="auto-style1"><strong>HINDI</strong></td>
                         <td width="86" style="text-align: center">
                             <asp:Label ID="lblHindiPT" runat="server"></asp:Label></td>
                         <td width="102" style="text-align: center">
@@ -99,13 +107,15 @@
                             <asp:Label ID="lblHindiPortfolio" runat="server"></asp:Label></td>
                         <td width="108" style="text-align: center">
                             <asp:Label ID="lblHindiTerm1" runat="server"></asp:Label></td>
+                        <td width="102" style="text-align: center">
+                            <asp:Label ID="lblHindiTerm2" runat="server"></asp:Label></td>
                         <td width="132" style="text-align: center">
                             <asp:Label ID="lblHindiTotal" runat="server"></asp:Label></td>
                         <td width="103" style="text-align: center">
                             <asp:Label ID="lblHindiGrade" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
-                        <td><strong>MATHEMATICS</strong></td>
+                        <td class="auto-style1"><strong>MATHEMATICS</strong></td>
                         <td width="86" style="text-align: center">
                             <asp:Label ID="lblMathematicsPT" runat="server"></asp:Label></td>
                         <td width="102" style="text-align: center">
@@ -116,13 +126,15 @@
                             <asp:Label ID="lblMathematicsPortfolio" runat="server"></asp:Label></td>
                         <td width="108" style="text-align: center">
                             <asp:Label ID="lblMathematicsTerm1" runat="server"></asp:Label></td>
+                        <td width="108" style="text-align: center">
+                            <asp:Label ID="lblMathematicsTerm2" runat="server"></asp:Label></td>
                         <td width="132" style="text-align: center">
                             <asp:Label ID="lblMathematicsTotal" runat="server"></asp:Label></td>
                         <td width="103" style="text-align: center">
                             <asp:Label ID="lblMathematicsGrade" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
-                        <td><strong>SCIENCE</strong></td>
+                        <td class="auto-style1"><strong>SCIENCE</strong></td>
                         <td width="86" style="text-align: center">
                             <asp:Label ID="lblSciencePT" runat="server"></asp:Label></td>
                         <td width="102" style="text-align: center">
@@ -133,13 +145,15 @@
                             <asp:Label ID="lblSciencePortfolio" runat="server"></asp:Label></td>
                         <td width="108" style="text-align: center">
                             <asp:Label ID="lblScienceTerm1" runat="server"></asp:Label></td>
+                        <td width="108" style="text-align: center">
+                            <asp:Label ID="lblScienceTerm2" runat="server"></asp:Label></td>
                         <td width="132" style="text-align: center">
                             <asp:Label ID="lblScienceTotal" runat="server"></asp:Label></td>
                         <td width="103" style="text-align: center">
                             <asp:Label ID="lblScienceGrade" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
-                        <td><strong>SOCIAL SCIENCE</strong></td>
+                        <td class="auto-style1"><strong>SOCIAL SCIENCE</strong></td>
                         <td width="86" style="text-align: center">
                             <asp:Label ID="lblSocialSciencePT" runat="server"></asp:Label></td>
                         <td width="102" style="text-align: center">
@@ -150,25 +164,27 @@
                             <asp:Label ID="lblSocialSciencePortolio" runat="server"></asp:Label></td>
                         <td width="108" style="text-align: center">
                             <asp:Label ID="lblSocialScienceTerm1" runat="server"></asp:Label></td>
+                        <td width="108" style="text-align: center">
+                            <asp:Label ID="lblSocialScienceTerm2" runat="server"></asp:Label></td>
                         <td width="132" style="text-align: center">
                             <asp:Label ID="lblSocialScienceTotal" runat="server"></asp:Label></td>
                         <td width="103" style="text-align: center">
                             <asp:Label ID="lblSocialScienceGrade" runat="server"></asp:Label></td>
                     </tr>
                     <tr style="border: 1px solid black;">
-                        <td><strong>Subject Name</strong></td>
+                        <td class="auto-style1"><strong>Subject Name</strong></td>
                         <td colspan="3"><strong>Theory (50)</strong></td>
                         <td colspan="2"><strong>Practical (50)</strong></td>
-                        <td><strong>Marks Obtained (100)</strong></td>
+                        <td colspan="2"><strong>Marks Obtained (100)</strong></td>
                         <td><strong>Grade</strong></td>
                     </tr>
                     <tr>
-                        <td><strong>I.T.</strong></td>
+                        <td class="auto-style1"><strong>I.T.</strong></td>
                         <td colspan="3" width="86" style="text-align: center">
                             <asp:Label ID="lblITTheory" runat="server"></asp:Label></td>
                         <td colspan="2" width="108" style="text-align: center">
                             <asp:Label ID="lblITPractical" runat="server"></asp:Label></td>
-                        <td width="132" style="text-align: center">
+                        <td colspan="2" width="132" style="text-align: center">
                             <asp:Label ID="lblITTotal" runat="server"></asp:Label></td>
                         <td width="103" style="text-align: center">
                             <asp:Label ID="lblITGrade" runat="server"></asp:Label></td>

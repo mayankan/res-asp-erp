@@ -186,6 +186,15 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblEnglishTerm1;
 
         /// <summary>
+        /// lblEnglishTerm2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEnglishTerm2;
+
+        /// <summary>
         /// lblEnglishTotal control.
         /// </summary>
         /// <remarks>
@@ -247,6 +256,15 @@ namespace RainbowERP.ReportCard._2019
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHindiTerm1;
+
+        /// <summary>
+        /// lblHindiTerm2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHindiTerm2;
 
         /// <summary>
         /// lblHindiTotal control.
@@ -312,6 +330,15 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblMathematicsTerm1;
 
         /// <summary>
+        /// lblMathematicsTerm2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMathematicsTerm2;
+
+        /// <summary>
         /// lblMathematicsTotal control.
         /// </summary>
         /// <remarks>
@@ -375,6 +402,15 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblScienceTerm1;
 
         /// <summary>
+        /// lblScienceTerm2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblScienceTerm2;
+
+        /// <summary>
         /// lblScienceTotal control.
         /// </summary>
         /// <remarks>
@@ -436,6 +472,15 @@ namespace RainbowERP.ReportCard._2019
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSocialScienceTerm1;
+
+        /// <summary>
+        /// lblSocialScienceTerm2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSocialScienceTerm2;
 
         /// <summary>
         /// lblSocialScienceTotal control.
