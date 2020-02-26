@@ -870,6 +870,24 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblGKGrade;
 
         /// <summary>
+        /// lblGrade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGrade;
+
+        /// <summary>
+        /// lblRank control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRank;
+
+        /// <summary>
         /// lblWorkEduTerm1 control.
         /// </summary>
         /// <remarks>
@@ -1012,24 +1030,6 @@ namespace RainbowERP.ReportCard._2019
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAttitudeStudentsTerm2;
-
-        /// <summary>
-        /// lblGrade control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblGrade;
-
-        /// <summary>
-        /// lblRank control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRank;
 
         /// <summary>
         /// lblRemarks control.

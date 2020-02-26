@@ -54,7 +54,7 @@
             <br />
             <asp:Image ID="imgLogo" runat="server" Width="100%" ImageUrl="logo.jpg" Style="padding-left: 50px;" />
             <p style="text-align: center"><b>ACHIEVEMENT RECORD (FINAL TERMINAL EXAMINATION)</b></p>
-            <p style="text-align: center">SESSION 2018-19</p>
+            <p style="text-align: center">SESSION 2019-20</p>
             <br />
             <table style="width: 100%; height: 150px;">
                 <tr>
@@ -434,6 +434,9 @@
                     </tr>
                 </tbody>
             </table>--%>
+            <p class="word-left">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GRADE : <u><asp:Label ID="lblGrade" runat="server"></asp:Label></u><span class="word-right">RANK : <u><asp:Label ID="lblRank" runat="server"></asp:Label></u></span>
+            </p>
             <br />
             <table width="100%" style="table-layout: fixed">
                 <tbody>
@@ -570,9 +573,7 @@
                     </tr>
                 </tbody>
             </table>
-             <p class="word-left">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GRADE : <u><asp:Label ID="lblGrade" runat="server"></asp:Label></u><span class="word-right">RANK : <u><asp:Label ID="lblRank" runat="server"></asp:Label></u></span>
-            </p>
+             
             <table width="100%" height="100px">
                 <tbody>
                     <tr>

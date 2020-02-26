@@ -9,6 +9,24 @@
         .auto-style1 {
             width: 171px;
         }
+        
+        .alignleft {
+            float: left;
+            text-align: left;
+            width: 33.33333%;
+        }
+
+        .aligncenter {
+            float: left;
+            text-align: center;
+            width: 33.33333%;
+        }
+
+        .alignright {
+            float: left;
+            text-align: right;
+            width: 33.33333%;
+        }
     </style>
 </head>
 <body>
@@ -273,15 +291,105 @@
                     <td></td>
                 </tr>
             </table>
-            <span>
+            <%--<table style="width: 100%; height: 250px;" border="1" cellspacing="0" cellpadding="0" align="center">
+                <tbody>
+                    <tr>
+                        <td colspan="11"><strong>Co-Scholastic Areas : Term – 1 [on a 3 point (A-C) grading scale]</strong>
+                            <td colspan="4" style="text-align: center"><strong>Grade</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="11"><strong>Work Education (or Pre-vocational Education)</strong></td>
+                        <td colspan="4" style="text-align: center"><strong>
+                            <asp:Label ID="lblWorkEdu" runat="server"></asp:Label></strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="11"><strong>Art Education</strong></td>
+                        <td colspan="4" style="text-align: center"><strong>
+                            <asp:Label ID="lblArtEdu" runat="server"></asp:Label></strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="11"><strong>Health &amp; Physical Education</strong></td>
+                        <td colspan="4" style="text-align: center"><strong>
+                            <asp:Label ID="lblPhysicalEdu" runat="server"></asp:Label></strong></td>
+                    </tr>
+                </tbody>
+            </table>--%>
+            <%--<br />
+            <table style="width: 100%; height: 250px;" border="1" cellspacing="0" cellpadding="0" align="center">
+                <tbody>
+                    <tr>
+                        <td colspan="15" align="center"><strong>Discipline : Term – 1 [on a 3 point (A-C) grading scale]</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" width="645" border="1"><strong>ELEMENT</strong></td>
+                        <td colspan="3" width="100" style="text-align: center" border="1"><strong>T1</strong></td>
+                        <td colspan="6" width="645"></td>
+                        <td colspan="2" style="text-align: center"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" border="1">1. Regularity and Punctuality</td>
+                        <td colspan="3" style="text-align: center" border="1">
+                            <asp:Label ID="lblRegularity" runat="server"></asp:Label></td>
+                        <td colspan="6" align="center">GRADE: <u>
+                            <asp:Label ID="lblGrade" runat="server"></asp:Label></u></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">2. Sincerity</td>
+                        <td colspan="3" style="text-align: center">
+                            <asp:Label ID="lblSincerity" runat="server"></asp:Label></td>
+                        <td colspan="6"></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">3. Behaviour</td>
+                        <td colspan="3" style="text-align: center">
+                            <asp:Label ID="lblBehaviour" runat="server"></asp:Label></td>
+                        <td colspan="6"></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">4. Attitude Towards Teachers</td>
+                        <td colspan="3" style="text-align: center">
+                            <asp:Label ID="lblAttitudeTeachers" runat="server"></asp:Label></td>
+                        <td colspan="6" align="center">RANK: <u>
+                            <asp:Label ID="lblRank" runat="server"></asp:Label></u></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">5. Attitude Towards Students</td>
+                        <td colspan="3" style="text-align: center">
+                            <asp:Label ID="lblAttitudeStudents" runat="server"></asp:Label></td>
+                        <td colspan="6"></td>
+                        <td colspan="2"></td>
+                    </tr>
+                </tbody>
+            </table>--%>
+            <br />
+            <br />
+            <%--<table style="width: 100%; height: 150px; border: 1px solid black;">
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Class Teacher's Remarks:
+                        <asp:Label ID="lblRemarks" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>--%>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Place: 
                 <br />
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="text-align: center"><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parent&#39;s Signature&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Signature of Class Teacher</span><span style="float: right; padding-right: 2em;">Signature of HOS</span>
-            <br />
-            <br />
-            <br />
-            <br />
+                <p class="alignleft">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date: </p>
+                <p class="aligncenter">Signature of Class Teacher:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+                <p class="alignright">Principal's Signature&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </p>
+            <br /><br /><br />
+               <%-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date:</span><span style="text-align: center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Signature of Class Teacher</span><span style="float: right; padding-right: 2em;">Signature of HOS</span>
+            
+        </div>--%>
         </div>
     </form>
 </body>

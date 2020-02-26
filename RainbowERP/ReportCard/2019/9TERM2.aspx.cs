@@ -54,28 +54,30 @@ namespace RainbowERP.ReportCard._2019
                         lblMotherName.Text = studentCL.motherName;
                         lblAdmissionNo.Text = studentCL.admissionNo.ToString();
                         lblClassSec.Text = studentCL.classSection;
-                        int term1ExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 1");
-                        int ptId = reportBLL.viewExamIdByClass(studentCL.classId, "PT(10)");
-                        int nsId = reportBLL.viewExamIdByClass(studentCL.classId, "NS(5)");
-                        int seaId = reportBLL.viewExamIdByClass(studentCL.classId, "SEA(5)");
-                        int pt2Id = reportBLL.viewExamIdByClass(studentCL.classId, "PT2(10)");
-                        int pt3Id = reportBLL.viewExamIdByClass(studentCL.classId, "PT3(10)");
-                        int annualId = reportBLL.viewExamIdByClass(studentCL.classId, "ANNUAL(80)");
+                        int ptId = reportBLL.viewExamIdByClass(studentCL.classId, "Avg of Best 2 PT(5)");
+                        int maId = reportBLL.viewExamIdByClass(studentCL.classId, "MA2(5)");
+                        int seaId = reportBLL.viewExamIdByClass(studentCL.classId, "SEA2(5)");
+                        int portfolioId = reportBLL.viewExamIdByClass(studentCL.classId, "Portfolio2(5)");
+                        int term1Id = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 1(20)");
+                        int term2Id = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 2(60)");
+                        int itTheoryId = reportBLL.viewExamIdByClass(studentCL.classId, "IT Theory(50)");
+                        int itPracticalId = reportBLL.viewExamIdByClass(studentCL.classId, "IT Practical(50)");
                         int term2GenExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 2 - GENERAL");
                         //int examinationId = Convert.ToInt32(Request.QueryString["examId"]);
                         //Collection<SubjectCL> subjectCol = subjectBLL.viewSubjectByClassId(studentCL.classId);
                         MiscEntryCL remarksAttendance = reportBLL.viewMiscByStudentId(studentId, term2GenExamId);
-                        Collection<MarksEntryCL> marksTerm1Col = reportBLL.viewMarksByStudentId(studentId, term1ExamId);
                         Collection<MarksEntryCL> marksPTCol = reportBLL.viewMarksByStudentId(studentId, ptId);
-                        Collection<MarksEntryCL> marksPT2Col = reportBLL.viewMarksByStudentId(studentId, pt2Id);
-                        Collection<MarksEntryCL> marksPT3Col = reportBLL.viewMarksByStudentId(studentId, pt3Id);
-                        Collection<MarksEntryCL> marksAnnualCol = reportBLL.viewMarksByStudentId(studentId, annualId);
-                        Collection<MarksEntryCL> markNSsCol = reportBLL.viewMarksByStudentId(studentId, nsId);
+                        Collection<MarksEntryCL> marksMACol = reportBLL.viewMarksByStudentId(studentId, maId);
                         Collection<MarksEntryCL> marksSEACol = reportBLL.viewMarksByStudentId(studentId, seaId);
-                        Collection<GradeEntryCL> gradeCol = reportBLL.viewGradesByStudentId(studentId, term1ExamId);
+                        Collection<MarksEntryCL> marksPortfolioCol = reportBLL.viewMarksByStudentId(studentId, portfolioId);
+                        Collection<MarksEntryCL> markTERM1Col = reportBLL.viewMarksByStudentId(studentId, term1Id);
+                        Collection<MarksEntryCL> marksTERM2Col = reportBLL.viewMarksByStudentId(studentId, term2Id);
+                        Collection<MarksEntryCL> markTheoryCol = reportBLL.viewMarksByStudentId(studentId, itTheoryId);
+                        Collection<MarksEntryCL> marksPracticalCol = reportBLL.viewMarksByStudentId(studentId, itPracticalId);
+                        Collection<GradeEntryCL> gradeCol = reportBLL.viewGradesByStudentId(studentId, term2GenExamId);
                         lblAttendance.Text = remarksAttendance.attendance;
                         lblRemarks.Text = remarksAttendance.remarks;
-                        //lblEnglishPT1.Text = marksPTCol.Where(x => x.subjectId == 0).FirstOrDefault().marks;
+                        //lblEnglishPT.Text = marksPTCol.Where(x => x.subjectId == 0).FirstOrDefault().marks;
                         //lblEnglishPT2.Text = marksPT2Col.Where(x => x.subjectId == 0).FirstOrDefault().marks;
                         //lblEnglishPT3.Text = marksPT3Col.Where(x => x.subjectId == 0).FirstOrDefault().marks;
                         //lblEnglishAvgPT.Text = returnHighest(Convert.ToDouble(lblEnglishPT1.Text), Convert.ToDouble(lblEnglishPT2.Text), Convert.ToDouble(lblEnglishPT3.Text)).ToString();
@@ -172,95 +174,6 @@ namespace RainbowERP.ReportCard._2019
                 Grade = "E (NEED Impovement)";
             }
             return Grade;
-        }
-        private double returnHighest(double FirstValue, double SecondValue, double ThirdValue)
-        {
-            double[] highestTwo = new double[2];
-            double avgOfTwo;
-            int firstValueChecked = 0;
-            if (FirstValue >= SecondValue && FirstValue >= ThirdValue)
-            {
-                if (FirstValue == SecondValue)
-                {
-                    highestTwo[0] = FirstValue;
-                    highestTwo[1] = SecondValue;
-                }
-                else if (FirstValue == ThirdValue)
-                {
-                    highestTwo[0] = FirstValue;
-                    highestTwo[1] = ThirdValue;
-                }
-                else
-                {
-                    highestTwo[0] = FirstValue;
-                    firstValueChecked = 1;
-                }
-            }
-            else if (SecondValue >= FirstValue && SecondValue >= ThirdValue)
-            {
-                if (SecondValue == FirstValue)
-                {
-                    highestTwo[0] = FirstValue;
-                    highestTwo[1] = SecondValue;
-                }
-                else if (SecondValue == ThirdValue)
-                {
-                    highestTwo[0] = SecondValue;
-                    highestTwo[1] = ThirdValue;
-                }
-                else
-                {
-                    highestTwo[0] = SecondValue;
-                    firstValueChecked = 2;
-                }
-            }
-            else if (ThirdValue >= FirstValue && ThirdValue >= SecondValue)
-            {
-                if (ThirdValue == FirstValue)
-                {
-                    highestTwo[0] = FirstValue;
-                    highestTwo[1] = ThirdValue;
-                }
-                else if (ThirdValue == SecondValue)
-                {
-                    if (ThirdValue == SecondValue)
-                    {
-                        highestTwo[0] = SecondValue;
-                        highestTwo[1] = ThirdValue;
-                    }
-                }
-                else
-                {
-                    highestTwo[0] = ThirdValue;
-                    firstValueChecked = 3;
-                }
-            }
-            switch (firstValueChecked)
-            {
-                case 1:
-                    if (SecondValue > ThirdValue)
-                        highestTwo[1] = SecondValue;
-                    else
-                        highestTwo[1] = ThirdValue;
-                    break;
-                case 2:
-                    if (ThirdValue > FirstValue)
-                        highestTwo[1] = ThirdValue;
-                    else
-                        highestTwo[1] = FirstValue;
-                    break;
-                case 3:
-                    if (FirstValue > SecondValue)
-                        highestTwo[1] = FirstValue;
-                    else
-                        highestTwo[1] = SecondValue;
-                    break;
-                default:
-                    break;
-            }
-            avgOfTwo = highestTwo[0] + highestTwo[1];
-            avgOfTwo = avgOfTwo / 2;
-            return avgOfTwo;
         }
     }
 }
