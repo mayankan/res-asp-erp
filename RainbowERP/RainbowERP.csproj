@@ -132,8 +132,11 @@
     <Content Include="ReportCard\2019\11UNIT2.aspx" />
     <Content Include="ReportCard\2019\12PREBOARD.aspx" />
     <Content Include="ReportCard\2019\1TERM1.aspx" />
+    <Content Include="ReportCard\2019\1TERM2.aspx" />
     <Content Include="ReportCard\2019\3TERM1.aspx" />
+    <Content Include="ReportCard\2019\3TERM2.aspx" />
     <Content Include="ReportCard\2019\6TERM1.aspx" />
+    <Content Include="ReportCard\2019\6TERM2.aspx" />
     <Content Include="ReportCard\2019\9TERM1.aspx" />
     <Content Include="ReportCard\2019\9TERM2.aspx" />
     <Content Include="ReportCard\2019\logo.jpg" />
@@ -410,6 +413,13 @@
     <Compile Include="ReportCard\2019\1TERM1.aspx.designer.cs">
       <DependentUpon>1TERM1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReportCard\2019\1TERM2.aspx.cs">
+      <DependentUpon>1TERM2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCard\2019\1TERM2.aspx.designer.cs">
+      <DependentUpon>1TERM2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReportCard\2019\3TERM1.aspx.cs">
       <DependentUpon>3TERM1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -417,12 +427,26 @@
     <Compile Include="ReportCard\2019\3TERM1.aspx.designer.cs">
       <DependentUpon>3TERM1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReportCard\2019\3TERM2.aspx.cs">
+      <DependentUpon>3TERM2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCard\2019\3TERM2.aspx.designer.cs">
+      <DependentUpon>3TERM2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReportCard\2019\6TERM1.aspx.cs">
       <DependentUpon>6TERM1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportCard\2019\6TERM1.aspx.designer.cs">
       <DependentUpon>6TERM1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCard\2019\6TERM2.aspx.cs">
+      <DependentUpon>6TERM2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCard\2019\6TERM2.aspx.designer.cs">
+      <DependentUpon>6TERM2.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportCard\2019\9TERM1.aspx.cs">
       <DependentUpon>9TERM1.aspx</DependentUpon>
