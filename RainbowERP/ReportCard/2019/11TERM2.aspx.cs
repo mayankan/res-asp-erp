@@ -86,16 +86,24 @@ namespace RainbowERP.ReportCard._2019
                         DataTable dt = new DataTable();
                         DataRow dr = null;
                         dt.Columns.Add(new DataColumn("Subjects", typeof(string)));
+                        dt.Columns.Add(new DataColumn("UT(40)", typeof(int)));
                         dt.Columns.Add(new DataColumn("UT(5)", typeof(int)));
+                        dt.Columns.Add(new DataColumn("Term-1(70)", typeof(int)));
                         dt.Columns.Add(new DataColumn("Term-1", typeof(int)));
                         dt.Columns.Add(new DataColumn("Term-2", typeof(int)));
-                        dt.Columns.Add(new DataColumn("Theory", typeof(int)));
-                        dt.Columns.Add(new DataColumn("Practical", typeof(int)));
+                        dt.Columns.Add(new DataColumn("Annual", typeof(int)));
+                        dt.Columns.Add(new DataColumn("UT+Theory+Practical", typeof(int)));
+                        dt.Columns.Add(new DataColumn("Practical - Term 1", typeof(int)));
+                        dt.Columns.Add(new DataColumn("Practical - Term 2", typeof(int)));
                         dt.Columns.Add(new DataColumn("Total", typeof(int)));
-                        IDictionary<int, string> marksSubjectDict = new Dictionary<int, string>();
-                        IDictionary<int, string> marksSubjectDictTERM1 = new Dictionary<int, string>();
-                        IDictionary<int, string> marksSubjectDictTERM2 = new Dictionary<int, string>();
-                        IDictionary<int, string> marksPracticalSubjectDict = new Dictionary<int, string>();
+                        IDictionary<int, string> marksSubjectDictOld = new Dictionary<int, string>();
+                        IDictionary<int, string> marksSubjectDictNew = new Dictionary<int, string>();
+                        IDictionary<int, string> marksSubjectDictTERM1Old = new Dictionary<int, string>();
+                        IDictionary<int, string> marksSubjectDictTERM1New = new Dictionary<int, string>();
+                        IDictionary<int, string> marksSubjectDictTERM2Old = new Dictionary<int, string>();
+                        IDictionary<int, string> marksSubjectDictTERM2New = new Dictionary<int, string>();
+                        IDictionary<int, string> marksPracticalSubjectDictOld = new Dictionary<int, string>();
+                        IDictionary<int, string> marksPracticalSubjectDictNew = new Dictionary<int, string>();
                         int count = 0;
                         //foreach (MarksEntryCL item in marksCol)
                         //{
@@ -191,36 +199,36 @@ namespace RainbowERP.ReportCard._2019
                         //    }
                         //}
                         double grandTotal = 0;
-                        foreach (SubjectCL item in subjectCol)
-                        {
-                            dr = dt.NewRow();
-                            dr["Subjects"] = item.name;
-                            dr["Max. Marks"] = 100;
-                            dr["Min. Marks"] = 40;
-                            if (marksSubjectDict.ContainsKey(item.id))
-                            {
-                                count++;
-                                dr["Theory"] = marksSubjectDict[item.id];
-                                if (marksPracticalSubjectDict[item.id] == string.Empty)
-                                {
-                                    dr["Total"] = marksSubjectDict[item.id];
-                                    grandTotal = grandTotal + Convert.ToDouble(marksSubjectDict[item.id]);
-                                }
-                                else
-                                {
-                                    dr["Practical"] = marksPracticalSubjectDict[item.id];
-                                    dr["Total"] = Convert.ToDouble(marksSubjectDict[item.id]) + Convert.ToDouble(marksPracticalSubjectDict[item.id]);
-                                    grandTotal = grandTotal + Convert.ToDouble(Convert.ToDouble(marksSubjectDict[item.id]) + Convert.ToDouble(marksPracticalSubjectDict[item.id]));
-                                }
-                            }
-                            else
-                            {
-                                dr["Theory"] = string.Empty;
-                                dr["Practical"] = string.Empty;
-                                dr["Total"] = string.Empty;
-                            }
-                            dt.Rows.Add(dr);
-                        }
+                        //foreach (SubjectCL item in subjectCol)
+                        //{
+                        //    dr = dt.NewRow();
+                        //    dr["Subjects"] = item.name;
+                        //    dr["Max. Marks"] = 100;
+                        //    dr["Min. Marks"] = 40;
+                        //    if (marksSubjectDict.ContainsKey(item.id))
+                        //    {
+                        //        count++;
+                        //        dr["Theory"] = marksSubjectDict[item.id];
+                        //        if (marksPracticalSubjectDict[item.id] == string.Empty)
+                        //        {
+                        //            dr["Total"] = marksSubjectDict[item.id];
+                        //            grandTotal = grandTotal + Convert.ToDouble(marksSubjectDict[item.id]);
+                        //        }
+                        //        else
+                        //        {
+                        //            dr["Practical"] = marksPracticalSubjectDict[item.id];
+                        //            dr["Total"] = Convert.ToDouble(marksSubjectDict[item.id]) + Convert.ToDouble(marksPracticalSubjectDict[item.id]);
+                        //            grandTotal = grandTotal + Convert.ToDouble(Convert.ToDouble(marksSubjectDict[item.id]) + Convert.ToDouble(marksPracticalSubjectDict[item.id]));
+                        //        }
+                        //    }
+                        //    else
+                        //    {
+                        //        dr["Theory"] = string.Empty;
+                        //        dr["Practical"] = string.Empty;
+                        //        dr["Total"] = string.Empty;
+                        //    }
+                        //    dt.Rows.Add(dr);
+                        //}
                         grdMarksReport.DataSource = dt;
                         grdMarksReport.DataBind();
                         lblGrandTotal.Text = grandTotal.ToString();
