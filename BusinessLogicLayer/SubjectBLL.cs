@@ -66,7 +66,7 @@ namespace BusinessLogicLayer
         public Collection<SubjectCL> viewSubjectMarksByClassId(int classId)
         {
             Collection<SubjectCL> returnSubjectData = new Collection<SubjectCL>();
-            IQueryable<Subject> querySubjectDB = from x in dbcontext.ClassSubjectMaps where x.ClassId == classId  && x.IsDeleted == false && (x.SubjectId<67 || x.SubjectId>71) select x.Subject;
+            IQueryable<Subject> querySubjectDB = from x in dbcontext.ClassSubjectMaps where x.ClassId == classId  && x.IsDeleted == false && x.Subject.IsDeleted== false && (x.SubjectId<67 || x.SubjectId>71) select x.Subject;
             foreach (Subject item in querySubjectDB)
             {
                 returnSubjectData.Add(new SubjectCL()

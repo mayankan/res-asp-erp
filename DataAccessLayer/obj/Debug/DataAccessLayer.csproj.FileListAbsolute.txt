@@ -21,3 +21,14 @@ C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLayer.cs
 C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Mayank\Desktop\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

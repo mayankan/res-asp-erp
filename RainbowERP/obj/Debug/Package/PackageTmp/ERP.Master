@@ -1,0 +1,215 @@
+﻿
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ERP.master.cs" Inherits="RAINBOW_ERP.ERP" %>
+
+<!DOCTYPE HTML>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="//assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <title>Master Page</title>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <div id="header">
+
+                <!-- Logo -->
+                <h1><a href="index.aspx" id="logo">Rainbow <em>English Senior Secondary School</em></a></h1>
+                
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <!--<li><a href="index.html">Home</a></li>
+								<li>
+									<a href="#">Dropdown</a>
+									<ul>
+										<li><a href="#">Lorem dolor</a></li>
+										<li><a href="#">Magna phasellus</a></li>
+										<li><a href="#">Etiam sed tempus</a></li>
+										<li>
+											<a href="#">Submenu</a>
+											<ul>
+												<li><a href="#">Lorem dolor</a></li>
+												<li><a href="#">Phasellus magna</a></li>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam nisl</a></li>
+												<li><a href="#">Veroeros feugiat</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Veroeros feugiat</a></li>
+									</ul>
+								</li>
+								<li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="two-sidebar.html">Two Sidebar</a></li>
+								<li class="current"><a href="no-sidebar.html">No Sidebar</a></li>-->
+                        <li><a href="/index.aspx">Homepage</a></li>
+                        <li>
+                            <a href="#">Student</a>
+                            <ul>
+                                <li><a href="/Student/Session.aspx">Manage Session</a></li>
+                                <li><a href="/Student/Class.aspx">Manage Classes</a></li>
+                                <li><a href="/Student/StudentCategory.aspx">Manage Student Categories</a></li>
+                                <li><a href="/Student/index.aspx">Manage Student</a></li>
+                                <li><a href="/Student/TC.aspx">Manage Transfer Certificates</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Attendance</a>
+                            <ul>
+                                <li><a href="/Attendance/StudentLeaveType.aspx">Manage Student Leave Types</a></li>
+                                <li><a href="/Attendance/SMSTemplate.aspx">Manage SMS Templates</a></li>
+                                <li><a href="/Attendance/index.aspx">Student Attendance Entry</a></li>
+                                <li><a href="/Attendance/SMSEntry.aspx">SMS Entry</a></li>
+                                <li><a href="/Attendance/SMSReport.aspx">View SMS Entry Report</a></li>
+                            </ul>
+                        </li>
+                        <!--<li>
+                                <span class="opener">Fee</span>
+                                <ul>
+                                    <li><a href="/Fee/FeeGroup.aspx">Manage Fee Groups</a></li>
+                                    <li><a href="/Fee/FeeClassMap.aspx">Manage Fee Class Allotment</a></li>
+                                    <li><a href="/Fee/.aspx">Fee Entry</a></li>
+                                    <li><a href="/Fee/.aspx">Concession/Waiver Entry</a></li>
+                                </ul>
+                            </li>-->
+                        <li>
+                            <a href="#">Report Card</a>
+                            <ul>
+                                <li><a href="/ReportCard/Subject.aspx">Manage Subjects</a></li>
+                                <li><a href="/ReportCard/Examination.aspx">Manage Examination</a></li>
+                                <li><a href="/ReportCard/ClassSubjectMap.aspx">Class Subject Mapping</a></li>
+                                <li><a href="/ReportCard/index.aspx">Marks Entry</a></li>
+                                <li><a href="/ReportCard/GradeEntry.aspx">Grades Entry</a></li>
+                                <!--<li><a href="/ReportCard/GradeEntryPrimary.aspx">Primary Grades Entry (Class 1-5)</a></li>-->
+                                <li><a href="/ReportCard/MiscellaneousEntry.aspx">Miscellaneous Entry (Remarks/ Attendance)</a></li>
+                                <li><a href="/ReportCard/ManageReportCard.aspx">View Report Card</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <!-- Main -->
+            <section class="wrapper style1">
+                <div class="container">
+                    <div id="content">
+
+                        <!-- Content -->
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <%--<article>
+									<header>
+										<h2>No Sidebar</h2>
+										<p>All content, all the time.</p>
+									</header>
+
+									<!--<span class="image featured"><img src="images/banner.jpg" alt="" /></span>-->
+
+									<p>Phasellus </p>
+
+									<h3>And Yet Another Subheading</h3>
+									<p>Lorem ipsum dolor sit amet, </p>
+
+									<p>Phasellus odio risus, </p>
+								</article>--%>
+                    </div>
+                </div>
+            </section>
+
+            <!--Footer -->
+            <div id="footer">
+                <!--<div class="container">
+						<div class="row">-->
+                <!--<section class="3u 6u(narrower) 12u$(mobilep)">
+								<h3>Links to Stuff</h3>
+								<ul class="links">
+									<li><a href="#">Mattis et quis rutrum</a></li>
+									<li><a href="#">Suspendisse amet varius</a></li>
+									<li><a href="#">Sed et dapibus quis</a></li>
+									<li><a href="#">Rutrum accumsan dolor</a></li>
+									<li><a href="#">Mattis rutrum accumsan</a></li>
+									<li><a href="#">Suspendisse varius nibh</a></li>
+									<li><a href="#">Sed et dapibus mattis</a></li>
+								</ul>
+							</section>
+							<section class="3u 6u$(narrower) 12u$(mobilep)">
+								<h3>More Links to Stuff</h3>
+								<ul class="links">
+									<li><a href="#">Duis neque nisi dapibus</a></li>
+									<li><a href="#">Sed et dapibus quis</a></li>
+									<li><a href="#">Rutrum accumsan sed</a></li>
+									<li><a href="#">Mattis et sed accumsan</a></li>
+									<li><a href="#">Duis neque nisi sed</a></li>
+									<li><a href="#">Sed et dapibus quis</a></li>
+									<li><a href="#">Rutrum amet varius</a></li>
+								</ul>
+							</section>-->
+                <!--<section class="6u 12u(narrower)">
+								<h3>Get In Touch</h3>
+								<form>
+									<div class="row 50%">
+										<div class="6u 12u(mobilep)">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="6u 12u(mobilep)">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="12u">
+											<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="12u">
+											<ul class="actions">
+												<li><input type="submit" class="button alt" value="Send Message" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>-->
+                <!--</div>
+					</div>-->
+
+                <!-- Icons 
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+						</ul>-->
+
+                <!--Copyright 
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; Rainbow English School. All rights reserved</li><li>Design: Mayank Anand</li>
+							</ul>
+						</div>-->
+
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/jquery.dropotron.min.js"></script>
+        <script src="/assets/js/skel.min.js"></script>
+        <script src="/assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="/assets/js/main.js"></script>
+    </form>
+</body>
+</html>

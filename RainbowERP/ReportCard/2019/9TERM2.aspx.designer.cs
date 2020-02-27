@@ -141,49 +141,22 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblAttendance;
 
         /// <summary>
-        /// lblEnglishPT1 control.
+        /// lblEnglishPT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEnglishPT1;
+        protected global::System.Web.UI.WebControls.Label lblEnglishPT;
 
         /// <summary>
-        /// lblEnglishPT2 control.
+        /// lblEnglishMA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEnglishPT2;
-
-        /// <summary>
-        /// lblEnglishPT3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEnglishPT3;
-
-        /// <summary>
-        /// lblEnglishAvgPT control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEnglishAvgPT;
-
-        /// <summary>
-        /// lblEnglishNS control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEnglishNS;
+        protected global::System.Web.UI.WebControls.Label lblEnglishMA;
 
         /// <summary>
         /// lblEnglishSEA control.
@@ -195,6 +168,33 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblEnglishSEA;
 
         /// <summary>
+        /// lblEnglishPortfolio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEnglishPortfolio;
+
+        /// <summary>
+        /// lblEnglishTerm1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEnglishTerm1;
+
+        /// <summary>
+        /// lblEnglishTerm2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEnglishTerm2;
+
+        /// <summary>
         /// lblEnglishTotal control.
         /// </summary>
         /// <remarks>
@@ -202,24 +202,6 @@ namespace RainbowERP.ReportCard._2019
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEnglishTotal;
-
-        /// <summary>
-        /// lblEnglishAnnual control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEnglishAnnual;
-
-        /// <summary>
-        /// lblEnglishGrandTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEnglishGrandTotal;
 
         /// <summary>
         /// lblEnglishGrade control.
@@ -231,49 +213,22 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblEnglishGrade;
 
         /// <summary>
-        /// lblHindiPT1 control.
+        /// lblHindiPT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHindiPT1;
+        protected global::System.Web.UI.WebControls.Label lblHindiPT;
 
         /// <summary>
-        /// lblHindiPT2 control.
+        /// lblHindiMA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHindiPT2;
-
-        /// <summary>
-        /// lblHindiPT3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHindiPT3;
-
-        /// <summary>
-        /// lblHindiAvgPT control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHindiAvgPT;
-
-        /// <summary>
-        /// lblHindiNS control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHindiNS;
+        protected global::System.Web.UI.WebControls.Label lblHindiMA;
 
         /// <summary>
         /// lblHindiSEA control.
@@ -285,6 +240,33 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblHindiSEA;
 
         /// <summary>
+        /// lblHindiPortfolio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHindiPortfolio;
+
+        /// <summary>
+        /// lblHindiTerm1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHindiTerm1;
+
+        /// <summary>
+        /// lblHindiTerm2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHindiTerm2;
+
+        /// <summary>
         /// lblHindiTotal control.
         /// </summary>
         /// <remarks>
@@ -292,24 +274,6 @@ namespace RainbowERP.ReportCard._2019
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHindiTotal;
-
-        /// <summary>
-        /// lblHindiAnnual control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHindiAnnual;
-
-        /// <summary>
-        /// lblHindiGrandTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHindiGrandTotal;
 
         /// <summary>
         /// lblHindiGrade control.
@@ -321,49 +285,22 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblHindiGrade;
 
         /// <summary>
-        /// lblMathematicsPT1 control.
+        /// lblMathematicsPT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMathematicsPT1;
+        protected global::System.Web.UI.WebControls.Label lblMathematicsPT;
 
         /// <summary>
-        /// lblMathematicsPT2 control.
+        /// lblMathematicsMA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMathematicsPT2;
-
-        /// <summary>
-        /// lblMathematicsPT3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMathematicsPT3;
-
-        /// <summary>
-        /// lblMathematicsAvgPT control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMathematicsAvgPT;
-
-        /// <summary>
-        /// lblMathematicsNS control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMathematicsNS;
+        protected global::System.Web.UI.WebControls.Label lblMathematicsMA;
 
         /// <summary>
         /// lblMathematicsSEA control.
@@ -375,6 +312,33 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblMathematicsSEA;
 
         /// <summary>
+        /// lblMathematicsPortfolio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMathematicsPortfolio;
+
+        /// <summary>
+        /// lblMathematicsTerm1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMathematicsTerm1;
+
+        /// <summary>
+        /// lblMathematicsTerm2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMathematicsTerm2;
+
+        /// <summary>
         /// lblMathematicsTotal control.
         /// </summary>
         /// <remarks>
@@ -382,24 +346,6 @@ namespace RainbowERP.ReportCard._2019
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMathematicsTotal;
-
-        /// <summary>
-        /// lblMathematicsAnnual control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMathematicsAnnual;
-
-        /// <summary>
-        /// lblMathematicsGrandTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMathematicsGrandTotal;
 
         /// <summary>
         /// lblMathematicsGrade control.
@@ -411,49 +357,22 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblMathematicsGrade;
 
         /// <summary>
-        /// lblSciencePT1 control.
+        /// lblSciencePT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSciencePT1;
+        protected global::System.Web.UI.WebControls.Label lblSciencePT;
 
         /// <summary>
-        /// lblSciencePT2 control.
+        /// lblScienceMA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSciencePT2;
-
-        /// <summary>
-        /// lblSciencePT3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSciencePT3;
-
-        /// <summary>
-        /// lblScienceAvgPT control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblScienceAvgPT;
-
-        /// <summary>
-        /// lblScienceNS control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblScienceNS;
+        protected global::System.Web.UI.WebControls.Label lblScienceMA;
 
         /// <summary>
         /// lblScienceSEA control.
@@ -465,6 +384,33 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblScienceSEA;
 
         /// <summary>
+        /// lblSciencePortfolio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSciencePortfolio;
+
+        /// <summary>
+        /// lblScienceTerm1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblScienceTerm1;
+
+        /// <summary>
+        /// lblScienceTerm2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblScienceTerm2;
+
+        /// <summary>
         /// lblScienceTotal control.
         /// </summary>
         /// <remarks>
@@ -472,24 +418,6 @@ namespace RainbowERP.ReportCard._2019
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblScienceTotal;
-
-        /// <summary>
-        /// lblScienceAnnual control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblScienceAnnual;
-
-        /// <summary>
-        /// lblScienceGrandTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblScienceGrandTotal;
 
         /// <summary>
         /// lblScienceGrade control.
@@ -501,49 +429,22 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblScienceGrade;
 
         /// <summary>
-        /// lblSocialSciencePT1 control.
+        /// lblSocialSciencePT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSocialSciencePT1;
+        protected global::System.Web.UI.WebControls.Label lblSocialSciencePT;
 
         /// <summary>
-        /// lblSocialSciencePT2 control.
+        /// lblSocialScienceMA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSocialSciencePT2;
-
-        /// <summary>
-        /// lblSocialSciencePT3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSocialSciencePT3;
-
-        /// <summary>
-        /// lblSocialScienceAvgPT control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSocialScienceAvgPT;
-
-        /// <summary>
-        /// lblSocialScienceNS control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSocialScienceNS;
+        protected global::System.Web.UI.WebControls.Label lblSocialScienceMA;
 
         /// <summary>
         /// lblSocialScienceSEA control.
@@ -555,6 +456,33 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblSocialScienceSEA;
 
         /// <summary>
+        /// lblSocialSciencePortolio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSocialSciencePortolio;
+
+        /// <summary>
+        /// lblSocialScienceTerm1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSocialScienceTerm1;
+
+        /// <summary>
+        /// lblSocialScienceTerm2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSocialScienceTerm2;
+
+        /// <summary>
         /// lblSocialScienceTotal control.
         /// </summary>
         /// <remarks>
@@ -562,24 +490,6 @@ namespace RainbowERP.ReportCard._2019
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSocialScienceTotal;
-
-        /// <summary>
-        /// lblSocialScienceAnnual control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSocialScienceAnnual;
-
-        /// <summary>
-        /// lblSocialScienceGrandTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSocialScienceGrandTotal;
 
         /// <summary>
         /// lblSocialScienceGrade control.
@@ -591,13 +501,49 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblSocialScienceGrade;
 
         /// <summary>
-        /// lblGrandTotal control.
+        /// lblITTheory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblGrandTotal;
+        protected global::System.Web.UI.WebControls.Label lblITTheory;
+
+        /// <summary>
+        /// lblITPractical control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblITPractical;
+
+        /// <summary>
+        /// lblITTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblITTotal;
+
+        /// <summary>
+        /// lblITGrade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblITGrade;
+
+        /// <summary>
+        /// lblGrade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGrade;
 
         /// <summary>
         /// lblPercentage control.
@@ -609,13 +555,13 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblPercentage;
 
         /// <summary>
-        /// lblGrade control.
+        /// lblGrandTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblGrade;
+        protected global::System.Web.UI.WebControls.Label lblGrandTotal;
 
         /// <summary>
         /// lblWorkEdu control.
