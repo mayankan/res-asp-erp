@@ -54,15 +54,22 @@ namespace RainbowERP.ReportCard._2019
                         lblMotherName.Text = studentCL.motherName;
                         lblAdmissionNo.Text = studentCL.admissionNo.ToString();
                         lblClassSec.Text = studentCL.classSection;
-                        int utExamId = reportBLL.viewExamIdByClass(studentCL.classId, "UT(5)");
-                        int term1ExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 1(Reduced)");
-                        int term2ExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 2");
+                        int utExamId = reportBLL.viewExamIdByClass(studentCL.classId, "UT(40)");
+                        int utNewExamId = reportBLL.viewExamIdByClass(studentCL.classId, "UT(5)");
+                        int term1ExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 1(Original)");
+                        int term1NewExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 1(Reduced)");
+                        int term2ExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 2(Original)");
+                        int term2NewExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 2(Reduced)");
                         Collection<SubjectCL> subjectCol = subjectBLL.viewSubjectByClassId(studentCL.classId);
                         Collection<MarksEntryCL> marksColUT = reportBLL.viewMarksByStudentId(studentId, utExamId);
                         Collection<MarksEntryCL> marksColTERM1 = reportBLL.viewMarksByStudentId(studentId, term1ExamId);
                         Collection<MarksEntryCL> marksColTERM2 = reportBLL.viewMarksByStudentId(studentId, term2ExamId);
-                        Collection<MarksEntryCL> marksColCopy = marksColTERM2;
-                        Collection<GradeEntryCL> gradesColTERM2 = reportBLL.viewGradesByStudentId(studentId, term2ExamId);
+                        Collection<MarksEntryCL> marksColUTNew = reportBLL.viewMarksByStudentId(studentId, utNewExamId);
+                        Collection<MarksEntryCL> marksColTERM1New = reportBLL.viewMarksByStudentId(studentId, term1NewExamId);
+                        Collection<MarksEntryCL> marksColTERM1Copy = marksColTERM1New;
+                        Collection<MarksEntryCL> marksColTERM2New = reportBLL.viewMarksByStudentId(studentId, term2NewExamId);
+                        Collection<MarksEntryCL> marksColTERM2Copy = marksColTERM2New;
+                        Collection<GradeEntryCL> gradesColTERM2 = reportBLL.viewGradesByStudentId(studentId, term2NewExamId);
                         int term2GenExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 2 - GENERAL");
                         MiscEntryCL remarksAttendance = reportBLL.viewMiscByStudentId(studentId, term2GenExamId);
                         for (int i = 55; i <= 66; i++)
@@ -84,292 +91,574 @@ namespace RainbowERP.ReportCard._2019
                         DataTable dt = new DataTable();
                         DataRow dr = null;
                         dt.Columns.Add(new DataColumn("Subjects", typeof(string)));
-                        dt.Columns.Add(new DataColumn("UT(40)", typeof(int)));
-                        dt.Columns.Add(new DataColumn("UT(5)", typeof(int)));
-                        dt.Columns.Add(new DataColumn("Term-1(70)", typeof(int)));
-                        dt.Columns.Add(new DataColumn("Term-1", typeof(int)));
-                        dt.Columns.Add(new DataColumn("Term-2", typeof(int)));
-                        dt.Columns.Add(new DataColumn("Annual", typeof(int)));
-                        dt.Columns.Add(new DataColumn("UT+Theory+Practical", typeof(int)));
-                        dt.Columns.Add(new DataColumn("Practical - Term 1", typeof(int)));
-                        dt.Columns.Add(new DataColumn("Practical - Term 2", typeof(int)));
-                        dt.Columns.Add(new DataColumn("Total", typeof(int)));
-                        IDictionary<int, string> marksSubjectDict = new Dictionary<int, string>();
-                        IDictionary<int, string> marksSubjectDictTERM1 = new Dictionary<int, string>();
-                        IDictionary<int, string> marksSubjectDictTERM2 = new Dictionary<int, string>();
-                        IDictionary<int, string> marksPracticalSubjectDict = new Dictionary<int, string>();
+                        dt.Columns.Add(new DataColumn("UT(40)", typeof(string)));
+                        dt.Columns.Add(new DataColumn("UT(5)", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Term-1(70)", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Term-1", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Term-2", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Annual", typeof(string)));
+                        dt.Columns.Add(new DataColumn("UT+Term-1+Term-2", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Practical - Term 1", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Practical - Term 2", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Grand Total", typeof(string)));
+                        IDictionary<int, string> marksSubjectDictUTOld = new Dictionary<int, string>();
+                        IDictionary<int, string> marksSubjectDictUTNew = new Dictionary<int, string>();
+                        IDictionary<int, string> marksSubjectDictTERM1Old = new Dictionary<int, string>();
+                        IDictionary<int, string> marksSubjectDictTERM2Old = new Dictionary<int, string>();
+                        IDictionary<int, string> marksSubjectDictNew = new Dictionary<int, string>();
+                        IDictionary<int, string> marksSubjectDictTERM1New = new Dictionary<int, string>();
+                        IDictionary<int, string> marksSubjectDictTERM2New = new Dictionary<int, string>();
+                        IDictionary<int, string> marksPracticalTERM1SubjectDictNew = new Dictionary<int, string>();
+                        IDictionary<int, string> marksPracticalTERM2SubjectDictNew = new Dictionary<int, string>();
                         int count = 0;
-                        //foreach (MarksEntryCL item in marksColUT)
-                        //{
-                        //    if (item.subjectName == "Physics(042)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Chemistry(043)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Biology(044)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Engineering Graphics(046)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Computer Science(083)" || item.subjectName == "Computer Science(283)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Physical Education(048)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Psychology(037)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Marketing(783)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Business Studies(054)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Accountancy(055)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Economics(030)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "History(027)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Hindi(302)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "English(301)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Political Science(028)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Mathematics(041)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else if (item.subjectName == "Information Practices(065)" || item.subjectName == "Information Practices(265)")
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //    else
-                        //    {
-                        //        marksSubjectDictUT.Add(item.subjectId, item.marks);
-                        //    }
-                        //}
+                        foreach (MarksEntryCL item in marksColUT)
+                        {
+                            if (item.subjectName == "Physics(042)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Chemistry(043)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Biology(044)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Engineering Graphics(046)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Computer Science(083)" || item.subjectName == "Computer Science(283)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Physical Education(048)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Psychology(037)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Marketing(783)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Business Studies(054)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Accountancy(055)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Economics(030)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "History(027)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Hindi(302)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "English(301)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Political Science(028)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Mathematics(041)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Information Practices(065)" || item.subjectName == "Information Practices(265)")
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                            else
+                            {
+                                marksSubjectDictUTOld.Add(item.subjectId, item.marks);
+                            }
+                        }
+                        foreach (MarksEntryCL item in marksColUTNew)
+                        {
+                            if (item.subjectName == "Physics(042)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Chemistry(043)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Biology(044)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Engineering Graphics(046)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Computer Science(083)" || item.subjectName == "Computer Science(283)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Physical Education(048)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Psychology(037)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Marketing(783)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Business Studies(054)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Accountancy(055)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Economics(030)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "History(027)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Hindi(302)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "English(301)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Political Science(028)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Mathematics(041)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else if (item.subjectName == "Information Practices(065)" || item.subjectName == "Information Practices(265)")
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                            else
+                            {
+                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
+                            }
+                        }
                         foreach (MarksEntryCL item in marksColTERM1)
                         {
                             if (item.subjectName == "Physics(042)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Chemistry(043)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Biology(044)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Engineering Graphics(046)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Computer Science(083)" || item.subjectName == "Computer Science(283)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Physical Education(048)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Psychology(037)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Marketing(783)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Business Studies(054)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Accountancy(055)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Economics(030)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "History(027)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Hindi(302)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "English(301)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Political Science(028)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Mathematics(041)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Information Practices(065)" || item.subjectName == "Information Practices(265)")
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
                             }
                             else
                             {
-                                marksSubjectDictTERM1.Add(item.subjectId, item.marks);
+                                marksSubjectDictTERM1Old.Add(item.subjectId, item.marks);
+                            }
+                        }
+                        foreach (MarksEntryCL item in marksColTERM1New)
+                        {
+                            if (item.subjectName == "Physics(042)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 55));
+                            }
+                            else if (item.subjectName == "Chemistry(043)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 56));
+                            }
+                            else if (item.subjectName == "Biology(044)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 57));
+                            }
+                            else if (item.subjectName == "Engineering Graphics(046)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 58));
+                            }
+                            else if (item.subjectName == "Computer Science(083)" || item.subjectName == "Computer Science(283)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 59));
+                            }
+                            else if (item.subjectName == "Physical Education(048)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 60));
+                            }
+                            else if (item.subjectName == "Psychology(037)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 61));
+                            }
+                            else if (item.subjectName == "Marketing(783)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 62));
+                            }
+                            else if (item.subjectName == "Business Studies(054)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 63));
+                            }
+                            else if (item.subjectName == "Accountancy(055)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 64));
+                            }
+                            else if (item.subjectName == "Economics(030)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 65));
+                            }
+                            else if (item.subjectName == "History(027)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 66));
+                            }
+                            else if (item.subjectName == "Hindi(302)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 121));
+                            }
+                            else if (item.subjectName == "English(301)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 145));
+                            }
+                            else if (item.subjectName == "Political Science(028)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 146));
+                            }
+                            else if (item.subjectName == "Mathematics(041)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 147));
+                            }
+                            else if (item.subjectName == "Information Practices(065)" || item.subjectName == "Information Practices(265)")
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM1Copy, 148));
+                            }
+                            else
+                            {
+                                marksSubjectDictTERM1New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM1SubjectDictNew.Add(item.subjectId, string.Empty);
                             }
                         }
                         foreach (MarksEntryCL item in marksColTERM2)
                         {
                             if (item.subjectName == "Physics(042)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 55));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Chemistry(043)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 56));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Biology(044)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 57));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Engineering Graphics(046)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 58));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Computer Science(083)" || item.subjectName == "Computer Science(283)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 59));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Physical Education(048)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 60));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Psychology(037)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 61));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Marketing(783)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 62));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Business Studies(054)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 63));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Accountancy(055)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 64));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Economics(030)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 65));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "History(027)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 66));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Hindi(302)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 121));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "English(301)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 145));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Political Science(028)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 146));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Mathematics(041)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 147));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Information Practices(065)" || item.subjectName == "Information Practices(265)")
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, CheckSubjectInCol(marksColCopy, 148));
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
                             }
                             else
                             {
-                                marksSubjectDictTERM2.Add(item.subjectId, item.marks);
-                                marksPracticalSubjectDict.Add(item.subjectId, string.Empty);
+                                marksSubjectDictTERM2Old.Add(item.subjectId, item.marks);
+                            }
+                        }
+                        foreach (MarksEntryCL item in marksColTERM2New)
+                        {
+                            if (item.subjectName == "Physics(042)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 55));
+                            }
+                            else if (item.subjectName == "Chemistry(043)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 56));
+                            }
+                            else if (item.subjectName == "Biology(044)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 57));
+                            }
+                            else if (item.subjectName == "Engineering Graphics(046)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 58));
+                            }
+                            else if (item.subjectName == "Computer Science(083)" || item.subjectName == "Computer Science(283)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 59));
+                            }
+                            else if (item.subjectName == "Physical Education(048)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 60));
+                            }
+                            else if (item.subjectName == "Psychology(037)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 61));
+                            }
+                            else if (item.subjectName == "Marketing(783)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 62));
+                            }
+                            else if (item.subjectName == "Business Studies(054)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 63));
+                            }
+                            else if (item.subjectName == "Accountancy(055)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 64));
+                            }
+                            else if (item.subjectName == "Economics(030)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 65));
+                            }
+                            else if (item.subjectName == "History(027)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 66));
+                            }
+                            else if (item.subjectName == "Hindi(302)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 121));
+                            }
+                            else if (item.subjectName == "English(301)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 145));
+                            }
+                            else if (item.subjectName == "Political Science(028)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 146));
+                            }
+                            else if (item.subjectName == "Mathematics(041)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 147));
+                            }
+                            else if (item.subjectName == "Information Practices(065)" || item.subjectName == "Information Practices(265)")
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, CheckSubjectInCol(marksColTERM2Copy, 148));
+                            }
+                            else
+                            {
+                                marksSubjectDictTERM2New.Add(item.subjectId, item.marks);
+                                marksPracticalTERM2SubjectDictNew.Add(item.subjectId, string.Empty);
                             }
                         }
                         double grandTotal = 0;
                         foreach (SubjectCL item in subjectCol)
                         {
+                            double theory = 0;
+                            double total = 0;
                             dr = dt.NewRow();
                             dr["Subjects"] = item.name;
-                            dr["Max. Marks"] = 100;
-                            dr["Min. Marks"] = 40;
-                            if (marksSubjectDict.ContainsKey(item.id))
+                            if (marksSubjectDictUTOld.ContainsKey(item.id)|| marksSubjectDictUTNew.ContainsKey(item.id)|| marksSubjectDictTERM1Old.ContainsKey(item.id)|| marksSubjectDictTERM1New.ContainsKey(item.id)|| marksSubjectDictTERM2Old.ContainsKey(item.id)|| marksSubjectDictTERM2New.ContainsKey(item.id))
                             {
-                                count++;
-                                dr["Theory"] = marksSubjectDict[item.id];
-                                if (marksPracticalSubjectDict[item.id] == string.Empty)
+                                if (marksSubjectDictUTOld.ContainsKey(item.id))
                                 {
-                                    dr["Total"] = marksSubjectDict[item.id];
-                                    grandTotal = grandTotal + Convert.ToDouble(marksSubjectDict[item.id]);
+                                    count++;
+                                    dr["UT(40)"] = Convert.ToDouble(marksSubjectDictUTOld[item.id]);
                                 }
-                                else
+                                if (marksSubjectDictUTNew.ContainsKey(item.id))
                                 {
-                                    dr["Practical"] = marksPracticalSubjectDict[item.id];
-                                    dr["Total"] = Convert.ToDouble(marksSubjectDict[item.id]) + Convert.ToDouble(marksPracticalSubjectDict[item.id]);
-                                    grandTotal = grandTotal + Convert.ToDouble(Convert.ToDouble(marksSubjectDict[item.id]) + Convert.ToDouble(marksPracticalSubjectDict[item.id]));
+                                    count++;
+                                    dr["UT(5)"] = marksSubjectDictUTNew[item.id];
+                                    theory = theory + Convert.ToDouble(marksSubjectDictUTNew[item.id]);
                                 }
+                                if (marksSubjectDictTERM1Old.ContainsKey(item.id))
+                                {
+                                    count++;
+                                    dr["Term-1(70)"] = marksSubjectDictTERM1Old[item.id];
+                                }
+                                if (marksSubjectDictTERM1New.ContainsKey(item.id))
+                                {
+                                    count++;
+                                    dr["Term-1"] = marksSubjectDictTERM1New[item.id];
+                                    theory = theory + Convert.ToDouble(marksSubjectDictTERM1New[item.id]);
+                                    dr["Practical - Term 1"] = marksPracticalTERM1SubjectDictNew[item.id];
+                                    total = total + Convert.ToDouble(marksPracticalTERM1SubjectDictNew[item.id]);
+                                }
+                                if (marksSubjectDictTERM2Old.ContainsKey(item.id))
+                                {
+                                    count++;
+                                    dr["Term-2"] = marksSubjectDictTERM2Old[item.id];
+                                }
+                                if (marksSubjectDictTERM2New.ContainsKey(item.id))
+                                {
+                                    count++;
+                                    dr["Annual"] = marksSubjectDictTERM2New[item.id];
+                                    theory = theory + Convert.ToDouble(marksSubjectDictTERM2New[item.id]);
+                                    dr["Practical - Term 2"] = marksPracticalTERM2SubjectDictNew[item.id];
+                                    total = total + Convert.ToDouble(marksPracticalTERM2SubjectDictNew[item.id]);
+                                }
+                                dr["UT+Term-1+Term-2"] = theory;
+                                grandTotal = grandTotal + total;
+                                dr["Grand Total"] = total;
                             }
                             else
                             {
-                                dr["Theory"] = string.Empty;
-                                dr["Practical"] = string.Empty;
-                                dr["Total"] = string.Empty;
+                                dr["UT(40)"] = string.Empty;
+                                dr["UT(5)"] = string.Empty;
+                                dr["Term-1(70)"] = string.Empty;
+                                dr["Term-1"] = string.Empty;
+                                dr["Term-2"] = string.Empty;
+                                dr["Annual"] = string.Empty;
+                                dr["UT+Term-1+Term-2"] = string.Empty;
+                                dr["Practical - Term 1"] = string.Empty;
+                                dr["Practical - Term 2"] = string.Empty;
+                                dr["Grand Total"] = string.Empty;
                             }
                             dt.Rows.Add(dr);
                         }
@@ -385,9 +674,9 @@ namespace RainbowERP.ReportCard._2019
                             lblAttitudeTeachers.Text = gradesColTERM2.Where(x => x.subjectId == 70).FirstOrDefault().grade;
                             lblDiscipline.Text = gradesColTERM2.Where(x => x.subjectId == 71).FirstOrDefault().grade;
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
-                            throw;
+                            throw(ex);
                         }
                         lblAttendance.Text = remarksAttendance.attendance;
                         lblRemarks.Text = remarksAttendance.remarks;

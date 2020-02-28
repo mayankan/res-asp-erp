@@ -9,7 +9,6 @@
         .auto-style1 {
             width: 171px;
         }
-        
         .alignleft {
             float: left;
             text-align: left;
