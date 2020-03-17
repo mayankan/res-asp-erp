@@ -456,13 +456,13 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblSocialScienceSEA;
 
         /// <summary>
-        /// lblSocialSciencePortolio control.
+        /// lblSocialSciencePortfolio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSocialSciencePortolio;
+        protected global::System.Web.UI.WebControls.Label lblSocialSciencePortfolio;
 
         /// <summary>
         /// lblSocialScienceTerm1 control.

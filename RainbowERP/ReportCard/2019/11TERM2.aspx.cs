@@ -100,7 +100,7 @@ namespace RainbowERP.ReportCard._2019
                         dt.Columns.Add(new DataColumn("UT+Term-1+Term-2", typeof(string)));
                         dt.Columns.Add(new DataColumn("Practical - Term 1", typeof(string)));
                         dt.Columns.Add(new DataColumn("Practical - Term 2", typeof(string)));
-                        dt.Columns.Add(new DataColumn("Grand Total", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Total", typeof(string)));
                         IDictionary<int, string> marksSubjectDictUTOld = new Dictionary<int, string>();
                         IDictionary<int, string> marksSubjectDictUTNew = new Dictionary<int, string>();
                         IDictionary<int, string> marksSubjectDictTERM1Old = new Dictionary<int, string>();
@@ -644,8 +644,9 @@ namespace RainbowERP.ReportCard._2019
                                     total = total + Convert.ToDouble(marksPracticalTERM2SubjectDictNew[item.id]);
                                 }
                                 dr["UT+Term-1+Term-2"] = theory;
+                                total = total + theory;
                                 grandTotal = grandTotal + total;
-                                dr["Grand Total"] = total;
+                                dr["Total"] = total;
                             }
                             else
                             {
@@ -658,7 +659,7 @@ namespace RainbowERP.ReportCard._2019
                                 dr["UT+Term-1+Term-2"] = string.Empty;
                                 dr["Practical - Term 1"] = string.Empty;
                                 dr["Practical - Term 2"] = string.Empty;
-                                dr["Grand Total"] = string.Empty;
+                                dr["Total"] = string.Empty;
                             }
                             dt.Rows.Add(dr);
                         }
