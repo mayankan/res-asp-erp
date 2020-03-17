@@ -178,7 +178,7 @@
                         <td width="114" style="text-align: center">
                             <asp:Label ID="lblSocialScienceSEA" runat="server"></asp:Label></td>
                         <td width="102" style="text-align: center">
-                            <asp:Label ID="lblSocialSciencePortolio" runat="server"></asp:Label></td>
+                            <asp:Label ID="lblSocialSciencePortfolio" runat="server"></asp:Label></td>
                         <td width="108" style="text-align: center">
                             <asp:Label ID="lblSocialScienceTerm1" runat="server"></asp:Label></td>
                         <td width="108" style="text-align: center">
