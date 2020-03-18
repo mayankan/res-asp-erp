@@ -89,7 +89,7 @@
                         <td><strong>Portfolio </strong>
                             <strong>(5)</strong></td>
                         <td><strong>Term-1 (20)</strong></td>
-                        <td><strong>Term-2 (80)</strong></td>
+                        <td><strong>Term-2 (60)</strong></td>
                         <td><strong>Marks Obtained (100)</strong></td>
                         <td><strong>Grade</strong></td>
                     </tr>
