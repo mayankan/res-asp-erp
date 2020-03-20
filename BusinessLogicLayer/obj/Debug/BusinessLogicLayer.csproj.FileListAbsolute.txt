@@ -62,3 +62,4 @@ C:\Users\Mayank\Source\Repos\res-asp-erp\BusinessLogicLayer\obj\Debug\BusinessLo
 C:\Users\Mayank\Source\Repos\res-asp-erp\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
 C:\Users\Mayank\Source\Repos\res-asp-erp\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 C:\Users\Mayank\Source\Repos\res-asp-erp\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\Users\Mayank\Source\Repos\res-asp-erp\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache

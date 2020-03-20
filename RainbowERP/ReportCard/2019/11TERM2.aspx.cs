@@ -60,6 +60,7 @@ namespace RainbowERP.ReportCard._2019
                         int term1NewExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 1(Reduced)");
                         int term2ExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 2(Original)");
                         int term2NewExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 2(Reduced)");
+                        int term2GenExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 2 - GENERAL");
                         Collection<SubjectCL> subjectCol = subjectBLL.viewSubjectByClassId(studentCL.classId);
                         Collection<MarksEntryCL> marksColUT = reportBLL.viewMarksByStudentId(studentId, utExamId);
                         Collection<MarksEntryCL> marksColTERM1 = reportBLL.viewMarksByStudentId(studentId, term1ExamId);
@@ -69,8 +70,7 @@ namespace RainbowERP.ReportCard._2019
                         Collection<MarksEntryCL> marksColTERM1Copy = marksColTERM1New;
                         Collection<MarksEntryCL> marksColTERM2New = reportBLL.viewMarksByStudentId(studentId, term2NewExamId);
                         Collection<MarksEntryCL> marksColTERM2Copy = marksColTERM2New;
-                        Collection<GradeEntryCL> gradesColTERM2 = reportBLL.viewGradesByStudentId(studentId, term2NewExamId);
-                        int term2GenExamId = reportBLL.viewExamIdByClass(studentCL.classId, "TERM 2 - GENERAL");
+                        Collection<GradeEntryCL> gradesColTERM2 = reportBLL.viewGradesByStudentId(studentId, term2GenExamId);
                         MiscEntryCL remarksAttendance = reportBLL.viewMiscByStudentId(studentId, term2GenExamId);
                         for (int i = 55; i <= 66; i++)
                         {
@@ -91,16 +91,16 @@ namespace RainbowERP.ReportCard._2019
                         DataTable dt = new DataTable();
                         DataRow dr = null;
                         dt.Columns.Add(new DataColumn("Subjects", typeof(string)));
-                        dt.Columns.Add(new DataColumn("UT(40)", typeof(string)));
-                        dt.Columns.Add(new DataColumn("UT(5)", typeof(string)));
-                        dt.Columns.Add(new DataColumn("Term-1(70)", typeof(string)));
-                        dt.Columns.Add(new DataColumn("Term-1", typeof(string)));
-                        dt.Columns.Add(new DataColumn("Term-2", typeof(string)));
-                        dt.Columns.Add(new DataColumn("Annual", typeof(string)));
-                        dt.Columns.Add(new DataColumn("UT+Term-1+Term-2", typeof(string)));
-                        dt.Columns.Add(new DataColumn("Practical - Term 1", typeof(string)));
-                        dt.Columns.Add(new DataColumn("Practical - Term 2", typeof(string)));
-                        dt.Columns.Add(new DataColumn("Total", typeof(string)));
+                        dt.Columns.Add(new DataColumn("UT(40)\nUT1+UT2", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Term 1\n[Theory]\n(60/70/80)", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Term 2\n[Theory]\n(60/70/80)", typeof(string)));
+                        dt.Columns.Add(new DataColumn("UT(5)\n*", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Term 1\n[Theory]\n(10/15/20)\n*", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Term 2\n[Theory]\n(45/50/55)\n*", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Total Weightage\n(60/70/80)\n*", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Practical\n[Term 1]\n(5/10/15)\n*", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Practical\n[Term 2]\n(15/25/30)\n*", typeof(string)));
+                        dt.Columns.Add(new DataColumn("Total\n(Th+Pr)\n*", typeof(string)));
                         IDictionary<int, string> marksSubjectDictUTOld = new Dictionary<int, string>();
                         IDictionary<int, string> marksSubjectDictUTNew = new Dictionary<int, string>();
                         IDictionary<int, string> marksSubjectDictTERM1Old = new Dictionary<int, string>();
@@ -253,10 +253,6 @@ namespace RainbowERP.ReportCard._2019
                                 marksSubjectDictUTNew.Add(item.subjectId, item.marks);
                             }
                             else if (item.subjectName == "Information Practices(065)" || item.subjectName == "Information Practices(265)")
-                            {
-                                marksSubjectDictUTNew.Add(item.subjectId, item.marks);
-                            }
-                            else
                             {
                                 marksSubjectDictUTNew.Add(item.subjectId, item.marks);
                             }
@@ -609,57 +605,57 @@ namespace RainbowERP.ReportCard._2019
                                 if (marksSubjectDictUTOld.ContainsKey(item.id))
                                 {
                                     count++;
-                                    dr["UT(40)"] = Convert.ToDouble(marksSubjectDictUTOld[item.id]);
-                                }
-                                if (marksSubjectDictUTNew.ContainsKey(item.id))
-                                {
-                                    count++;
-                                    dr["UT(5)"] = marksSubjectDictUTNew[item.id];
-                                    theory = theory + Convert.ToDouble(marksSubjectDictUTNew[item.id]);
+                                    dr["UT(40)\nUT1+UT2"] = Convert.ToDouble(marksSubjectDictUTOld[item.id]);
                                 }
                                 if (marksSubjectDictTERM1Old.ContainsKey(item.id))
                                 {
                                     count++;
-                                    dr["Term-1(70)"] = marksSubjectDictTERM1Old[item.id];
+                                    dr["Term 1\n[Theory]\n(60/70/80)"] = marksSubjectDictTERM1Old[item.id];
+                                }
+                                if (marksSubjectDictUTNew.ContainsKey(item.id))
+                                {
+                                    count++;
+                                    dr["UT(5)\n*"] = marksSubjectDictUTNew[item.id];
+                                    theory = theory + Convert.ToDouble(marksSubjectDictUTNew[item.id]);
                                 }
                                 if (marksSubjectDictTERM1New.ContainsKey(item.id))
                                 {
                                     count++;
-                                    dr["Term-1"] = marksSubjectDictTERM1New[item.id];
+                                    dr["Term 1\n[Theory]\n(10/15/20)\n*"] = marksSubjectDictTERM1New[item.id];
                                     theory = theory + Convert.ToDouble(marksSubjectDictTERM1New[item.id]);
-                                    dr["Practical - Term 1"] = marksPracticalTERM1SubjectDictNew[item.id];
+                                    dr["Practical\n[Term 1]\n(5/10/15)\n*"] = marksPracticalTERM1SubjectDictNew[item.id];
                                     total = total + Convert.ToDouble(marksPracticalTERM1SubjectDictNew[item.id]);
                                 }
                                 if (marksSubjectDictTERM2Old.ContainsKey(item.id))
                                 {
                                     count++;
-                                    dr["Term-2"] = marksSubjectDictTERM2Old[item.id];
+                                    dr["Term 2\n[Theory]\n(60/70/80)"] = marksSubjectDictTERM2Old[item.id];
                                 }
                                 if (marksSubjectDictTERM2New.ContainsKey(item.id))
                                 {
                                     count++;
-                                    dr["Annual"] = marksSubjectDictTERM2New[item.id];
+                                    dr["Term 2\n[Theory]\n(45/50/55)\n*"] = marksSubjectDictTERM2New[item.id];
                                     theory = theory + Convert.ToDouble(marksSubjectDictTERM2New[item.id]);
-                                    dr["Practical - Term 2"] = marksPracticalTERM2SubjectDictNew[item.id];
+                                    dr["Practical\n[Term 2]\n(15/25/30)\n*"] = marksPracticalTERM2SubjectDictNew[item.id];
                                     total = total + Convert.ToDouble(marksPracticalTERM2SubjectDictNew[item.id]);
                                 }
-                                dr["UT+Term-1+Term-2"] = theory;
+                                dr["Total Weightage\n(60/70/80)\n*"] = theory;
                                 total = total + theory;
                                 grandTotal = grandTotal + total;
-                                dr["Total"] = total;
+                                dr["Total\n(Th+Pr)\n*"] = total;
                             }
                             else
                             {
-                                dr["UT(40)"] = string.Empty;
-                                dr["UT(5)"] = string.Empty;
-                                dr["Term-1(70)"] = string.Empty;
-                                dr["Term-1"] = string.Empty;
-                                dr["Term-2"] = string.Empty;
-                                dr["Annual"] = string.Empty;
-                                dr["UT+Term-1+Term-2"] = string.Empty;
-                                dr["Practical - Term 1"] = string.Empty;
-                                dr["Practical - Term 2"] = string.Empty;
-                                dr["Total"] = string.Empty;
+                                dr["UT(40)\nUT1+UT2"] = string.Empty;
+                                dr["Term 1\n[Theory]\n(60/70/80)"] = string.Empty;
+                                dr["Term 2\n[Theory]\n(60/70/80)"] = string.Empty;
+                                dr["UT(5)\n*"] = string.Empty;
+                                dr["Term 1\n[Theory]\n(10/15/20)\n*"] = string.Empty;
+                                dr["Term 2\n[Theory]\n(45/50/55)\n*"] = string.Empty;
+                                dr["Total Weightage\n(60/70/80)\n*"] = string.Empty;
+                                dr["Practical\n[Term 1]\n(5/10/15)\n*"] = string.Empty;
+                                dr["Practical\n[Term 2]\n(15/25/30)\n*"] = string.Empty;
+                                dr["Total\n(Th+Pr)\n*"] = string.Empty;
                             }
                             dt.Rows.Add(dr);
                         }
@@ -670,9 +666,7 @@ namespace RainbowERP.ReportCard._2019
                         try
                         {
                             lblPunctuality.Text = gradesColTERM2.Where(x => x.subjectId == 67).FirstOrDefault().grade;
-                            lblRespectToGender.Text = gradesColTERM2.Where(x => x.subjectId == 68).FirstOrDefault().grade;
-                            lblAttitudeClassmates.Text = gradesColTERM2.Where(x => x.subjectId == 69).FirstOrDefault().grade;
-                            lblAttitudeTeachers.Text = gradesColTERM2.Where(x => x.subjectId == 70).FirstOrDefault().grade;
+                            lblValueSystem.Text = gradesColTERM2.Where(x => x.subjectId == 70).FirstOrDefault().grade;
                             lblDiscipline.Text = gradesColTERM2.Where(x => x.subjectId == 71).FirstOrDefault().grade;
                         }
                         catch (Exception ex)

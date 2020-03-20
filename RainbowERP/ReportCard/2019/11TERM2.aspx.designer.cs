@@ -204,31 +204,13 @@ namespace RainbowERP.ReportCard._2019
         protected global::System.Web.UI.WebControls.Label lblDiscipline;
 
         /// <summary>
-        /// lblRespectToGender control.
+        /// lblValueSystem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRespectToGender;
-
-        /// <summary>
-        /// lblAttitudeClassmates control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAttitudeClassmates;
-
-        /// <summary>
-        /// lblAttitudeTeachers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAttitudeTeachers;
+        protected global::System.Web.UI.WebControls.Label lblValueSystem;
 
         /// <summary>
         /// lblRemarks control.

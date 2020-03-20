@@ -32,3 +32,4 @@ C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLay
 C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Mayank\Source\Repos\res-asp-erp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache

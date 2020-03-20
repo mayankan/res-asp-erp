@@ -6,23 +6,26 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-    .alignleft {
+        body {
+            font-size: 40px;
+        }
+        .alignleft {
             float: left;
             text-align: left;
             width: 33.33333%;
         }
-
         .aligncenter {
             float: left;
             text-align: center;
             width: 33.33333%;
         }
-
         .alignright {
             float: left;
             text-align: right;
             width: 33.33333%;
         }
+        th { font-size: 40px; }
+        td { font-size: 40px; }
     </style>
 </head>
 <body>
@@ -139,57 +142,18 @@
                 </tr>
                 <tr>
                     <td>
-                        <p></p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.</p>
                     </td>
                     <td>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Value System</p>
-                    </td>
-                    <td>
-                        <p></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A.</p>
-                    </td>
-                    <td>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Respect to opposite gender.</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Value System and Attitude</p>
                     </td>
                     <td>
                         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Label ID="lblRespectToGender" runat="server"></asp:Label></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B.</p>
-                    </td>
-                    <td>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attitude towards classmates.</p>
-                    </td>
-                    <td>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Label ID="lblAttitudeClassmates" runat="server"></asp:Label></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C.</p>
-                    </td>
-                    <td>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attitude towards teachers.</p>
-                    </td>
-                    <td>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Label ID="lblAttitudeTeachers" runat="server"></asp:Label></p>
+                            <asp:Label ID="lblValueSystem" runat="server"></asp:Label></p>
                     </td>
                 </tr>
             </table>
             <br />
-            <span>
-                <br />
-                <br />
-            </span>
             <br />
             <br />
             <table style="width: 100%; height: 200px; border: 1px solid black;">
@@ -201,9 +165,7 @@
             <span>
                 <br />
                 <br />
-                <br />
-                <br />
-                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp; * - Total &amp; Weightage Marks<br />
                 <p>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Place: 
                 <br />

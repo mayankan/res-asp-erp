@@ -77,3 +77,4 @@ C:\Users\Mayank\Source\Repos\res-asp-erp\RainbowERP\obj\Debug\RainbowERP.csprojA
 C:\Users\Mayank\Source\Repos\res-asp-erp\RainbowERP\obj\Debug\RainbowERP.csproj.CopyComplete
 C:\Users\Mayank\Source\Repos\res-asp-erp\RainbowERP\obj\Debug\RainbowERP.dll
 C:\Users\Mayank\Source\Repos\res-asp-erp\RainbowERP\obj\Debug\RainbowERP.pdb
+C:\Users\Mayank\Source\Repos\res-asp-erp\RainbowERP\obj\Debug\RainbowERP.csproj.CoreCompileInputs.cache
